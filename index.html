@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beslutningsstøtteverktøy - palliativt pasientforløp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+
+            <div class="site-title">
+                <span class="title-main">Beslutningsstøtteverktøy <br> i et palliativt pasientforløp</span>
+            </div>
+
+            <!-- Mobil hamburger -->
+            <div class="dropdown mobile-only">
+            <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu">
+                ☰ Meny
+                <span aria-hidden="true">▾</span>
+            </button>
+
+            <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
+                <!-- Søkefelt -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-field" placeholder="Søk..." aria-label="Søk i innholdet">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+
+                <div class="dropdown-group" id="group-followup">
+                  <button class="group-toggle" aria-expanded="false" aria-controls="group-followup-content"><span class="group-label">Samhandling / Ressurspersoner</span></button>
+                  <div class="group-content" id="group-followup-content" role="group">
+                    <a href="#" role="menuitem">Fastlege</a>
+                    <a href="#" role="menuitem">Palliativt team</a>
+                    <a href="#" role="menuitem">Ressurssykepleier</a>
+                    <a href="#" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
+                    <a href="#" role="menuitem">Våketjenesten</a>
+                  </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Desktop dropdowns container -->
+            <div class="desktop-controls">
+                <!-- Desktop dropdown (Samhandling / Ressurspersoner) -->
+                <div class="dropdown followup-desktop">
+                <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false" aria-controls="followupMenu">
+                    Samhandling / Ressurspersoner
+                    <span class="chev">▾</span>
+                </button>
+
+                <div class="dropdown-content" id="followupMenu" role="menu">
+                    <!-- Search inside menu -->
+                    <div class="search-container-desktop">
+                        <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..." aria-label="Søk i innholdet">
+                        <div class="search-results-desktop" id="searchResultsDesktop"></div>
+                    </div>
+                    <hr style="margin: 8px 0; border: none; border-top: 1px solid rgba(15, 23, 42, 0.1);">
+                    <a href="#" role="menuitem">Fastlege</a>
+                    <a href="#" role="menuitem">Palliativt team</a>
+                    <a href="#" role="menuitem">Ressurssykepleier</a>
+                    <a href="#" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
+                    <a href="#" role="menuitem">Våketjenesten</a>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main class="container">
+        <h1>Hjemmetid og Hjemmedød</h1>
+        <!-- 4 steg som pasientforløp -->
+        <section class="steps">
+            <div class="flow">
+                <a class="step-card" href="steg1.html" aria-label="Identifisering av palliativ pasient">
+                    <h2>Identifisering av palliativ pasient</h2>
+                    <p class="step-desc">Mottak av melding, avklaring av ansvar og oppstart av oppfølging.</p>
+                </a>
+                <span class="arrow" aria-hidden="true">→</span>
+                <a class="step-card" href="steg2.html" aria-label="Mottak av pasient">
+                    <h2>Mottak av pasient</h2>
+                    <p class="step-desc">Kartlegging av behov, tiltak, samhandling og plan for videre forløp.</p>
+                </a>
+                <span class="arrow" aria-hidden="true">→</span>
+                <a class="step-card" href="steg3.html" aria-label="Hjemmetid">
+                    <h2>Hjemmetid</h2>
+                    <p class="step-desc">Forventningsavklaring, mål for behandling og plan for akutte situasjoner.</p>
+                </a>
+                <span class="arrow" aria-hidden="true">→</span>
+                <a class="step-card" href="steg4.html" aria-label="Pasient død hjemme">
+                    <h2>Pasient død hjemme</h2>
+                    <p class="step-desc">Rutiner, dokumentasjon og ivaretakelse av pårørende/etterlatte.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© Beslutningsstøtte – Palliativ behandling</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
