@@ -148,7 +148,7 @@ if (searchDesktopBtnElm && searchDesktopMenu) {
 // Marker aktiv side i meny
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-document.querySelectorAll(".menuHref a, #stepsMenu a").forEach(link => {
+document.querySelectorAll(".menuHref a, #stepsMenu a, .page-nav a").forEach(link => {
   const linkPage = link.getAttribute("href");
 
   if (linkPage === currentPage) {
@@ -255,3 +255,11 @@ if (searchInput) {
     }
   });
 }
+
+// show/hide scroll-to-top button
+const topBtn = document.getElementById('topBtn');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) topBtn.classList.add('show');
+  else topBtn.classList.remove('show');
+});
+topBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));

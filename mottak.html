@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">Hopp til innhold</a>
     <header class="site-header">
         <div class="header-inner">
 
@@ -14,9 +15,18 @@
                 <span class="title-main">Beslutningsstøtteverktøy <br> i et palliativt pasientforløp</span>
             </div>
 
+            <!-- Page navigation bar (desktop only, hidden on mobile) -->
+            <nav class="page-nav" role="navigation" aria-label="Steg navigasjon">
+                <a href="index.html" role="menuitem">Hjem</a>
+                <a href="identifisering.html">Identifisering</a>
+                <a href="mottak.html">Mottak</a>
+                <a href="hjemmetid.html">Hjemmetid</a>
+                <a href="hjemmedod.html">Hjemmedød</a>
+            </nav>
+
             <!-- Mobil hamburger -->
             <div class="dropdown mobile-only">
-            <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu">
+            <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu" aria-label="Åpne meny">
                 ☰ Meny
                 <span aria-hidden="true">▾</span>
             </button>
@@ -26,6 +36,18 @@
                 <div class="search-container">
                     <input type="text" id="searchInput" class="search-field" placeholder="Søk..." aria-label="Søk i innholdet">
                     <div class="search-results" id="searchResults"></div>
+                </div>
+                <div class="dropdown-group" id="group-nav">
+                  <button class="group-toggle" aria-expanded="false" aria-controls="group-nav-content">
+                    <span class="group-label">Navigasjon</span>
+                  </button>
+                  <div class="group-content" id="group-nav-content" role="group">
+                    <a href="index.html" role="menuitem">Hjem</a>
+                    <a href="identifisering.html" role="menuitem">Identifisering</a>
+                    <a href="mottak.html" role="menuitem">Mottak</a>
+                    <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
+                    <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
+                  </div>
                 </div>
 
                 <div class="dropdown-group" id="group-followup">
@@ -80,7 +102,7 @@
 
         </div>
     </header>
-    <main class="container">
+    <main id="main" class="container">
         <section class="page-intro">
             <h1>Mottak av pasient</h1>
             <p>
@@ -152,9 +174,35 @@
         </div>
     </main>
     <footer class="footer">
-        <p>© Beslutningsstøtte – Palliativ behandling</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Om verktøyet</h4>
+                <p>Utviklet for å støtte palliativ behandling og pasientforløp i helsesektoren.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Steg</h4>
+                <ul>
+                    <li><a href="identifisering.html">Identifisering</a></li>
+                    <li><a href="mottak.html">Mottak</a></li>
+                    <li><a href="hjemmetid.html">Hjemmetid</a></li>
+                    <li><a href="hjemmedod.html">Hjemmedød</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Ressurser</h4>
+                <ul>
+                    <li><a href="#">Dokumentasjon</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Beslutningsstøtte – Palliativ behandling</p>
+        </div>
     </footer>
 
+    <button class="top-btn" id="topBtn" aria-label="Til toppen">↑</button>
     <script src="script.js"></script>
 </body>
 </html>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">Hopp til innhold</a>
     <header class="site-header">
         <div class="header-inner">
 
@@ -16,7 +17,7 @@
 
             <!-- Mobil hamburger -->
             <div class="dropdown mobile-only">
-            <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu">
+            <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu" aria-label="Åpne meny">
                 ☰ Meny
                 <span aria-hidden="true">▾</span>
             </button>
@@ -80,11 +81,18 @@
 
         </div>
     </header>
-    <main class="container">
-        <h1>Hjemmetid og Hjemmedød</h1>
+    <main id="main" class="container">
+        <!-- Hero Banner -->
+        <section class="hero">
+            <h1>Hjemmetid & Hjemmedød</h1>
+            <p class="hero-subtitle">En strukturert guide for helsepersonell i palliativt pasientforløp</p>
+        </section>
+
         <!-- 4 steg som pasientforløp -->
-        <section class="steps">
-            <div class="flow">
+        <section class="steps-section">
+            <h2>Pasientforløpet</h2>
+            <div class="steps">
+                <div class="flow">
                 <a class="step-card" href="identifisering.html" aria-label="Identifisering av palliativ pasient">
                     <h2>Identifisering av palliativ pasient</h2>
                     <p class="step-desc">Mottak av melding, avklaring av ansvar og oppstart av oppfølging.</p>
@@ -108,9 +116,35 @@
         </section>
     </main>
     <footer class="footer">
-        <p>© Beslutningsstøtte – Palliativ behandling</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Om verktøyet</h4>
+                <p>Utviklet for å støtte palliativ behandling og pasientforløp i helsesektoren.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Steg</h4>
+                <ul>
+                    <li><a href="identifisering.html">Identifisering</a></li>
+                    <li><a href="mottak.html">Mottak</a></li>
+                    <li><a href="hjemmetid.html">Hjemmetid</a></li>
+                    <li><a href="hjemmedod.html">Hjemmedød</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Ressurser</h4>
+                <ul>
+                    <li><a href="#">Dokumentasjon</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Beslutningsstøtte – Palliativ behandling</p>
+        </div>
     </footer>
 
+    <button class="top-btn" id="topBtn" aria-label="Til toppen">↑</button>
     <script src="script.js"></script>
 </body>
 </html>
