@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mottak av pasient</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+
+            <div class="site-title">
+                <span class="title-main">Beslutningsstøtteverktøy <br> i et palliativt pasientforløp</span>
+            </div>
+
+            <!-- Mobil hamburger -->
+            <div class="dropdown mobile-only">
+            <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu">
+                ☰ Meny
+                <span aria-hidden="true">▾</span>
+            </button>
+
+            <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
+                <!-- Søkefelt -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-field" placeholder="Søk..." aria-label="Søk i innholdet">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+
+                <div class="dropdown-group" id="group-followup">
+                  <button class="group-toggle" aria-expanded="false" aria-controls="group-followup-content"><span class="group-label">Samhandling / Ressurspersoner</span></button>
+                  <div class="group-content" id="group-followup-content" role="group">
+                    <a href="#" role="menuitem">Fastlege</a>
+                    <a href="#" role="menuitem">Palliativt team</a>
+                    <a href="#" role="menuitem">Ressurssykepleier</a>
+                    <a href="#" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
+                    <a href="#" role="menuitem">Våketjenesten</a>
+                  </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Desktop dropdowns container -->
+            <div class="desktop-controls">
+                <!-- Desktop dropdown (Samhandling / Ressurspersoner) -->
+                <div class="dropdown followup-desktop">
+                <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false" aria-controls="followupMenu">
+                    Samhandling / Ressurspersoner
+                    <span class="chev">▾</span>
+                </button>
+
+                <div class="dropdown-content" id="followupMenu" role="menu">
+                    <a href="#" role="menuitem">Fastlege</a>
+                    <a href="#" role="menuitem">Palliativt team</a>
+                    <a href="#" role="menuitem">Ressurssykepleier</a>
+                    <a href="#" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
+                    <a href="#" role="menuitem">Våketjenesten</a>
+                </div>
+                </div>
+                
+                <!-- Desktop Search dropdown -->
+                <div class="dropdown search-desktop">
+                <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false" aria-controls="searchDesktopMenu">
+                    Søk
+                </button>
+
+                <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
+                    <div class="search-container-desktop">
+                        <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..." aria-label="Søk i innholdet">
+                        <div class="search-results-desktop" id="searchResultsDesktop"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main class="container">
+        <section class="page-intro">
+            <h1>Mottak av pasient</h1>
+            <p>
+                Mottak av pasient (info)
+                <i>Under står det fakta, men dette er enkelt å endre da dette er fra tidligere informasjon fra dere. Også utseende osv.. er enkel fiks.</i>
+        </section>
+
+        <div class="content-grid">
+            <!-- Venstre kolonne - Prosess -->
+            <section class="accordion-section">
+                <h2>Prosess</h2>
+
+                <details class="accordion-item">
+                <summary>Presentasjon / Informasjon / Avklaringer</summary>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Informasjon</li>
+                        <li>Informasjon</li>
+                        <li>Informasjon</li>
+                    </ul>
+                </div>
+                </details>
+
+                <details class="accordion-item">
+                <summary>Informasjon til fastlege</summary>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Informasjon</li>
+                        <li>Informasjon</li>
+                    </ul>
+                </div>
+                </details>
+
+                <details class="accordion-item">
+                <summary>Planlegging / Palliativt plan</summary>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Informasjon</li>
+                        <li>Informasjon</li>
+                    </ul>
+                </div>
+                </details>
+            </section>
+
+            <!-- Høyre kolonne - Infopunkter -->
+            <section class="info-section">
+                <h2>Viktige infopunkter</h2>
+                <div class="info-card">
+                    <h3>Dokumentasjon</h3>
+                    <p>Beskrivelse av infopunktet som skal være her.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Pårørendestøtte</h3>
+                    <p>Beskrivelse av infopunktet som skal være her.</p>
+                    <details class="info-details">
+                        <summary>Barn som pårørende</summary>
+                        <p>Informasjon om hvordan barn som pårørende skal håndteres og støttes i situasjonen.</p>
+                    </details>
+                </div>
+                <div class="info-card">
+                    <h3>Hjelpemidler / Fysio</h3>
+                    <p>Beskrivelse av infopunktet som skal være her.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Ressurssykepleier / Primærkontakt</h3>
+                    <p>Beskrivelse av infopunktet som skal være her.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© Beslutningsstøtte – Palliativ behandling</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
