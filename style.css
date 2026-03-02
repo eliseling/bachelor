@@ -82,6 +82,12 @@ button:focus-visible{
   font-weight: 800;
 }
 
+.site-title-link {
+    display: block;
+    text-decoration: none; /* prevents underline */
+    color: inherit;        /* keeps existing text color */
+}
+
 .menuHref{
   display: flex;
   align-items: center;
