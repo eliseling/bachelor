@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beslutningsstøtteverktøy - palliativt pasientforløp</title>
+    <title>Identifisering av palliativ pasient</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -62,7 +62,7 @@
                     <a href="#" role="menuitem">Våketjenesten</a>
                 </div>
                 </div>
-
+                
                 <!-- Desktop Search dropdown -->
                 <div class="dropdown search-desktop">
                 <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false" aria-controls="searchDesktopMenu">
@@ -81,31 +81,53 @@
         </div>
     </header>
     <main class="container">
-        <h1>Hjemmetid og Hjemmedød</h1>
-        <!-- 4 steg som pasientforløp -->
-        <section class="steps">
-            <div class="flow">
-                <a class="step-card" href="identifisering.html" aria-label="Identifisering av palliativ pasient">
-                    <h2>Identifisering av palliativ pasient</h2>
-                    <p class="step-desc">Mottak av melding, avklaring av ansvar og oppstart av oppfølging.</p>
-                </a>
-                <span class="arrow" aria-hidden="true">→</span>
-                <a class="step-card" href="mottak.html" aria-label="Mottak av pasient">
-                    <h2>Mottak av pasient</h2>
-                    <p class="step-desc">Kartlegging av behov, tiltak, samhandling og plan for videre forløp.</p>
-                </a>
-                <span class="arrow" aria-hidden="true">→</span>
-                <a class="step-card" href="hjemmetid.html" aria-label="Hjemmetid">
-                    <h2>Hjemmetid</h2>
-                    <p class="step-desc">Forventningsavklaring, mål for behandling og plan for akutte situasjoner.</p>
-                </a>
-                <span class="arrow" aria-hidden="true">→</span>
-                <a class="step-card" href="hjemmedod.html" aria-label="Pasient død hjemme">
-                    <h2>Pasient død hjemme</h2>
-                    <p class="step-desc">Rutiner, dokumentasjon og ivaretakelse av pårørende/etterlatte.</p>
-                </a>
-            </div>
+        <section class="page-intro">
+            <h1>Identifisering av palliativ pasient</h1>
+            <p>
+                Identifisering av palliativ pasient (info)
         </section>
+
+        <div class="content-grid">
+            <!-- Venstre kolonne - Prosess -->
+            <section class="accordion-section">
+                <h2>Prosess</h2>
+                <details class="accordion-item">
+                <summary>Bestillerkontor innhenter opplysninger</summary>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Informasjon</li>
+                        <li>Informasjon</li>
+                        <li>Informasjon</li>
+                    </ul>
+                </div>
+                </details>
+            </section>
+
+            <!-- Høyre kolonne - Infopunkter -->
+            <section class="info-section">
+                <h2>Viktige infopunkter</h2>
+                <div class="info-card">
+                    <h3>Dokumentasjon</h3>
+                    <p>Beskrivelse av infopunktet som skal være her.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Pårørendestøtte</h3>
+                    <p>Beskrivelse av infopunktet som skal være her.</p>
+                    <details class="info-details">
+                        <summary>Barn som pårørende</summary>
+                        <p>Informasjon om hvordan barn som pårørende skal håndteres og støttes i situasjonen.</p>
+                    </details>
+                </div>
+                <div class="info-card">
+                    <h3>Hjelpemidler / Fysio</h3>
+                    <p>Beskrivelse av infopunktet som skal være her.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Ressurssykepleier / Primærkontakt</h3>
+                    <p>Beskrivelse av infopunktet som skal være her.</p>
+                </div>
+            </section>
+        </div>
     </main>
     <footer class="footer">
         <p>© Beslutningsstøtte – Palliativ behandling</p>

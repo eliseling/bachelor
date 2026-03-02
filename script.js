@@ -43,12 +43,12 @@ if (stepsBtn && stepsMenu) {
 const followupBtn = document.getElementById("followupBtn");
 const followupMenu = document.getElementById("followupMenu");
 
-// Desktop search (inside menu)
+// Desktop search input and results (shown via separate dropdown button)
 const searchInputDesktop = document.getElementById("searchInputDesktop");
 const searchResultsDesktop = document.getElementById("searchResultsDesktop");
 
 if (searchInputDesktop && searchResultsDesktop) {
-  // Prevent menu from closing when clicking on search input
+  // Prevent dropdown menu from closing when clicking on search input
   searchInputDesktop.addEventListener("click", (e) => {
     e.stopPropagation();
   });
@@ -94,7 +94,8 @@ if (searchInputDesktop && searchResultsDesktop) {
         </div>
       `).join("");
 
-      document.querySelectorAll("#followupMenu .search-result-item").forEach((item, index) => {
+      // attach click handlers to items in the results container
+      searchResultsDesktop.querySelectorAll('.search-result-item').forEach((item, index) => {
         item.addEventListener("click", () => {
           results[index].element.scrollIntoView({ behavior: "smooth", block: "center" });
           results[index].element.style.backgroundColor = "rgba(43,179,163,0.2)";
@@ -120,6 +121,26 @@ if (followupBtn && followupMenu) {
     if (followupMenu.classList.contains("show")) {
       followupMenu.classList.remove("show");
       followupBtn.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+// Desktop search dropdown toggle
+const searchDesktopBtnElm = document.getElementById("searchDesktopBtn");
+const searchDesktopMenu = document.getElementById("searchDesktopMenu");
+if (searchDesktopBtnElm && searchDesktopMenu) {
+  searchDesktopBtnElm.addEventListener("click", (e) => {
+    e.stopPropagation();
+    searchDesktopMenu.classList.toggle("show");
+
+    const expanded = searchDesktopMenu.classList.contains("show");
+    searchDesktopBtnElm.setAttribute("aria-expanded", expanded ? "true" : "false");
+  });
+
+  document.addEventListener("click", () => {
+    if (searchDesktopMenu.classList.contains("show")) {
+      searchDesktopMenu.classList.remove("show");
+      searchDesktopBtnElm.setAttribute("aria-expanded", "false");
     }
   });
 }
