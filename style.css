@@ -671,6 +671,9 @@ main.container{
   .followup-desktop { display: block; }
   .search-desktop { display: block; }
 
+  /* hide the mobile search input when showing desktop layout */
+  .dropdownSteps .search-container { display: none; }
+
   /* tighten spacing for desktop so everything fits without scrolling */
   .steps{
     gap: 8px;
