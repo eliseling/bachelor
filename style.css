@@ -661,6 +661,22 @@ main.container{
   color: #ffffff;
 }
 
+.extra-section {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+.extra-section ul li a {
+  color: var(--brand-dark);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.extra-section ul li a:hover {
+  text-decoration: underline;
+}
+
 .footer{
   padding: 20px;
   text-align: center;
