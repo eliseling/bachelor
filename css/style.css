@@ -122,13 +122,13 @@ button:focus-visible{
 }
 
 .dropbtn{
-  background: rgba(255,255,255,0.1);
+  background: transparent;
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid transparent;
   padding: 8px 12px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   transition: background 0.15s ease;
 }
@@ -295,11 +295,12 @@ button:focus-visible{
 .search-btn{
   padding: 8px 10px;
   font-size: 16px;
-  background: rgba(255,255,255,0.1);
+  background: transparent !important;
+  border: solid 1px rgba(255,255,255,0.15) !important;
 }
 
 .search-btn:hover{
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.2) !important;
 }
 
 .search-container-desktop{
@@ -895,6 +896,19 @@ main.container{
   .step-desc{
     font-size: 15px;
   }
+}
+
+.back-link{
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  max-width: 80px;
+}
+.back-link:hover{
+  text-decoration: underline;
 }
 
 /*Steg-sider*/
