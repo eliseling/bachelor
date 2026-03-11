@@ -259,6 +259,13 @@ button:focus-visible{
   gap: 10px;
 }
 
+.page-intro{
+  padding: 24px 24px 24px 24px;
+  border-radius: var(--radius);
+  background-color: #f4f8f8;
+  border: 2px solid var(--border);
+}
+
 /* persistent page navigation bar for step pages */
 .page-nav{
   padding: 8px 16px;
