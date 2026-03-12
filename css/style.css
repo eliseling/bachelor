@@ -124,7 +124,7 @@ button:focus-visible{
 .dropbtn{
   background: transparent;
   color: #fff;
-  border: 1px solid transparent;
+  border: solid 1px rgba(255,255,255,0.15);
   padding: 8px 12px;
   border-radius: 10px;
   cursor: pointer;
@@ -137,6 +137,11 @@ button:focus-visible{
   background: rgba(255,255,255,0.2);
 }
 
+.dropbtn svg{
+  width: 16px;
+  height: 16px;
+}
+
 .dropdown-content,
 .dropdownSteps{
   display: none;
@@ -144,7 +149,7 @@ button:focus-visible{
   right: 0;
   top: calc(100% + 10px);
   min-width: 260px;
-  background: var(--surface);
+  background: linear-gradient(180deg, var(--brand) 0%, var(--brand-dark) 100%);
   border: 1px solid var(--border);
   border-radius: 14px;
   box-shadow: var(--shadow);
@@ -162,7 +167,7 @@ button:focus-visible{
   display: block;
   padding: 12px 14px;
   text-decoration: none;
-  color: var(--text);
+  color: #ffffff;
   font-size: 14px;
   border-left: 3px solid transparent;
   transition: background 0.15s ease, border-color 0.15s ease;
@@ -170,9 +175,8 @@ button:focus-visible{
 
 .dropdown-content a:hover,
 .dropdownSteps a:hover{
-  background: rgba(43,179,163,0.10);
   border-left-color: var(--accent);
-  color: var(--brand);
+  color: var(--accent);
 }
 
 .dropdown-content a.active,
@@ -180,7 +184,7 @@ button:focus-visible{
   background: rgba(43,179,163,0.15);
   font-weight: 800;
   border-left-color: var(--accent);
-  color: var(--brand);
+  color: var(--accent);
 }
 
 .dropdown-divider{
@@ -295,8 +299,6 @@ button:focus-visible{
 .search-btn{
   padding: 8px 10px;
   font-size: 16px;
-  background: transparent !important;
-  border: solid 1px rgba(255,255,255,0.15) !important;
 }
 
 .search-btn:hover{
@@ -506,6 +508,11 @@ button:focus-visible{
 
 .search-btn:hover{
   background: rgba(255,255,255,0.2);
+}
+
+.search-btn svg{
+  width: 16px;
+  height: 16px;
 }
 
 .search-container-desktop{
@@ -803,6 +810,7 @@ main.container{
 
 .group-label{
   font-weight: 700;
+  color: #ffffff;
 }
 
 .group-content{
