@@ -264,6 +264,23 @@ window.addEventListener('scroll', () => {
 });
 topBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
 
+const btn = document.getElementById("stepsBtn");
+const menu = document.getElementById("stepsMenu");
+
+btn.addEventListener("click", () => {
+  const isOpen = menu.classList.toggle("open");
+
+  btn.setAttribute("aria-expanded", isOpen);
+
+  if (isOpen) {
+    btn.innerHTML = 'Lukk <i data-lucide="x"></i>';
+  } else {
+    btn.innerHTML = 'Meny <i data-lucide="menu"></i>';
+  }
+
+  lucide.createIcons();
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   lucide.createIcons();
 });
