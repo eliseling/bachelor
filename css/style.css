@@ -142,6 +142,15 @@ button:focus-visible{
   height: 16px;
 }
 
+.chev{
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+#followupBtn[aria-expanded="true"] .chev{
+  transform: rotate(180deg);
+}
+
 .dropdown-content,
 .dropdownSteps{
   display: none;
