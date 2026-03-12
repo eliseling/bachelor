@@ -273,9 +273,9 @@ btn.addEventListener("click", () => {
   btn.setAttribute("aria-expanded", isOpen);
 
   if (isOpen) {
-    btn.innerHTML = 'Lukk <i data-lucide="x"></i>';
+    btn.innerHTML = '<i data-lucide="x"></i>';
   } else {
-    btn.innerHTML = 'Meny <i data-lucide="menu"></i>';
+    btn.innerHTML = '<i data-lucide="menu"></i>';
   }
 
   lucide.createIcons();
