@@ -235,9 +235,9 @@ button:focus-visible{
 .search-result-item{
   padding: 10px 12px;
   font-size: 13px;
-  color: var(--text);
   background: rgba(43,179,163,0.05);
   border-left: 3px solid var(--accent);
+  color: #fff;
   cursor: pointer;
   transition: background 0.15s ease;
   margin-bottom: 4px;
@@ -250,20 +250,21 @@ button:focus-visible{
 
 .search-result-type{
   font-size: 11px;
-  color: var(--muted);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color: #fff !important;
 }
 
 .search-result-text{
   margin-top: 2px;
+  color: #fff;
 }
 
 .search-no-results{
   padding: 20px 12px;
   text-align: center;
-  color: var(--muted);
+  color: #fff;
   font-size: 13px;
 }
 
