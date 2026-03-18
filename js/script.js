@@ -61,25 +61,22 @@ if (searchInputDesktop && searchResultsDesktop) {
       return;
     }
 
+    if (!searchIndex) {
+      searchResultsDesktop.innerHTML = '<div class="search-no-results">Laster søkeindeks...</div>';
+      return;
+    }
+
     const results = [];
-    const elementsToSearch = document.querySelectorAll("h1, h2, h3, h4, p, li, summary, .info-card h3, .info-card-blue h3");
+    const seen = new Set();
     
-    elementsToSearch.forEach((element) => {
-      const text = element.textContent.toLowerCase();
+    searchIndex.forEach((item) => {
+      const text = item.text.toLowerCase();
       
       if (text.includes(query)) {
-        const isDuplicate = results.some(r => r.text === element.textContent);
-        if (!isDuplicate) {
-          let type = "Innhold";
-          if (element.tagName.match(/^H[1-4]$/)) {
-            type = "Overskrift";
-          }
-          
-          results.push({
-            text: element.textContent.substring(0, 60) + (element.textContent.length > 60 ? "..." : ""),
-            type: type,
-            element: element
-          });
+        const key = `${item.page}:${item.text}`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          results.push(item);
         }
       }
     });
@@ -89,19 +86,38 @@ if (searchInputDesktop && searchResultsDesktop) {
     } else {
       searchResultsDesktop.innerHTML = results.map((result, index) => `
         <div class="search-result-item" data-index="${index}">
-          <div class="search-result-type">${result.type}</div>
-          <div class="search-result-text">${result.text}</div>
+          <div class="search-result-type">${result.type} - ${result.pageTitle}</div>
+          <div class="search-result-text">${result.displayText}</div>
         </div>
       `).join("");
 
       // attach click handlers to items in the results container
       searchResultsDesktop.querySelectorAll('.search-result-item').forEach((item, index) => {
         item.addEventListener("click", () => {
-          results[index].element.scrollIntoView({ behavior: "smooth", block: "center" });
-          results[index].element.style.backgroundColor = "rgba(43,179,163,0.2)";
-          setTimeout(() => {
-            results[index].element.style.backgroundColor = "";
-          }, 1500);
+          const result = results[index];
+          
+          if (result.isCurrentPage) {
+            // Search in current page and scroll to element
+            const elementsToSearch = document.querySelectorAll("h1, h2, h3, h4, p, li, summary, .info-card h3, .info-card-blue h3");
+            let foundElement = null;
+            
+            elementsToSearch.forEach((element) => {
+              if (element.textContent.trim() === result.text) {
+                foundElement = element;
+              }
+            });
+            
+            if (foundElement) {
+              foundElement.scrollIntoView({ behavior: "smooth", block: "center" });
+              foundElement.style.backgroundColor = "rgba(43,179,163,0.2)";
+              setTimeout(() => {
+                foundElement.style.backgroundColor = "";
+              }, 1500);
+            }
+          } else {
+            // Navigate to other page with search query as parameter
+            window.location.href = result.page + '?search=' + encodeURIComponent(query);
+          }
         });
       });
     }
@@ -179,11 +195,68 @@ document.querySelectorAll('.group-toggle').forEach(btn => {
   });
 });
 
-// Søkefunksjonalitet
+// Cross-page search functionality
+const allPages = [
+  { url: 'index.html', title: 'Forside' },
+  { url: 'identifisering.html', title: 'Identifisering' },
+  { url: 'mottak.html', title: 'Mottak' },
+  { url: 'hjemmetid.html', title: 'Hjemmetid' },
+  { url: 'hjemmedod.html', title: 'Hjemmedød' },
+  { url: 'vaketjeneste.html', title: 'Våketjenesten' }
+];
+
+let searchIndex = null;
+
+// Build search index from all pages
+async function buildSearchIndex() {
+  const index = [];
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  
+  for (const page of allPages) {
+    try {
+      const response = await fetch(page.url);
+      const html = await response.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      
+      const elementsToSearch = doc.querySelectorAll("h1, h2, h3, h4, p, li, summary, .info-card h3, .info-card-blue h3");
+      
+      elementsToSearch.forEach((element) => {
+        const text = element.textContent.trim();
+        if (text && !element.classList.contains("search-field")) {
+          let type = "Innhold";
+          if (element.tagName.match(/^H[1-4]$/)) {
+            type = "Overskrift";
+          }
+          
+          index.push({
+            text: text,
+            displayText: text.substring(0, 60) + (text.length > 60 ? "..." : ""),
+            type: type,
+            page: page.url,
+            pageTitle: page.title,
+            isCurrentPage: page.url === currentPage
+          });
+        }
+      });
+    } catch (error) {
+      console.error(`Failed to load ${page.url}:`, error);
+    }
+  }
+  
+  return index;
+}
+
+// Søkefunksjonalitet (Mobile)
 const searchInput = document.getElementById("searchInput");
 const searchResults = document.getElementById("searchResults");
 
 if (searchInput) {
+  // Build index on page load
+  buildSearchIndex().then(index => {
+    searchIndex = index;
+  });
+
   // Prevent menu from closing when clicking on search input
   searchInput.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -197,30 +270,22 @@ if (searchInput) {
       return;
     }
 
+    if (!searchIndex) {
+      searchResults.innerHTML = '<div class="search-no-results">Laster søkeindeks...</div>';
+      return;
+    }
+
     const results = [];
+    const seen = new Set();
     
-    // Søk i alle h1, h2, h3, h4, p, li, summary elementer
-    const elementsToSearch = document.querySelectorAll("h1, h2, h3, h4, p, li, summary, .info-card h3, .info-card-blue h3");
-    
-    elementsToSearch.forEach((element) => {
-      const text = element.textContent.toLowerCase();
+    searchIndex.forEach((item) => {
+      const text = item.text.toLowerCase();
       
       if (text.includes(query)) {
-        // Unngå duplikater
-        const isDuplicate = results.some(r => r.text === element.textContent);
-        if (!isDuplicate) {
-          let type = "Innhold";
-          if (element.tagName.match(/^H[1-4]$/)) {
-            type = "Overskrift";
-          } else if (element.classList.contains("search-field")) {
-            return;
-          }
-          
-          results.push({
-            text: element.textContent.substring(0, 60) + (element.textContent.length > 60 ? "..." : ""),
-            type: type,
-            element: element
-          });
+        const key = `${item.page}:${item.text}`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          results.push(item);
         }
       }
     });
@@ -231,25 +296,44 @@ if (searchInput) {
     } else {
       searchResults.innerHTML = results.map((result, index) => `
         <div class="search-result-item" data-index="${index}">
-          <div class="search-result-type">${result.type}</div>
-          <div class="search-result-text">${result.text}</div>
+          <div class="search-result-type">${result.type} - ${result.pageTitle}</div>
+          <div class="search-result-text">${result.displayText}</div>
         </div>
       `).join("");
 
       // Legg til click-handler for søkresultater
       document.querySelectorAll(".search-result-item").forEach((item, index) => {
         item.addEventListener("click", () => {
-          results[index].element.scrollIntoView({ behavior: "smooth", block: "center" });
-          // Lukk menyen
-          if (stepsMenu) {
-            stepsMenu.classList.remove("show");
-            if (stepsBtn) stepsBtn.setAttribute("aria-expanded", "false");
+          const result = results[index];
+          
+          if (result.isCurrentPage) {
+            // Search in current page and scroll to element
+            const elementsToSearch = document.querySelectorAll("h1, h2, h3, h4, p, li, summary, .info-card h3, .info-card-blue h3");
+            let foundElement = null;
+            
+            elementsToSearch.forEach((element) => {
+              if (element.textContent.trim() === result.text) {
+                foundElement = element;
+              }
+            });
+            
+            if (foundElement) {
+              foundElement.scrollIntoView({ behavior: "smooth", block: "center" });
+              foundElement.style.backgroundColor = "rgba(43,179,163,0.2)";
+              setTimeout(() => {
+                foundElement.style.backgroundColor = "";
+              }, 1500);
+            }
+            
+            // Lukk menyen
+            if (stepsMenu) {
+              stepsMenu.classList.remove("show");
+              if (stepsBtn) stepsBtn.setAttribute("aria-expanded", "false");
+            }
+          } else {
+            // Navigate to other page with search query as parameter
+            window.location.href = result.page + '?search=' + encodeURIComponent(query);
           }
-          // Highlight elementet kort
-          results[index].element.style.backgroundColor = "rgba(43,179,163,0.2)";
-          setTimeout(() => {
-            results[index].element.style.backgroundColor = "";
-          }, 1500);
         });
       });
     }
@@ -283,4 +367,35 @@ btn.addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   lucide.createIcons();
+  
+  // Check if page was loaded with a search parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchQuery = urlParams.get('search');
+  
+  if (searchQuery) {
+    // Wait a bit for page to fully render
+    setTimeout(() => {
+      const elementsToSearch = document.querySelectorAll("h1, h2, h3, h4, p, li, summary, .info-card h3, .info-card-blue h3");
+      let foundElement = null;
+      const queryLower = searchQuery.toLowerCase();
+      
+      // Find first element that contains the search query
+      elementsToSearch.forEach((element) => {
+        if (!foundElement && element.textContent.toLowerCase().includes(queryLower)) {
+          foundElement = element;
+        }
+      });
+      
+      if (foundElement) {
+        foundElement.scrollIntoView({ behavior: "smooth", block: "center" });
+        foundElement.style.backgroundColor = "rgba(43,179,163,0.2)";
+        setTimeout(() => {
+          foundElement.style.backgroundColor = "";
+        }, 1500);
+        
+        // Clean up URL
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+    }, 300);
+  }
 });
