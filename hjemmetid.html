@@ -37,7 +37,7 @@
                 <!-- Søkefelt -->
                 <div class="search-container">
                     <input type="text" id="searchInput" class="search-field" placeholder="Søk..." aria-label="Søk i innholdet">
-                    <div class="search-results" id="searchResults"></div>
+                    <div class="search-results" id="searchResults" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
                 </div>
                 <div class="dropdown-group" id="group-nav">
                   <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-nav-content">
@@ -96,7 +96,7 @@
                 <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
                     <div class="search-container-desktop">
                         <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..." aria-label="Søk i innholdet">
-                        <div class="search-results-desktop" id="searchResultsDesktop"></div>
+                        <div class="search-results-desktop" id="searchResultsDesktop" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
                     </div>
                 </div>
                 </div>
@@ -105,7 +105,12 @@
         </div>
     </header>
     <main id="main" class="container">
-        <a href="index.html" class="back-link">&larr; Tilbake</a>
+        <div class="nav-row">
+            <a href="#" class="back-link" aria-label="Tilbake" title="Tilbake">
+                <i data-lucide="arrow-left"></i>
+            </a>
+            <nav class="breadcrumb-nav" aria-label="Brødsmuler"></nav>
+        </div>
         <section class="page-intro">
             <h1>Hjemmetid</h1>
             <p>
