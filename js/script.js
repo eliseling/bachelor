@@ -43,6 +43,64 @@ if (stepsBtn && stepsMenu) {
 const followupBtn = document.getElementById("followupBtn");
 const followupMenu = document.getElementById("followupMenu");
 
+// Helper function to find and highlight search result
+function highlightSearchResult(targetText) {
+  const elementsToSearch = document.querySelectorAll("h1, h2, h3, h4, p, li, summary, .info-card h3, .info-card-blue h3");
+  let foundElement = null;
+  
+  elementsToSearch.forEach((element) => {
+    if (element.textContent.trim() === targetText) {
+      foundElement = element;
+    }
+  });
+  
+  if (foundElement) {
+    let elementToHighlight = foundElement;
+    
+    // Check if element is inside a <details> accordion
+    const detailsAccordion = foundElement.closest('details.accordion-item');
+    if (detailsAccordion) {
+      // Find the summary inside this details element
+      const summary = detailsAccordion.querySelector('summary');
+      if (summary) {
+        // Open the details element
+        detailsAccordion.open = true;
+        elementToHighlight = summary;
+      }
+    }
+    
+    // Check if element is inside a .dropdown-group accordion
+    const dropdownAccordion = foundElement.closest('.dropdown-group');
+    if (dropdownAccordion) {
+      const toggle = dropdownAccordion.querySelector('.group-toggle');
+      const content = dropdownAccordion.querySelector('.group-content');
+      
+      // If accordion is not expanded, expand it
+      if (!dropdownAccordion.classList.contains('expanded')) {
+        dropdownAccordion.classList.add('expanded');
+        if (toggle) toggle.setAttribute('aria-expanded', 'true');
+        if (content) content.style.maxHeight = content.scrollHeight + 'px';
+      }
+      
+      if (toggle) {
+        elementToHighlight = toggle;
+      }
+    }
+    
+    // Scroll to and highlight the element
+    elementToHighlight.scrollIntoView({ behavior: "smooth", block: "center" });
+    elementToHighlight.style.backgroundColor = "rgba(41, 152, 139, 0.54)";
+    
+    setTimeout(() => {
+      elementToHighlight.style.backgroundColor = "";
+    }, 1500);
+    
+    return true;
+  }
+  
+  return false;
+}
+
 // Desktop search input and results (shown via separate dropdown button)
 const searchInputDesktop = document.getElementById("searchInputDesktop");
 const searchResultsDesktop = document.getElementById("searchResultsDesktop");
@@ -97,26 +155,10 @@ if (searchInputDesktop && searchResultsDesktop) {
           const result = results[index];
           
           if (result.isCurrentPage) {
-            // Search in current page and scroll to element
-            const elementsToSearch = document.querySelectorAll("h1, h2, h3, h4, p, li, summary, .info-card h3, .info-card-blue h3");
-            let foundElement = null;
-            
-            elementsToSearch.forEach((element) => {
-              if (element.textContent.trim() === result.text) {
-                foundElement = element;
-              }
-            });
-            
-            if (foundElement) {
-              foundElement.scrollIntoView({ behavior: "smooth", block: "center" });
-              foundElement.style.backgroundColor = "rgba(43,179,163,0.2)";
-              setTimeout(() => {
-                foundElement.style.backgroundColor = "";
-              }, 1500);
-            }
+            highlightSearchResult(result.text);
           } else {
-            // Navigate to other page with search query as parameter
-            window.location.href = result.page + '?search=' + encodeURIComponent(query);
+            // Navigate to other page with full text as parameter
+            window.location.href = result.page + '?search=' + encodeURIComponent(result.text);
           }
         });
       });
@@ -307,23 +349,7 @@ if (searchInput) {
           const result = results[index];
           
           if (result.isCurrentPage) {
-            // Search in current page and scroll to element
-            const elementsToSearch = document.querySelectorAll("h1, h2, h3, h4, p, li, summary, .info-card h3, .info-card-blue h3");
-            let foundElement = null;
-            
-            elementsToSearch.forEach((element) => {
-              if (element.textContent.trim() === result.text) {
-                foundElement = element;
-              }
-            });
-            
-            if (foundElement) {
-              foundElement.scrollIntoView({ behavior: "smooth", block: "center" });
-              foundElement.style.backgroundColor = "rgba(43,179,163,0.2)";
-              setTimeout(() => {
-                foundElement.style.backgroundColor = "";
-              }, 1500);
-            }
+            highlightSearchResult(result.text);
             
             // Lukk menyen
             if (stepsMenu) {
@@ -331,8 +357,8 @@ if (searchInput) {
               if (stepsBtn) stepsBtn.setAttribute("aria-expanded", "false");
             }
           } else {
-            // Navigate to other page with search query as parameter
-            window.location.href = result.page + '?search=' + encodeURIComponent(query);
+            // Navigate to other page with full text as parameter
+            window.location.href = result.page + '?search=' + encodeURIComponent(result.text);
           }
         });
       });
@@ -375,27 +401,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (searchQuery) {
     // Wait a bit for page to fully render
     setTimeout(() => {
-      const elementsToSearch = document.querySelectorAll("h1, h2, h3, h4, p, li, summary, .info-card h3, .info-card-blue h3");
-      let foundElement = null;
-      const queryLower = searchQuery.toLowerCase();
+      highlightSearchResult(searchQuery);
       
-      // Find first element that contains the search query
-      elementsToSearch.forEach((element) => {
-        if (!foundElement && element.textContent.toLowerCase().includes(queryLower)) {
-          foundElement = element;
-        }
-      });
-      
-      if (foundElement) {
-        foundElement.scrollIntoView({ behavior: "smooth", block: "center" });
-        foundElement.style.backgroundColor = "rgba(43,179,163,0.2)";
-        setTimeout(() => {
-          foundElement.style.backgroundColor = "";
-        }, 1500);
-        
-        // Clean up URL
-        window.history.replaceState({}, document.title, window.location.pathname);
-      }
+      // Clean up URL
+      window.history.replaceState({}, document.title, window.location.pathname);
     }, 300);
   }
 });
