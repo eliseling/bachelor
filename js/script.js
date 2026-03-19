@@ -391,6 +391,59 @@ btn.addEventListener("click", () => {
   lucide.createIcons();
 });
 
+// Breadcrumb and navigation system
+const pageMap = {
+  'index.html': { title: 'Forside', position: 0, previousPage: null },
+  'identifisering.html': { title: 'Identifisering', position: 1, previousPage: 'index.html' },
+  'mottak.html': { title: 'Mottak', position: 2, previousPage: 'identifisering.html' },
+  'hjemmetid.html': { title: 'Hjemmetid', position: 3, previousPage: 'mottak.html' },
+  'hjemmedod.html': { title: 'Pasient død hjemme', position: 4, previousPage: 'hjemmetid.html' },
+  'vaketjeneste.html': { title: 'Våketjenesten', position: 0, previousPage: 'index.html' }
+};
+
+function generateBreadcrumbs() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const breadcrumbContainer = document.querySelector('.breadcrumb-nav');
+  
+  if (!breadcrumbContainer) return;
+  
+  const pageInfo = pageMap[currentPage];
+  if (!pageInfo) return;
+  
+  let breadcrumbHTML = '<a href="index.html">Forside</a>';
+  
+  if (currentPage !== 'index.html' && pageInfo.position > 0) {
+    breadcrumbHTML += ` <span class="breadcrumb-separator">/</span> <span class="breadcrumb-current">${pageInfo.title}</span>`;
+  }
+  
+  breadcrumbContainer.innerHTML = breadcrumbHTML;
+}
+
+// Handle back button - goes to previous step in workflow (option B)
+function setupBackButton() {
+  const backLink = document.querySelector('.back-link');
+  if (backLink) {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const pageInfo = pageMap[currentPage];
+    
+    // Hide back button on index.html, identifisering.html, and vaketjeneste.html
+    const pagesWithoutBack = ['index.html', 'identifisering.html', 'vaketjeneste.html'];
+    
+    if (!pagesWithoutBack.includes(currentPage) && pageInfo && pageInfo.previousPage) {
+      backLink.href = pageInfo.previousPage;
+      backLink.classList.add('visible');
+    }
+    // Back button stays hidden for excluded pages
+  }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+  generateBreadcrumbs();
+  setupBackButton();
+  lucide.createIcons();
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   lucide.createIcons();
   

@@ -541,6 +541,9 @@ button:focus-visible{
   padding: 8px 10px;
   font-size: 16px;
   background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .search-btn:hover{
@@ -548,8 +551,9 @@ button:focus-visible{
 }
 
 .search-btn svg{
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .search-container-desktop{
@@ -973,17 +977,73 @@ main.container{
   }
 }
 
-.back-link{
-  display: inline-block;
+/* Navigation row - breadcrumb and back button */
+.nav-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 20px;
+}
+
+.back-link {
   color: var(--brand);
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
-  max-width: 80px;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  display: none;
+  flex-shrink: 0;
+  padding: 4px;
+  border-radius: 4px;
+  line-height: 1;
+  border-right: 1px solid var(--border);
+  padding-right: 12px;
+  margin-right: 0;
 }
-.back-link:hover{
+
+.back-link:hover {
+  color: var(--accent);
+  transform: translateX(-2px);
+}
+
+.back-link i {
+  display: flex;
+  width: 16px;
+  height: 16px;
+}
+
+.back-link.visible {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Breadcrumb navigation */
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.breadcrumb-nav a {
+  color: var(--brand);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-nav a:hover {
   text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+.breadcrumb-current {
+  color: var(--text);
+  font-weight: 500;
 }
 
 /*Steg-sider*/
