@@ -397,7 +397,7 @@ const pageMap = {
   'identifisering.html': { title: 'Identifisering', position: 1, previousPage: 'index.html' },
   'igangsetting.html': { title: 'Igangsetting', position: 2, previousPage: 'identifisering.html' },
   'hjemmetid.html': { title: 'Hjemmetid', position: 3, previousPage: 'igangsetting.html' },
-  'hjemmedod.html': { title: 'Pasient død hjemme', position: 4, previousPage: 'hjemmetid.html' },
+  'hjemmedod.html': { title: 'Hjemmedød', position: 4, previousPage: 'hjemmetid.html' },
   'vaketjeneste.html': { title: 'Våketjenesten', position: 0, previousPage: 'index.html' }
 };
 
