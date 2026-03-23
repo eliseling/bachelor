@@ -526,6 +526,22 @@ button:focus-visible{
   font-size: 13px;
 }
 
+.no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a {
+  color: var(--brand-dark);
+  text-decoration: underline;
+}
+
+.info-card a {
+  color: var(--brand-dark);
+  text-decoration: underline;
+  font-size: small;
+}
+
 /* desktop search */
 .desktop-controls{
   display: flex;
@@ -1132,7 +1148,7 @@ main.container{
 .info-section h2{
   margin: 0 0 12px;
   font-size: 18px;
-  color: var(--brand);
+  color: var(--brand-dark);
   font-weight: 800;
 }
 
@@ -1186,7 +1202,7 @@ main.container{
 .info-details summary{
   list-style: none;
   cursor: pointer;
-  color: var(--brand);
+  color: var(--brand-dark);
   font-weight: 600;
   font-size: 13px;
   padding: 8px 0;
@@ -1211,7 +1227,7 @@ main.container{
 .info-details p{
   margin: 8px 0 0 20px;
   font-size: 13px;
-  color: var(--muted);
+  color: var(--brand);
   line-height: 1.5;
 }
 
