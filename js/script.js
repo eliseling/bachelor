@@ -241,7 +241,7 @@ document.querySelectorAll('.group-toggle').forEach(btn => {
 const allPages = [
   { url: 'index.html', title: 'Forside' },
   { url: 'identifisering.html', title: 'Identifisering' },
-  { url: 'igangsetting.html', title: 'Mottak' },
+  { url: 'igangsetting.html', title: 'Igangsetting' },
   { url: 'hjemmetid.html', title: 'Hjemmetid' },
   { url: 'hjemmedod.html', title: 'Hjemmedød' },
   { url: 'vaketjeneste.html', title: 'Våketjenesten' }
@@ -395,7 +395,7 @@ btn.addEventListener("click", () => {
 const pageMap = {
   'index.html': { title: 'Forside', position: 0, previousPage: null },
   'identifisering.html': { title: 'Identifisering', position: 1, previousPage: 'index.html' },
-  'igangsetting.html': { title: 'Mottak', position: 2, previousPage: 'identifisering.html' },
+  'igangsetting.html': { title: 'Igangsetting', position: 2, previousPage: 'identifisering.html' },
   'hjemmetid.html': { title: 'Hjemmetid', position: 3, previousPage: 'igangsetting.html' },
   'hjemmedod.html': { title: 'Pasient død hjemme', position: 4, previousPage: 'hjemmetid.html' },
   'vaketjeneste.html': { title: 'Våketjenesten', position: 0, previousPage: 'index.html' }
