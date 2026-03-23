@@ -436,7 +436,7 @@ button:focus-visible{
   border: 1px solid var(--border);
   border-radius: 10px;
   text-decoration: none;
-  width: 100%;
+  width: 108%;
 }
 
 .steps-section {
