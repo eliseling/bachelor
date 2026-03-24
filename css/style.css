@@ -1090,6 +1090,11 @@ main.container{
   overflow: hidden;
 }
 
+.accordion-item-green {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.12) 0%, rgba(76, 175, 80, 0.06) 100%);
+  border-color: rgba(76, 175, 80, 0.5);
+}
+
 .accordion-item:hover{
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
   filter: brightness(1.05);
