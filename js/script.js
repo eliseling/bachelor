@@ -90,6 +90,7 @@ function highlightSearchResult(targetText) {
     // Scroll to and highlight the element
     elementToHighlight.scrollIntoView({ behavior: "smooth", block: "center" });
     elementToHighlight.style.backgroundColor = "rgba(41, 152, 139, 0.54)";
+    elementToHighlight.style.borderRadius = "8px";
     
     setTimeout(() => {
       elementToHighlight.style.backgroundColor = "";
