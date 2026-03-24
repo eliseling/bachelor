@@ -1090,11 +1090,6 @@ main.container{
   overflow: hidden;
 }
 
-.accordion-item-green {
-  background: linear-gradient(135deg, rgba(76, 175, 80, 0.12) 0%, rgba(76, 175, 80, 0.06) 100%);
-  border-color: rgba(76, 175, 80, 0.5);
-}
-
 .accordion-item:hover{
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
   filter: brightness(1.05);
@@ -1128,6 +1123,21 @@ main.container{
 
 .accordion-item[open] summary::after{
   transform: rotate(180deg);
+  color: #ffffff;
+}
+
+.accordion-item-green {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.12) 0%, rgba(76, 175, 80, 0.06) 100%);
+  border-color: var(--brand-dark);
+}
+
+.accordion-item-green[open] summary {
+  background: var(--brand);
+  color: #ffffff;
+  border-color: var(--brand-dark);
+}
+
+.accordion-item-green[open] summary::after {
   color: #ffffff;
 }
 
