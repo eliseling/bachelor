@@ -408,10 +408,10 @@ const pageMap = {
   'igangsetting.html': { title: 'Igangsetting', position: 2, previousPage: 'identifisering.html' },
   'hjemmetid.html': { title: 'Hjemmetid', position: 3, previousPage: 'igangsetting.html' },
   'hjemmedod.html': { title: 'Hjemmedød', position: 4, previousPage: 'hjemmetid.html' },
-  'vaketjeneste.html': { title: 'Våketjenesten', position: 0, previousPage: 'index.html' },
-  'dokumentasjon.html': { title: 'Dokumentasjon', position: 0, previousPage: 'index.html' },
-  'lenker.html': { title: 'Lenker', position: 0, previousPage: 'index.html' }
-  'oppfolging.html': { title: 'Oppfølging', position: 5, previousPage: 'hjemmedod.html' }
+  'oppfolging.html': { title: 'Oppfølging', position: 5, previousPage: 'hjemmedod.html' },
+  'vaketjeneste.html': { title: 'Våketjenesten', position: 6, previousPage: 'index.html' },
+  'dokumentasjon.html': { title: 'Dokumentasjon', position: 6, previousPage: 'index.html' },
+  'lenker.html': { title: 'Lenker', position: 6, previousPage: 'index.html' }
 };
 
 function generateBreadcrumbs() {
