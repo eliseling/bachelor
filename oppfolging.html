@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hjemmetid</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Hopp til innhold</a>
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a href="index.html" class="site-title-link">
+            <div class="site-title">
+                <span class="title-main">
+                    Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
+                </span>
+            </div>
+            </a>
+
+           <!-- Page navigation bar (desktop only, hidden on mobile) -->
+            <nav class="page-nav" role="navigation" aria-label="Steg navigasjon">
+                <a href="identifisering.html">Identifisering</a>
+                <a href="igangsetting.html">Igangsetting</a>
+                <a href="hjemmetid.html">Hjemmetid</a>
+                <a href="hjemmedod.html">Hjemmedød</a>
+            </nav>
+
+            <!-- Mobil hamburger -->
+            <div class="dropdown mobile-only">
+            <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu" aria-label="Åpne meny">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
+                <!-- Søkefelt -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-field" placeholder="Søk..." aria-label="Søk i innholdet">
+                    <div class="search-results" id="searchResults" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
+                </div>
+                <div class="dropdown-group" id="group-nav">
+                  <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-nav-content">
+                    <span class="group-label">Navigasjon</span>
+                  </button>
+                  <div class="group-content" id="group-nav-content" role="group">
+                    <a href="identifisering.html" role="menuitem">Identifisering</a>
+                    <a href="igangsetting.html" role="menuitem">Igangsetting</a>
+                    <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
+                    <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
+                  </div>
+                </div>
+
+                <div class="dropdown-group" id="group-followup">
+                  <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-followup-content"><span class="group-label">Samhandling / Ressurspersoner</span></button>
+                  <div class="group-content" id="group-followup-content" role="group">
+                    <a href="#" role="menuitem">Fastlege</a>
+                    <a href="#" role="menuitem">Palliativt team</a>
+                    <a href="#" role="menuitem">Ressurssykepleier</a>
+                    <a href="#" role="menuitem">Kreftkoordinator/<br>demenskoordinator/AKS</a>
+                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
+                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
+                  </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Desktop dropdowns container -->
+            <div class="desktop-controls">
+                <!-- Desktop dropdown (Samhandling / Ressurspersoner) -->
+                <div class="dropdown followup-desktop">
+                <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false" aria-controls="followupMenu">
+                    Samhandling / Ressurspersoner
+                    <span class="chev">▾</span>
+                </button>
+
+                <div class="dropdown-content" id="followupMenu" role="menu">
+                    <a href="#" role="menuitem">Fastlege</a>
+                    <a href="#" role="menuitem">Palliativt team</a>
+                    <a href="#" role="menuitem">Ressurssykepleier</a>
+                    <a href="#" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
+                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
+                </div>
+                </div>
+                
+                <!-- Desktop Search dropdown -->
+                <div class="dropdown search-desktop desktop-only">
+                <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false" aria-controls="searchDesktopMenu">
+                    <i data-lucide="search"></i>
+                    Søk
+                </button>
+
+                <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
+                    <div class="search-container-desktop">
+                        <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..." aria-label="Søk i innholdet">
+                        <div class="search-results-desktop" id="searchResultsDesktop" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main id="main" class="container">
+        <div class="nav-row">
+            <a href="#" class="back-link" aria-label="Tilbake" title="Tilbake">
+                <i data-lucide="arrow-left"></i>
+            </a>
+            <nav class="breadcrumb-nav" aria-label="Brødsmuler"></nav>
+        </div>
+        <section class="page-intro">
+            <h1>Oppfølging av etterlatte</h1>
+            <p>Etterlattsamtaler er en viktig del av palliativ omsorg. Her finner du informasjon om gjennomføring og formål.</p>
+        </section>
+
+        <div class="content-grid">
+            <!-- Venstre kolonne - Prosess og gjennomføring -->
+            <section class="accordion-section">
+                <h2>Gjennomføring</h2>
+
+                <details class="accordion-item">
+                <summary>Formål</summary>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Gi etterlatte mulighet til å stille spørsmål og å reflektere omkring sykeleiet og dødsfallet de har opplevd med sine nærmeste.</li>
+                        <li>Avklare om etterlatte har behov for videre oppfølging av psykiske eller sosiale problemer og gi råd og veiledning i forhold til dette.</li>
+                        <li>Bakgrunn for forbedring av tjenester til døende og deres pårørende.</li>
+                    </ul>
+                </div>
+                </details>
+
+                <details class="accordion-item">
+                <summary>Etter dødsfallet</summary>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Personalet som var til stede ved dødsfallet har ansvaret for å gi ut skriv om etterlattsamtale.</li>
+                        <li>Eventuelt ringe pårørende og koordinere samtalen.</li>
+                        <li>Det er naturlig at den ansatte som var mye i kontakt med pasient/pårørende planlegger etterlattsamtalen.</li>
+                    </ul>
+                </div>
+                </details>
+
+                <details class="accordion-item">
+                <summary>Etterlattesamtalen</summary>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Pårørende kontaktes via telefonen 2-6 uker etter dødsfallet.</li>
+                        <li>Dersom samtale ønskes, skal tidspunkt avtales og noteres.</li>
+                        <li>Avklare hvor mange som ønsker å delta og hvor de ønsker å treffes.</li>
+                    </ul>
+                </div>
+                </details>
+
+                <details class="accordion-item">
+                <summary>Gjennomføring</summary>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Samtalen beregnes til å vare ca. 1 time.</li>
+                        <li>Server gjerne forfriskninger / kaffe.</li>
+                        <li>Samtalen skal foregå på de pårørendes premisser.</li>
+                        <li>Vi skal være lyttende og tilstede.</li>
+                        <li>Være støttende – sorg oppleves veldig vondt.</li>
+                    </ul>
+                </div>
+                </details>
+
+                <details class="accordion-item">
+                <summary>Forslag til spørsmål</summary>
+                <div class="accordion-content">
+                    <p><strong>Innledende spørsmål:</strong></p>
+                    <ul>
+                        <li>Hvordan var det for deg /dere å komme tilbake hit i dag?</li>
+                        <li>Hvordan har den siste tiden vært for dere?</li>
+                        <li>Hvordan opplevde du den siste tiden før dødsfallet og selve dødsfallet?</li>
+                        <li>Hvordan opplevde du begravelsen og forberedelsene til denne?</li>
+                        <li>Hvordan har tiden etter begravelsen vært for deg?</li>
+                        <li>Vi ønsker å forbedre oss og lurer på om det var noe vi kunne gjort annerledes?</li>
+                        <li>Hvordan ser du på fremtiden?</li>
+                    </ul>
+                    <p><em>Spørsmålene våre skal være ment som en hjelp. De etterlattes behov er avgjørende for hvor mye tid vi bruker på hvert enkelt punkt.</em></p>
+                </div>
+                </details>
+            </section>
+
+            <!-- Høyre kolonne - Infokort -->
+            <section class="info-section">
+                <h2>Viktig å vite</h2>
+                
+                <div class="info-card">
+                    <h3>Tidspunkt for kontakt</h3>
+                    <p>Kontakt pårørende 2-6 uker etter dødsfallet. Da har sjokket som regel lagt seg, spørsmålene begynner å dukke opp, og sorgen begynner å bli litt bedre.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Brosjyre til de etterlatte</h3>
+                    <p>Vi deler ut den fine brosjyren <strong>"Til deg som har mistet en av dine nærmeste"</strong> til pårørende.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Hvorfor etterlattsamtaler er viktige</h3>
+                    <p>Gir mening og forståelse når pårørende sitter igjen med spørsmål som "Gjorde vi det riktige?", "Hadde han/hun smerter?" eller "Kunne vi gjort noe annerledes?"</p>
+                    <p>Helsepersonell kan forklare sykdomsforløpet og hjelpe pårørende å forstå naturlige dødstegn.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Pårørende trenger å høre</h3>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>At det de gjorde var godt nok</li>
+                        <li>At de var viktige for bruker</li>
+                        <li>At de ikke var alene om avgjørelser</li>
+                    </ul>
+                    <p>Dette er avgjørende for sorgprosessen videre.</p>
+                </div>
+
+                <div class="info-card-blue">
+                    <h3>Egne erfaringer</h3>
+                    <p>Etterlattsamtaler oppleves som en viktig del av omsorgen og gir en verdig avslutning på en prosess som kanskje har vart over lang tid i hjemmet.</p>
+                    <p>Det er også en stor hjelp til helsepersonell å få tilbakemeldinger og avklare eventuelt misforståelser.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Ressurser</h3>
+                    <p><a href="https://www.kompetansebroen.no/" target="_blank">Kompetansebroen.no</a> - Ressurs for kompetanse innen palliativ omsorg</p>
+                    <p>Egenerfaring</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Om verktøyet</h4>
+                <p>Utviklet for å støtte palliativ behandling og pasientforløp i helsesektoren.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Steg</h4>
+                <ul>
+                    <li><a href="identifisering.html">Identifisering</a></li>
+                    <li><a href="igangsetting.html">Igangsetting</a></li>
+                    <li><a href="hjemmetid.html">Hjemmetid</a></li>
+                    <li><a href="hjemmedod.html">Hjemmedød</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Ressurser</h4>
+                <ul>
+                    <li><a href="#">Dokumentasjon</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Beslutningsstøtteverktøy – Palliativ behandling</p>
+        </div>
+    </footer>
+
+    <button class="top-btn" id="topBtn" aria-label="Til toppen">↑</button>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
