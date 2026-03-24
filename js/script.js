@@ -193,6 +193,14 @@ if (searchDesktopBtnElm && searchDesktopMenu) {
 
     const expanded = searchDesktopMenu.classList.contains("show");
     searchDesktopBtnElm.setAttribute("aria-expanded", expanded ? "true" : "false");
+    
+    // Auto-focus search input when dropdown opens
+    if (expanded) {
+      const searchInput = document.getElementById("searchInputDesktop");
+      if (searchInput) {
+        setTimeout(() => searchInput.focus(), 100);
+      }
+    }
   });
 
   document.addEventListener("click", () => {
@@ -403,6 +411,7 @@ const pageMap = {
   'vaketjeneste.html': { title: 'Våketjenesten', position: 0, previousPage: 'index.html' },
   'dokumentasjon.html': { title: 'Dokumentasjon', position: 0, previousPage: 'index.html' },
   'lenker.html': { title: 'Lenker', position: 0, previousPage: 'index.html' }
+  'oppfolging.html': { title: 'Oppfølging', position: 5, previousPage: 'hjemmedod.html' }
 };
 
 function generateBreadcrumbs() {
@@ -416,6 +425,15 @@ function generateBreadcrumbs() {
   
   let breadcrumbHTML = '<a href="index.html">Forside</a>';
   
+  // For oppfolging.html, show intermediate page (hjemmedod)
+  if (currentPage === 'oppfolging.html' && pageInfo.previousPage) {
+    const prevPageInfo = pageMap[pageInfo.previousPage];
+    if (prevPageInfo) {
+      breadcrumbHTML += ` <span class="breadcrumb-separator">/</span> <a href="${pageInfo.previousPage}">${prevPageInfo.title}</a>`;
+    }
+  }
+  
+  // Add current page if not index
   if (currentPage !== 'index.html' && pageInfo.position > 0) {
     breadcrumbHTML += ` <span class="breadcrumb-separator">/</span> <span class="breadcrumb-current">${pageInfo.title}</span>`;
   }
@@ -423,28 +441,9 @@ function generateBreadcrumbs() {
   breadcrumbContainer.innerHTML = breadcrumbHTML;
 }
 
-// Handle back button - goes to previous step in workflow (option B)
-function setupBackButton() {
-  const backLink = document.querySelector('.back-link');
-  if (backLink) {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const pageInfo = pageMap[currentPage];
-    
-    // Hide back button on index.html, identifisering.html, and vaketjeneste.html
-    const pagesWithoutBack = ['index.html', 'identifisering.html', 'vaketjeneste.html', 'dokumentasjon.html', 'lenker.html'];
-    
-    if (!pagesWithoutBack.includes(currentPage) && pageInfo && pageInfo.previousPage) {
-      backLink.href = pageInfo.previousPage;
-      backLink.classList.add('visible');
-    }
-    // Back button stays hidden for excluded pages
-  }
-}
-
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
   generateBreadcrumbs();
-  setupBackButton();
   lucide.createIcons();
 });
 
