@@ -399,7 +399,7 @@ const pageMap = {
   'hjemmetid.html': { title: 'Hjemmetid', position: 3, previousPage: 'igangsetting.html' },
   'hjemmedod.html': { title: 'Hjemmedød', position: 4, previousPage: 'hjemmetid.html' },
   'oppfolging.html': { title: 'Oppfølging', position: 5, previousPage: 'hjemmedod.html' },
-  'vaketjeneste.html': { title: 'Våketjenesten', position: 0, previousPage: 'index.html' }
+  'vaketjeneste.html': { title: 'Våketjenesten', position: 6, previousPage: 'index.html' }
 };
 
 function generateBreadcrumbs() {
@@ -429,28 +429,9 @@ function generateBreadcrumbs() {
   breadcrumbContainer.innerHTML = breadcrumbHTML;
 }
 
-// Handle back button - goes to previous step in workflow (option B)
-function setupBackButton() {
-  const backLink = document.querySelector('.back-link');
-  if (backLink) {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const pageInfo = pageMap[currentPage];
-    
-    // Hide back button on index.html, identifisering.html, and vaketjeneste.html
-    const pagesWithoutBack = ['index.html', 'identifisering.html', 'vaketjeneste.html'];
-    
-    if (!pagesWithoutBack.includes(currentPage) && pageInfo && pageInfo.previousPage) {
-      backLink.href = pageInfo.previousPage;
-      backLink.classList.add('visible');
-    }
-    // Back button stays hidden for excluded pages
-  }
-}
-
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
   generateBreadcrumbs();
-  setupBackButton();
   lucide.createIcons();
 });
 
