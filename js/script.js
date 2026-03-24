@@ -245,7 +245,8 @@ const allPages = [
   { url: 'hjemmetid.html', title: 'Hjemmetid' },
   { url: 'hjemmedod.html', title: 'Hjemmedød' },
   { url: 'vaketjeneste.html', title: 'Våketjenesten' },
-  { url: 'dokumentasjon.html', title: 'Dokumentasjon' }
+  { url: 'dokumentasjon.html', title: 'Dokumentasjon' },
+  { url: 'lenker.html', title: 'Lenker' }
 ];
 
 let searchIndex = null;
@@ -400,7 +401,8 @@ const pageMap = {
   'hjemmetid.html': { title: 'Hjemmetid', position: 3, previousPage: 'igangsetting.html' },
   'hjemmedod.html': { title: 'Hjemmedød', position: 4, previousPage: 'hjemmetid.html' },
   'vaketjeneste.html': { title: 'Våketjenesten', position: 0, previousPage: 'index.html' },
-  'dokumentasjon.html': { title: 'Dokumentasjon', position: 0, previousPage: 'index.html' }
+  'dokumentasjon.html': { title: 'Dokumentasjon', position: 0, previousPage: 'index.html' },
+  'lenker.html': { title: 'Lenker', position: 0, previousPage: 'index.html' }
 };
 
 function generateBreadcrumbs() {
@@ -429,7 +431,7 @@ function setupBackButton() {
     const pageInfo = pageMap[currentPage];
     
     // Hide back button on index.html, identifisering.html, and vaketjeneste.html
-    const pagesWithoutBack = ['index.html', 'identifisering.html', 'vaketjeneste.html', 'dokumentasjon.html'];
+    const pagesWithoutBack = ['index.html', 'identifisering.html', 'vaketjeneste.html', 'dokumentasjon.html', 'lenker.html'];
     
     if (!pagesWithoutBack.includes(currentPage) && pageInfo && pageInfo.previousPage) {
       backLink.href = pageInfo.previousPage;
