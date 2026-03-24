@@ -398,6 +398,7 @@ const pageMap = {
   'igangsetting.html': { title: 'Igangsetting', position: 2, previousPage: 'identifisering.html' },
   'hjemmetid.html': { title: 'Hjemmetid', position: 3, previousPage: 'igangsetting.html' },
   'hjemmedod.html': { title: 'Hjemmedød', position: 4, previousPage: 'hjemmetid.html' },
+  'oppfolging.html': { title: 'Oppfølging', position: 5, previousPage: 'hjemmedod.html' },
   'vaketjeneste.html': { title: 'Våketjenesten', position: 0, previousPage: 'index.html' }
 };
 
@@ -412,6 +413,15 @@ function generateBreadcrumbs() {
   
   let breadcrumbHTML = '<a href="index.html">Forside</a>';
   
+  // For oppfolging.html, show intermediate page (hjemmedod)
+  if (currentPage === 'oppfolging.html' && pageInfo.previousPage) {
+    const prevPageInfo = pageMap[pageInfo.previousPage];
+    if (prevPageInfo) {
+      breadcrumbHTML += ` <span class="breadcrumb-separator">/</span> <a href="${pageInfo.previousPage}">${prevPageInfo.title}</a>`;
+    }
+  }
+  
+  // Add current page if not index
   if (currentPage !== 'index.html' && pageInfo.position > 0) {
     breadcrumbHTML += ` <span class="breadcrumb-separator">/</span> <span class="breadcrumb-current">${pageInfo.title}</span>`;
   }

@@ -1134,6 +1134,24 @@ main.container{
   color: var(--text);
 }
 
+.accordion-content ul{
+  margin: 0;
+  padding-left: 20px;
+}
+
+.accordion-content li{
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.accordion-content p{
+  margin: 0 0 12px 0;
+}
+
+.accordion-content p:last-child{
+  margin-bottom: 0;
+}
+
 .accordion-item summary:focus-visible{
   outline: none;
   box-shadow: 0 0 0 4px rgba(43,179,163,0.25);
@@ -1168,10 +1186,26 @@ main.container{
 }
 
 .info-card p{
-  margin: 0;
+  margin: 8px 0 0 0;
   font-size: 14px;
   color: var(--muted);
   line-height: 1.5;
+}
+
+.info-card p:first-child{
+  margin-top: 0;
+}
+
+.info-card ul{
+  margin: 8px 0 0 0;
+  padding-left: 20px;
+}
+
+.info-card li{
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 4px;
 }
 
 .info-card-blue{
@@ -1189,10 +1223,26 @@ main.container{
 }
 
 .info-card-blue p{
-  margin: 0;
+  margin: 8px 0 0 0;
   font-size: 14px;
   color: var(--muted);
   line-height: 1.5;
+}
+
+.info-card-blue p:first-child{
+  margin-top: 0;
+}
+
+.info-card-blue ul{
+  margin: 8px 0 0 0;
+  padding-left: 20px;
+}
+
+.info-card-blue li{
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 4px;
 }
 
 .info-details{
