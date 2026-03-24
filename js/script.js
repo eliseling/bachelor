@@ -193,6 +193,14 @@ if (searchDesktopBtnElm && searchDesktopMenu) {
 
     const expanded = searchDesktopMenu.classList.contains("show");
     searchDesktopBtnElm.setAttribute("aria-expanded", expanded ? "true" : "false");
+    
+    // Auto-focus search input when dropdown opens
+    if (expanded) {
+      const searchInput = document.getElementById("searchInputDesktop");
+      if (searchInput) {
+        setTimeout(() => searchInput.focus(), 100);
+      }
+    }
   });
 
   document.addEventListener("click", () => {
