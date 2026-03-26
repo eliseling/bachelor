@@ -533,13 +533,18 @@ button:focus-visible{
 
 a {
   color: var(--brand-dark);
-  text-decoration: underline;
+  text-decoration: underline solid var(--brand-dark);
 }
 
 .info-card a {
   color: var(--brand-dark);
-  text-decoration: underline;
+  text-decoration: underline solid var(--brand-dark);
   font-size: small;
+}
+
+.info-card a:hover {
+  text-decoration: underline solid var(--accent);
+  color: var(--accent);
 }
 
 /* desktop search */
@@ -742,11 +747,12 @@ main.container{
 
 .extra-section ul li a {
   color: var(--brand-dark);
-  text-decoration: none;
+  text-decoration: underline solid var(--brand-dark);
   transition: color 0.2s;
 }
 .extra-section ul li a:hover {
-  text-decoration: underline;
+  text-decoration: underline solid var(--accent);
+  color: var(--accent);
 }
 
 .footer{
