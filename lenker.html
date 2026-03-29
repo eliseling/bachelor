@@ -1,178 +1,197 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lenker</title>
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenker</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <a href="#main" class="skip-link">Hopp til innhold</a>
-  <header class="site-header">
-    <div class="header-inner">
+    <a href="#main" class="skip-link">Hopp til innhold</a>
+    <header class="site-header">
+        <div class="header-inner">
 
-      <a href="index.html" class="site-title-link">
-      <div class="site-title">
-        <span class="title-main">
-          Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
-        </span>
-      </div>
-      </a>
+            <a href="index.html" class="site-title-link">
+                <div class="site-title">
+                    <span class="title-main">
+                        Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
+                    </span>
+                </div>
+            </a>
 
-      <!-- Page navigation bar (desktop only, hidden on mobile) -->
-      <nav class="page-nav" role="navigation" aria-label="Steg navigasjon">
-        <a href="identifisering.html">Identifisering</a>
-        <a href="igangsetting.html">Igangsetting</a>
-        <a href="hjemmetid.html">Hjemmetid</a>
-        <a href="hjemmedod.html">Hjemmedød</a>
-      </nav>
+            <!-- Page navigation bar (desktop only, hidden on mobile) -->
+            <nav class="page-nav" role="navigation" aria-label="Steg navigasjon">
+                <a href="identifisering.html">Identifisering</a>
+                <a href="igangsetting.html">Igangsetting</a>
+                <a href="hjemmetid.html">Hjemmetid</a>
+                <a href="hjemmedod.html">Hjemmedød</a>
+            </nav>
 
-      <!-- Mobil hamburger -->
-      <div class="dropdown mobile-only">
-      <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu" aria-label="Åpne meny">
-        <i data-lucide="menu"></i>
-      </button>
+            <!-- Mobil hamburger -->
+            <div class="dropdown mobile-only">
+                <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu" aria-label="Åpne meny">
+                    <i data-lucide="menu"></i>
+                </button>
 
-      <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
-        <!-- Søkefelt -->
-        <div class="search-container">
-          <input type="text" id="searchInput" class="search-field" placeholder="Søk..." aria-label="Søk i innholdet">
-          <div class="search-results" id="searchResults" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
+                <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
+                    <!-- Søkefelt -->
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-field" placeholder="Søk..." aria-label="Søk i innholdet">
+                        <div class="search-results" id="searchResults" role="status" aria-live="polite" aria-label="Søkeresultater">
+                        </div>
+                    </div>
+                    <div class="dropdown-group" id="group-nav">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-nav-content">
+                            <span class="group-label">Navigasjon</span>
+                        </button>
+                        <div class="group-content" id="group-nav-content" role="group">
+                            <a href="identifisering.html" role="menuitem">Identifisering</a>
+                            <a href="igangsetting.html" role="menuitem">Igangsetting</a>
+                            <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
+                            <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-group" id="group-followup">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-followup-content"><span class="group-label">Samhandling /
+                                Ressurspersoner</span></button>
+                        <div class="group-content" id="group-followup-content" role="group">
+                            <a href="#" role="menuitem">Fastlege</a>
+                            <a href="#" role="menuitem">Palliativt team</a>
+                            <a href="#" role="menuitem">Ressurssykepleier</a>
+                            <a href="#" role="menuitem">Kreftkoordinator/<br>demenskoordinator/AKS</a>
+                            <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                            <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
+                            <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop dropdowns container -->
+            <div class="desktop-controls">
+                <!-- Desktop dropdown (Samhandling / Ressurspersoner) -->
+                <div class="dropdown followup-desktop">
+                    <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="followupMenu">
+                        Samhandling / Ressurspersoner
+                        <span class="chev">▾</span>
+                    </button>
+
+                    <div class="dropdown-content" id="followupMenu" role="menu">
+                        <a href="#" role="menuitem">Fastlege</a>
+                        <a href="#" role="menuitem">Palliativt team</a>
+                        <a href="#" role="menuitem">Ressurssykepleier</a>
+                        <a href="#" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                        <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                        <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
+                        <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
+                    </div>
+                </div>
+
+                <!-- Desktop Search dropdown -->
+                <div class="dropdown search-desktop desktop-only">
+                    <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="searchDesktopMenu">
+                        <i data-lucide="search"></i>
+                        Søk
+                    </button>
+
+                    <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
+                        <div class="search-container-desktop">
+                            <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..."
+                                aria-label="Søk i innholdet">
+                            <div class="search-results-desktop" id="searchResultsDesktop" role="status" aria-live="polite"
+                                aria-label="Søkeresultater"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="dropdown-group" id="group-nav">
-          <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-nav-content">
-            <span class="group-label">Navigasjon</span>
-          </button>
-          <div class="group-content" id="group-nav-content" role="group">
-            <a href="identifisering.html" role="menuitem">Identifisering</a>
-            <a href="igangsetting.html" role="menuitem">Igangsetting</a>
-            <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
-            <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
-          </div>
+    </header>
+    <main id="main" class="container">
+        <div class="nav-row">
+            <a href="#" class="back-link" aria-label="Tilbake" title="Tilbake">
+                <i data-lucide="arrow-left"></i>
+            </a>
+            <nav class="breadcrumb-nav" aria-label="Brødsmuler"></nav>
         </div>
+        <section class="page-intro">
+            <h1>Lenker</h1>
+            <p>
+                Her finner du lenker til relevante ressurser og dokumentasjon.
+            </p>
+        </section>
 
-        <div class="dropdown-group" id="group-followup">
-          <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-followup-content"><span class="group-label">Samhandling / Ressurspersoner</span></button>
-          <div class="group-content" id="group-followup-content" role="group">
-            <a href="#" role="menuitem">Fastlege</a>
-            <a href="#" role="menuitem">Palliativt team</a>
-            <a href="#" role="menuitem">Ressurssykepleier</a>
-            <a href="#" role="menuitem">Kreftkoordinator/<br>demenskoordinator/AKS</a>
-            <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
-            <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
-            <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-          </div>
+        <div class="content-grid">
+            <!-- Venstre kolonne -->
+            <section class="info-section extra-section">
+                <div class="info-card">
+                    <h2>Helsedirektoratet</h2>
+                    <ul>
+                        <li><a href="https://www.helsedirektoratet.no/faglige-rad/lindrende-behandling-i-livets-sluttfase"
+                                target="_blank">Helsedirektoratet - Lindrende behandling i livets sluttfase</a></li>
+                        <li><a
+                                href="https://www.helsedirektoratet.no/faglige-rad/lindrende-behandling-i-livets-sluttfase/kommunikasjon-og-samvalg/pasientens-palliative-plan-bor-oppdateres-i-livets-sluttfase"
+                                target="_blank">Helsedirektoratet - Pasientens palliative plan</a></li>
+                        <li><a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder" target="_blank">Helsedirektoratet
+                                - Pårørendestøtte</a></li>
+                        <li><a
+                                href="https://www.helsedirektoratet.no/forebygging-diagnose-og-behandling/diagnose-og-behandling/palliasjon"
+                                target="_blank">Helsedirektoratet - Palliasjon</a></li>
+                        <li><a
+                                href="https://www.helsedirektoratet.no/veiledere/beslutningsprosesser-ved-begrensning-av-livsforlengende-behandling"
+                                target="_blank">Helsedirektoratet - Beslutningsprosesser ved begrensning av livsforlengende
+                                behandling</a></li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h2>Andre</h2>
+                    <ul>
+                        <li><a href="https://www.nav.no/pleiepenger-sluttfase" target="_blank">NAV - Pleiepenger i sluttfasen</a>
+                        </li>
+                        <li><a href="https://www.helsebiblioteket.no/innhold/pht/sykehjem/palliasjon"
+                                target="_blank">Helsebiblioteket - Palliasjon</a></li>
+                        <li><a href="https://metodebok.no/index.php?action=book&book=lindrende" target="_blank">Metodebok</a></li>
+                    </ul>
+                </div>
+            </section>
         </div>
-      </div>
-      </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Om verktøyet</h4>
+                <p>Utviklet for å støtte palliativ behandling og pasientforløp i helsesektoren.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Steg</h4>
+                <ul>
+                    <li><a href="identifisering.html">Identifisering</a></li>
+                    <li><a href="igangsetting.html">Igangsetting</a></li>
+                    <li><a href="hjemmetid.html">Hjemmetid</a></li>
+                    <li><a href="hjemmedod.html">Hjemmedød</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Ressurser</h4>
+                <ul>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="lenker.html">Lenker</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Beslutningsstøtteverktøy – Palliativ behandling</p>
+        </div>
+    </footer>
 
-      <!-- Desktop dropdowns container -->
-      <div class="desktop-controls">
-        <!-- Desktop dropdown (Samhandling / Ressurspersoner) -->
-        <div class="dropdown followup-desktop">
-        <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false" aria-controls="followupMenu">
-          Samhandling / Ressurspersoner
-          <span class="chev">▾</span>
-        </button>
-
-        <div class="dropdown-content" id="followupMenu" role="menu">
-          <a href="#" role="menuitem">Fastlege</a>
-          <a href="#" role="menuitem">Palliativt team</a>
-          <a href="#" role="menuitem">Ressurssykepleier</a>
-          <a href="#" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
-          <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
-          <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
-          <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-        </div>
-        </div>
-                
-        <!-- Desktop Search dropdown -->
-        <div class="dropdown search-desktop desktop-only">
-        <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false" aria-controls="searchDesktopMenu">
-          <i data-lucide="search"></i>
-          Søk
-        </button>
-
-        <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
-          <div class="search-container-desktop">
-            <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..." aria-label="Søk i innholdet">
-            <div class="search-results-desktop" id="searchResultsDesktop" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
-          </div>
-        </div>
-        </div>
-      </div>
-
-    </div>
-  </header>
-  <main id="main" class="container">
-    <div class="nav-row">
-      <a href="#" class="back-link" aria-label="Tilbake" title="Tilbake">
-        <i data-lucide="arrow-left"></i>
-      </a>
-      <nav class="breadcrumb-nav" aria-label="Brødsmuler"></nav>
-    </div>
-    <section class="page-intro">
-      <h1>Lenker</h1>
-      <p>
-        Her finner du lenker til relevante ressurser og dokumentasjon.
-      </p>
-    </section>
-
-    <div class="content-grid">
-      <!-- Venstre kolonne -->
-      <section class="info-section extra-section">
-        <div class="info-card">
-          <h2>Helsedirektoratet</h2>
-          <ul>
-            <li><a href="https://www.helsedirektoratet.no/faglige-rad/lindrende-behandling-i-livets-sluttfase" target="_blank">Helsedirektoratet - Lindrende behandling i livets sluttfase</a></li>
-            <li><a href="https://www.helsedirektoratet.no/faglige-rad/lindrende-behandling-i-livets-sluttfase/kommunikasjon-og-samvalg/pasientens-palliative-plan-bor-oppdateres-i-livets-sluttfase" target="_blank">Helsedirektoratet - Pasientens palliative plan</a></li>
-            <li><a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder" target="_blank">Helsedirektoratet - Pårørendestøtte</a></li>
-            <li><a href="https://www.helsedirektoratet.no/forebygging-diagnose-og-behandling/diagnose-og-behandling/palliasjon" target="_blank">Helsedirektoratet - Palliasjon</a></li>
-            <li><a href="https://www.helsedirektoratet.no/veiledere/beslutningsprosesser-ved-begrensning-av-livsforlengende-behandling" target="_blank">Helsedirektoratet - Beslutningsprosesser ved begrensning av livsforlengende behandling</a></li>
-          </ul>
-        </div>
-        <div class="info-card">
-          <h2>Andre</h2>
-          <ul>
-            <li><a href="https://www.nav.no/pleiepenger-sluttfase" target="_blank">NAV - Pleiepenger i sluttfasen</a></li>
-            <li><a href="https://www.helsebiblioteket.no/innhold/pht/sykehjem/palliasjon" target="_blank">Helsebiblioteket - Palliasjon</a></li>
-            <li><a href="https://metodebok.no/index.php?action=book&book=lindrende" target="_blank">Metodebok</a></li>
-          </ul>
-        </div>
-      </section>
-    </div>
-  </main>
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h4>Om verktøyet</h4>
-        <p>Utviklet for å støtte palliativ behandling og pasientforløp i helsesektoren.</p>
-      </div>
-      <div class="footer-section">
-        <h4>Steg</h4>
-        <ul>
-          <li><a href="identifisering.html">Identifisering</a></li>
-          <li><a href="igangsetting.html">Igangsetting</a></li>
-          <li><a href="hjemmetid.html">Hjemmetid</a></li>
-          <li><a href="hjemmedod.html">Hjemmedød</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Ressurser</h4>
-        <ul>
-          <li><a href="dokumentasjon.html">Dokumentasjon</a></li>
-          <li><a href="#">Kontakt</a></li>
-          <li><a href="lenker.html">Lenker</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Beslutningsstøtteverktøy – Palliativ behandling</p>
-    </div>
-  </footer>
-
-  <button class="top-btn" id="topBtn" aria-label="Til toppen">↑</button>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="./js/script.js"></script>
+    <button class="top-btn" id="topBtn" aria-label="Til toppen">↑</button>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
