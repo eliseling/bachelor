@@ -1172,6 +1172,24 @@ main.container{
   color: #ffffff;
 }
 
+.accordion-item-blue {
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.15) 0%, rgba(33, 150, 243, 0.08) 100%);
+  border-color: #0d47a1;
+}
+
+.accordion-item-blue summary {
+  color: #0d47a1; /* høy kontrast mot hvit bakgrunn */
+}
+
+.accordion-item-blue[open] summary {
+  background: #0d47a1;
+  color: #ffffff;
+}
+
+.accordion-item-blue[open] summary::after {
+  color: #ffffff;
+}
+
 .accordion-content{
   padding: 16px 18px;
   border-top: 1px solid rgba(0,0,0,0.06);
