@@ -402,41 +402,89 @@ button:focus-visible{
   margin-bottom: 50px;
 }
 
-a.info-card {
+body.page-contact .info-card,
+body.page-links .info-card {
   background: var(--surface);
   border: 2px solid var(--accent);
   border-radius: var(--radius);
   padding: 24px;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
-  text-decoration: none;
-  display: block;
-  color: inherit;
 }
 
-a.info-card:hover {
+body.page-contact .info-card:hover,
+body.page-links .info-card:hover {
   box-shadow: var(--shadow-hover);
   transform: translateY(-2px);
 }
 
-a.info-card h2 {
+body.page-contact .info-card h2,
+body.page-links .info-card h2 {
   margin: 0 0 16px;
   font-size: 20px;
   color: var(--brand);
 }
 
-a.info-card ul li {
+body.page-contact .info-card ul li,
+body.page-links .info-card ul li {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 8px;
   color: var(--muted);
+  font-size: 16px;
 }
 
-a.info-card ul li i {
+body.page-contact .info-card ul li i,
+body.page-links .info-card ul li i {
   width: 16px;
   height: 16px;
   color: var(--accent);
   flex-shrink: 0;
+}
+
+body.page-contact .info-card ul li a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+body.page-contact .info-card ul li a:hover {
+  color: var(--accent);
+}
+
+body.page-links .info-card ul li a {
+  color: var(--muted);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+body.page-links .info-card ul li a:hover {
+  color: var(--accent);
+}
+
+body.page-links .info-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+  margin-bottom: 50px;
+}
+
+body.page-links .info-section .info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+@media (max-width: 800px) {
+  body.page-links .info-section {
+    grid-template-columns: 1fr;
+  }
 }
 
 .content-grid {
