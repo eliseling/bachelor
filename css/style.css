@@ -684,12 +684,10 @@ a {
   overflow-y: auto;
 }
 
-/* ensure main content can fill viewport and be centered */
+/* ensure main content flows from the top */
 main.container{
-  min-height: calc(100vh - 140px); /* approximate header+footer height */
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .steps{
