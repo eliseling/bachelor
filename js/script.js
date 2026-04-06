@@ -413,7 +413,8 @@ const pageMap = {
   'vaketjeneste.html': { title: 'Våketjenesten', position: 6, previousPage: 'index.html' },
   'dokumentasjon.html': { title: 'Dokumentasjon', position: 6, previousPage: 'index.html' },
   'lenker.html': { title: 'Lenker', position: 6, previousPage: 'index.html' },
-  'kontakt.html': { title: 'Kontakt', position: 6, previousPage: 'index.html' }
+  'kontakt.html': { title: 'Kontakt', position: 6, previousPage: 'index.html' },
+  'kompetanseSenter.html': { title: 'Kompetansesenteret', position: 6, previousPage: 'index.html' }
 };
 
 function generateBreadcrumbs() {
