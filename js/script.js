@@ -415,7 +415,8 @@ const pageMap = {
   'lenker.html': { title: 'Lenker', position: 6, previousPage: 'index.html' },
   'kontakt.html': { title: 'Kontakt', position: 6, previousPage: 'index.html' },
   'kompetanseSenter.html': { title: 'Kompetansesenteret', position: 6, previousPage: 'index.html' },
-  'ressursSykepleier.html': { title: 'Ressurssykepleier', position: 6, previousPage: 'index.html' }
+  'ressursSykepleier.html': { title: 'Ressurssykepleier', position: 6, previousPage: 'index.html' },
+  'kreftomsorg.html': { title: 'Kreftomsorg Rogaland', position: 6, previousPage: 'index.html' }
 };
 
 function generateBreadcrumbs() {
