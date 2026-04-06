@@ -466,7 +466,7 @@ body.page-links .info-card ul li a:hover {
   color: var(--accent);
 }
 
-body.page-competence .info-card ul li a {
+body.page-contact-info .info-card ul li a {
   color: var(--muted);
   text-decoration: none;
   transition: color 0.2s ease;
@@ -474,7 +474,7 @@ body.page-competence .info-card ul li a {
   align-items: center;
 }
 
-body.page-competence .info-card ul li a:hover {
+body.page-contact-info .info-card ul li a:hover {
   color: var(--accent);
 }
 
