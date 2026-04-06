@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Identifisering av palliativ pasient</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <a href="#main" class="skip-link">Hopp til innhold</a>
     <header class="site-header">
         <div class="header-inner">
 
             <a href="index.html" class="site-title-link">
-            <div class="site-title">
-                <span class="title-main">
-                    Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
-                </span>
-            </div>
+                <div class="site-title">
+                    <span class="title-main">
+                        Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
+                    </span>
+                </div>
             </a>
 
             <!-- Page navigation bar (desktop only, hidden on mobile) -->
@@ -29,76 +31,86 @@
 
             <!-- Mobil hamburger -->
             <div class="dropdown mobile-only">
-            <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu" aria-label="Åpne meny">
-                <i data-lucide="menu"></i>
-            </button>
+                <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu"
+                    aria-label="Åpne meny">
+                    <i data-lucide="menu"></i>
+                </button>
 
-            <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
-                <!-- Søkefelt -->
-                <div class="search-container">
-                    <input type="text" id="searchInput" class="search-field" placeholder="Søk..." aria-label="Søk i innholdet">
-                    <div class="search-results" id="searchResults" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
-                </div>
-                <div class="dropdown-group" id="group-nav">
-                  <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-nav-content">
-                    <span class="group-label">Navigasjon</span>
-                  </button>
-                  <div class="group-content" id="group-nav-content" role="group">
-                    <a href="identifisering.html" role="menuitem">Identifisering</a>
-                    <a href="igangsetting.html" role="menuitem">Igangsetting</a>
-                    <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
-                    <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
-                  </div>
-                </div>
+                <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
+                    <!-- Søkefelt -->
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-field" placeholder="Søk..."
+                            aria-label="Søk i innholdet">
+                        <div class="search-results" id="searchResults" role="status" aria-live="polite"
+                            aria-label="Søkeresultater"></div>
+                    </div>
+                    <div class="dropdown-group" id="group-nav">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-nav-content">
+                            <span class="group-label">Navigasjon</span>
+                        </button>
+                        <div class="group-content" id="group-nav-content" role="group">
+                            <a href="identifisering.html" role="menuitem">Identifisering</a>
+                            <a href="igangsetting.html" role="menuitem">Igangsetting</a>
+                            <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
+                            <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
+                        </div>
+                    </div>
 
-                <div class="dropdown-group" id="group-followup">
-                  <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-followup-content"><span class="group-label">Samhandling / Ressurspersoner</span></button>
-                  <div class="group-content" id="group-followup-content" role="group">
-                    <a href="#" role="menuitem">Fastlege</a>
-                    <a href="#" role="menuitem">Palliativt team</a>
-                    <a href="#" role="menuitem">Ressurssykepleier</a>
-                    <a href="#" role="menuitem">Kreftkoordinator/<br>demenskoordinator/AKS</a>
-                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
-                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
-                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-                  </div>
+                    <div class="dropdown-group" id="group-followup">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-followup-content"><span class="group-label">Samhandling /
+                                Ressurspersoner</span></button>
+                        <div class="group-content" id="group-followup-content" role="group">
+                            <a href="fastlege.html" role="menuitem">Fastlege</a>
+                            <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                            <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                            <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                            <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                            <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                            <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
             </div>
 
             <!-- Desktop dropdowns container -->
             <div class="desktop-controls">
                 <!-- Desktop dropdown (Samhandling / Ressurspersoner) -->
                 <div class="dropdown followup-desktop">
-                <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false" aria-controls="followupMenu">
-                    Samhandling / Ressurspersoner
-                    <span class="chev">▾</span>
-                </button>
+                    <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="followupMenu">
+                        Samhandling / Ressurspersoner
+                        <span class="chev">▾</span>
+                    </button>
 
-                <div class="dropdown-content" id="followupMenu" role="menu">
-                    <a href="#" role="menuitem">Fastlege</a>
-                    <a href="#" role="menuitem">Palliativt team</a>
-                    <a href="#" role="menuitem">Ressurssykepleier</a>
-                    <a href="#" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
-                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
-                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
-                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-                </div>
-                </div>
-                
-                <!-- Desktop Search dropdown -->
-                <div class="dropdown search-desktop desktop-only">
-                <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false" aria-controls="searchDesktopMenu">
-                    <i data-lucide="search"></i>
-                    Søk
-                </button>
-
-                <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
-                    <div class="search-container-desktop">
-                        <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..." aria-label="Søk i innholdet">
-                        <div class="search-results-desktop" id="searchResultsDesktop" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
+                    <div class="dropdown-content" id="followupMenu" role="menu">
+                        <a href="fastlege.html" role="menuitem">Fastlege</a>
+                        <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                        <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                        <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                        <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                        <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                        <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
                     </div>
                 </div>
+
+                <!-- Desktop Search dropdown -->
+                <div class="dropdown search-desktop desktop-only">
+                    <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="searchDesktopMenu">
+                        <i data-lucide="search"></i>
+                        Søk
+                    </button>
+
+                    <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
+                        <div class="search-container-desktop">
+                            <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..."
+                                aria-label="Søk i innholdet">
+                            <div class="search-results-desktop" id="searchResultsDesktop" role="status"
+                                aria-live="polite" aria-label="Søkeresultater"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -111,7 +123,7 @@
         <section class="page-intro">
             <h1>Identifisering av palliativ pasient</h1>
             <p>
-                En palliativ pasient kan enten bli meldt til kommunen via bestillerkontor/vedtakskontor, 
+                En palliativ pasient kan enten bli meldt til kommunen via bestillerkontor/vedtakskontor,
                 eller det kan være at man identifiserer en pasient som man allerede gir tjenester til som palliativ.
             </p>
         </section>
@@ -121,67 +133,81 @@
             <section class="accordion-section">
                 <h2>Inngang til palliativt forløp</h2>
                 <details class="accordion-item">
-                <summary>Palliativ pasient meldt til kommunen</summary>
-                <div class="accordion-content">
-                    <p>
-                        Dersom det er en ny pasient med behov for palliative tjenester som er meldt til kommunen, 
-                        har Bestillerkontoret eller Vedtakskontoret i kommunen en sentral rolle i å kartlegge behov og fatte vedtak om helse- og omsorgstjenester. <br>
-                    </p>
-                    <p>
-                        Ved hjemmetid og hjemmedød innhenter Bestillerkontoret/Vedtakskontoret følgende opplysninger for å sikre en verdig oppfølging og avslutning:
-                    </p>
-                    <ul class="no-bullets">
-                        <li>
-                            <b>Helsetilstand og pleiebehov:</b>
-                            Kartlegging av pasientens fysiske og psykiske tilstand, ofte i samarbeid med fastlege og spesialisthelsetjenesten (sykehus).
-                            Hvor er pasienten i et palliativt forløp? Hva er behovet for tjenester? Hvem skal ha ansvar for medisinering? 
-                            Dersom pasienten kommer fra sykehuset, må man forsikre seg om at pasienten har medisiner med seg hjem til neste virkedag, og at det er foreskrevet aktuelle resepter. 
-                            Vurder om man skal ha et planleggingsmøte på sykehuset før hjemreise.
-                            Kartlegg også om det er spesielle prosedyrer pasienten trenger hjemme, og om hjemmetjenesten trenger opplæring i disse.
-                        </li>
-                        <br>
-                        <li>
-                            <b>Ønsker og preferanser:</b>
-                            Dokumentasjon av pasientens egne ønsker for den siste tiden, etterspør om det er foretatt en forhåndssamtale. 
-                            Er pasient og pårørende informert om pasientens tilstand og forventninger videre? Hva er terskelen for reinnleggelse?
-                        </li>
-                        <br>
-                        <li>
-                            <b>Pårørendes situasjon:</b>
-                            Kartlegg om pasienten har pårørende. Har pasienten barn? Er det foretatt en vurdering av behov for avlastning og støtte til pårørende? 
-                            Avklar hvem som er nærmest pårørende, og dokumenter i journal. 
-                        </li>
-                        <br>
-                        <li>
-                            <b>Behov for hjelpemidler:</b>
-                            Kartlegging av behov for medisinsk utstyr (som heveseng og andre hjelpemidler) for å tilrettelegge for hjemmetid og hjemmedød. 
-                            Må dette være på plass for at pasienten skal kunne komme hjem dersom pasienten kommer fra sykehuset?
-                        </li>
-                        <br>
-                        <li>
-                            <b>Koordinering av tjenester:</b>
-                            Sikre at hjemmetjenesten er informert tidlig, slik at de kan planlegge sine tjenester. 
-                            Etterspør om pasienten er henvist palliativ team, eller om en bør gjøre det. Forsikre deg om at aktuelle instanser er involvert og samkjørt. 
-                        </li>
-                    </ul>
-                </div>
+                    <summary>Palliativ pasient meldt til kommunen</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Dersom det er en ny pasient med behov for palliative tjenester som er meldt til kommunen,
+                            har Bestillerkontoret eller Vedtakskontoret i kommunen en sentral rolle i å kartlegge behov
+                            og fatte vedtak om helse- og omsorgstjenester. <br>
+                        </p>
+                        <p>
+                            Ved hjemmetid og hjemmedød innhenter Bestillerkontoret/Vedtakskontoret følgende opplysninger
+                            for å sikre en verdig oppfølging og avslutning:
+                        </p>
+                        <ul class="no-bullets">
+                            <li>
+                                <b>Helsetilstand og pleiebehov:</b>
+                                Kartlegging av pasientens fysiske og psykiske tilstand, ofte i samarbeid med fastlege og
+                                spesialisthelsetjenesten (sykehus).
+                                Hvor er pasienten i et palliativt forløp? Hva er behovet for tjenester? Hvem skal ha
+                                ansvar for medisinering?
+                                Dersom pasienten kommer fra sykehuset, må man forsikre seg om at pasienten har medisiner
+                                med seg hjem til neste virkedag, og at det er foreskrevet aktuelle resepter.
+                                Vurder om man skal ha et planleggingsmøte på sykehuset før hjemreise.
+                                Kartlegg også om det er spesielle prosedyrer pasienten trenger hjemme, og om
+                                hjemmetjenesten trenger opplæring i disse.
+                            </li>
+                            <br>
+                            <li>
+                                <b>Ønsker og preferanser:</b>
+                                Dokumentasjon av pasientens egne ønsker for den siste tiden, etterspør om det er
+                                foretatt en forhåndssamtale.
+                                Er pasient og pårørende informert om pasientens tilstand og forventninger videre? Hva er
+                                terskelen for reinnleggelse?
+                            </li>
+                            <br>
+                            <li>
+                                <b>Pårørendes situasjon:</b>
+                                Kartlegg om pasienten har pårørende. Har pasienten barn? Er det foretatt en vurdering av
+                                behov for avlastning og støtte til pårørende?
+                                Avklar hvem som er nærmest pårørende, og dokumenter i journal.
+                            </li>
+                            <br>
+                            <li>
+                                <b>Behov for hjelpemidler:</b>
+                                Kartlegging av behov for medisinsk utstyr (som heveseng og andre hjelpemidler) for å
+                                tilrettelegge for hjemmetid og hjemmedød.
+                                Må dette være på plass for at pasienten skal kunne komme hjem dersom pasienten kommer
+                                fra sykehuset?
+                            </li>
+                            <br>
+                            <li>
+                                <b>Koordinering av tjenester:</b>
+                                Sikre at hjemmetjenesten er informert tidlig, slik at de kan planlegge sine tjenester.
+                                Etterspør om pasienten er henvist palliativ team, eller om en bør gjøre det. Forsikre
+                                deg om at aktuelle instanser er involvert og samkjørt.
+                            </li>
+                        </ul>
+                    </div>
                 </details>
                 <details class="accordion-item">
-                <summary>Identifisering av palliativ pasient</summary>
-                <div class="accordion-content">
-                    <p>
-                        En palliativ pasient kan også bli identifisert i egen tjeneste dersom det er vendepunkt i sykdomsforløpet. 
-                        Det er viktig å tilby også andre enn palliative kreftpasienter palliasjon og hjemmedød.
-                    </p>
-                    <p>
-                        En kan identifisere en palliativ pasient ved å spør seg selv. 
-                        «Ville du blitt overrasket dersom denne pasienten døde i løpet av det neste året?»
-                    </p>
-                    <p>
-                        Et hjelpemiddel for å identifisere en palliativ pasient er SPICT skjema:
-                        <a href="https://www.helse-bergen.no/4aaaf9/siteassets/seksjon/klb/documents/praktisk-info/identifisere-palliativ-pasient.pdf" target="_blank">Identifisere palliativ pasient</a>
-                    </p>
-                </div>
+                    <summary>Identifisering av palliativ pasient</summary>
+                    <div class="accordion-content">
+                        <p>
+                            En palliativ pasient kan også bli identifisert i egen tjeneste dersom det er vendepunkt i
+                            sykdomsforløpet.
+                            Det er viktig å tilby også andre enn palliative kreftpasienter palliasjon og hjemmedød.
+                        </p>
+                        <p>
+                            En kan identifisere en palliativ pasient ved å spør seg selv.
+                            «Ville du blitt overrasket dersom denne pasienten døde i løpet av det neste året?»
+                        </p>
+                        <p>
+                            Et hjelpemiddel for å identifisere en palliativ pasient er SPICT skjema:
+                            <a href="https://www.helse-bergen.no/4aaaf9/siteassets/seksjon/klb/documents/praktisk-info/identifisere-palliativ-pasient.pdf"
+                                target="_blank">Identifisere palliativ pasient</a>
+                        </p>
+                    </div>
                 </details>
             </section>
 
@@ -191,75 +217,95 @@
                     <h2>Kartlegging og tilrettelegging ved oppstart</h2>
                 </div>
                 <details class="accordion-item accordion-item-green">
-                <summary>Hjelpebehov / medisinansvar</summary>
-                <div class="accordion-content">
-                    <p>
-                        Ha dialog med pasient, pårørende, faslege og ev. sykehus. 
-                        Er det søkt om helsehjelp? Hvor ofte ønsker i tilfelle pasient og pårørende hjelp, 
-                        hva skal de ha hjelp til, og hvor rask progresjon i tilstand er forventet? 
-                        Innhent også opplysninger fra e-meldinger og epikriser.
-                    </p>
-                    <p>
-                        Avklar hvem som skal ha medisinansvar. Dersom det er forventet rask endring, eller pasienten ønsker hjemmedød, 
-                        er det ønskelig at hjemmetjenesten overtar medisinansvaret så raskt som mulig. Dette krever en formell overføring av ansvar. 
-                    </p>
-                    <p>
-                        Pasient og pårørende kan likevel administrere medikamenter etter avtale med hjemmetjenesten. 
-                        Pass på å hente inn oppdatert medisinliste.
-                    </p>
-                    <p>
-                        Sørg for at pasienten har medisiner hjemme for de neste dagene, og at det foreligger resepter på aktuelle medisiner. 
-                        Vurder om det er nødvendig å ha lindrende medikamenter klar, eller hvordan en kan få de raskt på plass når en trenger de.
-                    </p>
-                    <p>
-                        <a href="https://www.helse-bergen.no/kompetansesenter-i-lindrande-behandling/palliasjon-verktoy-for-helsepersonell/behandlingsalgoritmar-for-vanlege-symptom-hos-doyande-vaksne-dei-fire-viktigaste-medikamenta/" target="_blank">Behandlingsalgoritmar for vanlege symptom hos døyande vaksne</a>
-                    </p>
-                </div>
+                    <summary>Hjelpebehov / medisinansvar</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Ha dialog med pasient, pårørende, faslege og ev. sykehus.
+                            Er det søkt om helsehjelp? Hvor ofte ønsker i tilfelle pasient og pårørende hjelp,
+                            hva skal de ha hjelp til, og hvor rask progresjon i tilstand er forventet?
+                            Innhent også opplysninger fra e-meldinger og epikriser.
+                        </p>
+                        <p>
+                            Avklar hvem som skal ha medisinansvar. Dersom det er forventet rask endring, eller pasienten
+                            ønsker hjemmedød,
+                            er det ønskelig at hjemmetjenesten overtar medisinansvaret så raskt som mulig. Dette krever
+                            en formell overføring av ansvar.
+                        </p>
+                        <p>
+                            Pasient og pårørende kan likevel administrere medikamenter etter avtale med hjemmetjenesten.
+                            Pass på å hente inn oppdatert medisinliste.
+                        </p>
+                        <p>
+                            Sørg for at pasienten har medisiner hjemme for de neste dagene, og at det foreligger
+                            resepter på aktuelle medisiner.
+                            Vurder om det er nødvendig å ha lindrende medikamenter klar, eller hvordan en kan få de
+                            raskt på plass når en trenger de.
+                        </p>
+                        <p>
+                            <a href="https://www.helse-bergen.no/kompetansesenter-i-lindrande-behandling/palliasjon-verktoy-for-helsepersonell/behandlingsalgoritmar-for-vanlege-symptom-hos-doyande-vaksne-dei-fire-viktigaste-medikamenta/"
+                                target="_blank">Behandlingsalgoritmar for vanlege symptom hos døyande vaksne</a>
+                        </p>
+                    </div>
                 </details>
                 <details class="accordion-item accordion-item-green">
-                <summary>Kartlegging av pårørende og dokumentasjon</summary>
-                <div class="accordion-content">
-                    <p>
-                        Kartlegg om det er pårørende som ønsker å stille opp, hvor mye de ønsker å gjøre, og hvordan de organiserer seg. 
-                        Informer om pleiepenger ved livet sluttfase: 
-                        <a href="https://www.nav.no/pleiepenger-sluttfase" target="_blank">Pleiepenger i livets sluttfase - nav.no</a>.
-                        Kontakt gjerne sosionom ved sykehuset dersom en trenger hjelp til å søke om pleiepenger.
-                    </p>
-                    <p>
-                        Kommunen har plikt til å tilby opplæring, veiledning og støtte til pårørende. 
-                        Dette gjelder særlig til pårørende med særlig tyngende omsorgsoppgaver. 
-                        <a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder" target="_blank">Pårørendeveileder - Helsedirektoratet</a>
-                    </p>
-                    <p>
-                        Avklar om pasienten har barn som pårørende. 
-                        Helsepersonell som yter helsehjelp til en pasient med alvorlig somatisk sykdom eller skade skal bidra til å ivareta pasientens mindreårige barn eller søsken. 
-                        <a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder/informasjon-og-stotte-til-barn-som-parorende" target="_blank">Informasjon og støtte til barn som pårørende - Helsedirektoratet</a>
-                    </p>
-                    <p>
-                        Det er viktig at informasjon som er innhentet, og at kartlegginger og avklaringer som er gjort, dokumenteres i pasientens journal. 
-                        Sørg for at den neste som kommer på vakt, enkelt kan oppdatere seg om pasienten.
-                    </p>
-                </div>
+                    <summary>Kartlegging av pårørende og dokumentasjon</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Kartlegg om det er pårørende som ønsker å stille opp, hvor mye de ønsker å gjøre, og hvordan
+                            de organiserer seg.
+                            Informer om pleiepenger ved livet sluttfase:
+                            <a href="https://www.nav.no/pleiepenger-sluttfase" target="_blank">Pleiepenger i livets
+                                sluttfase - nav.no</a>.
+                            Kontakt gjerne sosionom ved sykehuset dersom en trenger hjelp til å søke om pleiepenger.
+                        </p>
+                        <p>
+                            Kommunen har plikt til å tilby opplæring, veiledning og støtte til pårørende.
+                            Dette gjelder særlig til pårørende med særlig tyngende omsorgsoppgaver.
+                            <a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder"
+                                target="_blank">Pårørendeveileder - Helsedirektoratet</a>
+                        </p>
+                        <p>
+                            Avklar om pasienten har barn som pårørende.
+                            Helsepersonell som yter helsehjelp til en pasient med alvorlig somatisk sykdom eller skade
+                            skal bidra til å ivareta pasientens mindreårige barn eller søsken.
+                            <a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder/informasjon-og-stotte-til-barn-som-parorende"
+                                target="_blank">Informasjon og støtte til barn som pårørende - Helsedirektoratet</a>
+                        </p>
+                        <p>
+                            Det er viktig at informasjon som er innhentet, og at kartlegginger og avklaringer som er
+                            gjort, dokumenteres i pasientens journal.
+                            Sørg for at den neste som kommer på vakt, enkelt kan oppdatere seg om pasienten.
+                        </p>
+                    </div>
                 </details>
                 <details class="accordion-item accordion-item-green">
-                <summary>Hjelpemidler / Fysio</summary>
-                <div class="accordion-content">
-                    <p>
-                        For at en palliativ pasient skal kunne tilbringe mest mulig tid hjemme, og at en skal kunne tilby hjemmedød, er det nødvendig å legge til rette med hjelpemidler i hjemmet. 
-                        Dette er både for å ivareta pasient og pårørende, og for å ivareta helsepersonell.
-                    </p>
-                    <p>
-                        De fleste kommuner har et korttidslager hvor en enkelt kan låne ting for en kort periode dersom man er palliativ/terminal, har ALS eller FCF. 
-                    <p>
-                        Hjelpemidler kan være sykeseng, madrass, trykkavlastende overmadrass, personløfter, toalettstol, toalettforhøyer med armlene, dusjkrakk, dusjstol, manuell rullestol, preikestol, underarmsrullator, rullator, trykkavlastende pute, arbeidsstol og terskeleliminator. 
-                    </p>
-                    <p>
-                        Eksisterende seng kan tilrettelegges med hjertebrett (dette krever todelt overmadrass og at den er minst 10 cm høy) søsterhjelp og støttestang. Lageret har noen ganger forhøyningsklosser som kan lånes kortvarig. 
-                    </p>
-                    <p>
-                        Fysio-/ergoterapitjenesten i kommunen kan dra på hjemmebesøk for å kartlegge og hjelpe til med å tilrettelegge boligen. Fysioterapitjenesten har også kunnskap om andre hjelpemidler, og kan søke på disse. 
-                    </p>
-                </div>
+                    <summary>Hjelpemidler / Fysio</summary>
+                    <div class="accordion-content">
+                        <p>
+                            For at en palliativ pasient skal kunne tilbringe mest mulig tid hjemme, og at en skal kunne
+                            tilby hjemmedød, er det nødvendig å legge til rette med hjelpemidler i hjemmet.
+                            Dette er både for å ivareta pasient og pårørende, og for å ivareta helsepersonell.
+                        </p>
+                        <p>
+                            De fleste kommuner har et korttidslager hvor en enkelt kan låne ting for en kort periode
+                            dersom man er palliativ/terminal, har ALS eller FCF.
+                        <p>
+                            Hjelpemidler kan være sykeseng, madrass, trykkavlastende overmadrass, personløfter,
+                            toalettstol, toalettforhøyer med armlene, dusjkrakk, dusjstol, manuell rullestol,
+                            preikestol, underarmsrullator, rullator, trykkavlastende pute, arbeidsstol og
+                            terskeleliminator.
+                        </p>
+                        <p>
+                            Eksisterende seng kan tilrettelegges med hjertebrett (dette krever todelt overmadrass og at
+                            den er minst 10 cm høy) søsterhjelp og støttestang. Lageret har noen ganger
+                            forhøyningsklosser som kan lånes kortvarig.
+                        </p>
+                        <p>
+                            Fysio-/ergoterapitjenesten i kommunen kan dra på hjemmebesøk for å kartlegge og hjelpe til
+                            med å tilrettelegge boligen. Fysioterapitjenesten har også kunnskap om andre hjelpemidler,
+                            og kan søke på disse.
+                        </p>
+                    </div>
                 </details>
             </section>
         </div>
@@ -296,4 +342,5 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>

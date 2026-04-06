@@ -255,7 +255,14 @@ const allPages = [
   { url: 'hjemmedod.html', title: 'Hjemmedød' },
   { url: 'vaketjeneste.html', title: 'Våketjenesten' },
   { url: 'dokumentasjon.html', title: 'Dokumentasjon' },
-  { url: 'lenker.html', title: 'Lenker' }
+  { url: 'lenker.html', title: 'Lenker' },
+  { url: 'kontakt.html', title: 'Kontakt' },
+  { url: 'kompetanseSenter.html', title: 'Kompetansesenteret' },
+  { url: 'ressursSykepleier.html', title: 'Ressurssykepleier' },
+  { url: 'kreftomsorg.html', title: 'Kreftomsorg Rogaland' },
+  { url: 'kreftkoordinator.html', title: 'Kreftkoordinator/demenskoordinator/AKS' },
+  { url: 'palliativtTeam.html', title: 'Palliativt team' },
+  { url: 'fastlege.html', title: 'Fastlege' }
 ];
 
 let searchIndex = null;

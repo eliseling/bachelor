@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Igangsetting av palliativt forløp</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <a href="#main" class="skip-link">Hopp til innhold</a>
     <header class="site-header">
         <div class="header-inner">
 
             <a href="index.html" class="site-title-link">
-            <div class="site-title">
-                <span class="title-main">
-                    Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
-                </span>
-            </div>
+                <div class="site-title">
+                    <span class="title-main">
+                        Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
+                    </span>
+                </div>
             </a>
 
             <!-- Page navigation bar (desktop only, hidden on mobile) -->
@@ -29,76 +31,86 @@
 
             <!-- Mobil hamburger -->
             <div class="dropdown mobile-only">
-            <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu" aria-label="Åpne meny">
-                <i data-lucide="menu"></i>
-            </button>
+                <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu"
+                    aria-label="Åpne meny">
+                    <i data-lucide="menu"></i>
+                </button>
 
-            <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
-                <!-- Søkefelt -->
-                <div class="search-container">
-                    <input type="text" id="searchInput" class="search-field" placeholder="Søk..." aria-label="Søk i innholdet">
-                    <div class="search-results" id="searchResults" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
-                </div>
-                <div class="dropdown-group" id="group-nav">
-                  <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-nav-content">
-                    <span class="group-label">Navigasjon</span>
-                  </button>
-                  <div class="group-content" id="group-nav-content" role="group">
-                    <a href="identifisering.html" role="menuitem">Identifisering</a>
-                    <a href="igangsetting.html" role="menuitem">Igangsetting</a>
-                    <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
-                    <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
-                  </div>
-                </div>
+                <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
+                    <!-- Søkefelt -->
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-field" placeholder="Søk..."
+                            aria-label="Søk i innholdet">
+                        <div class="search-results" id="searchResults" role="status" aria-live="polite"
+                            aria-label="Søkeresultater"></div>
+                    </div>
+                    <div class="dropdown-group" id="group-nav">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-nav-content">
+                            <span class="group-label">Navigasjon</span>
+                        </button>
+                        <div class="group-content" id="group-nav-content" role="group">
+                            <a href="identifisering.html" role="menuitem">Identifisering</a>
+                            <a href="igangsetting.html" role="menuitem">Igangsetting</a>
+                            <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
+                            <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
+                        </div>
+                    </div>
 
-                <div class="dropdown-group" id="group-followup">
-                  <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-followup-content"><span class="group-label">Samhandling / Ressurspersoner</span></button>
-                  <div class="group-content" id="group-followup-content" role="group">
-                    <a href="#" role="menuitem">Fastlege</a>
-                    <a href="#" role="menuitem">Palliativt team</a>
-                    <a href="#" role="menuitem">Ressurssykepleier</a>
-                    <a href="#" role="menuitem">Kreftkoordinator/<br>demenskoordinator/AKS</a>
-                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
-                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
-                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-                  </div>
+                    <div class="dropdown-group" id="group-followup">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-followup-content"><span class="group-label">Samhandling /
+                                Ressurspersoner</span></button>
+                        <div class="group-content" id="group-followup-content" role="group">
+                            <a href="fastlege.html" role="menuitem">Fastlege</a>
+                            <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                            <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                            <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                            <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                            <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                            <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
             </div>
 
             <!-- Desktop dropdowns container -->
             <div class="desktop-controls">
                 <!-- Desktop dropdown (Samhandling / Ressurspersoner) -->
                 <div class="dropdown followup-desktop">
-                <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false" aria-controls="followupMenu">
-                    Samhandling / Ressurspersoner
-                    <span class="chev">▾</span>
-                </button>
+                    <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="followupMenu">
+                        Samhandling / Ressurspersoner
+                        <span class="chev">▾</span>
+                    </button>
 
-                <div class="dropdown-content" id="followupMenu" role="menu">
-                    <a href="#" role="menuitem">Fastlege</a>
-                    <a href="#" role="menuitem">Palliativt team</a>
-                    <a href="#" role="menuitem">Ressurssykepleier</a>
-                    <a href="#" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
-                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
-                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
-                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-                </div>
-                </div>
-                
-                <!-- Desktop Search dropdown -->
-                <div class="dropdown search-desktop desktop-only">
-                <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false" aria-controls="searchDesktopMenu">
-                    <i data-lucide="search"></i>
-                    Søk
-                </button>
-
-                <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
-                    <div class="search-container-desktop">
-                        <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..." aria-label="Søk i innholdet">
-                        <div class="search-results-desktop" id="searchResultsDesktop" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
+                    <div class="dropdown-content" id="followupMenu" role="menu">
+                        <a href="fastlege.html" role="menuitem">Fastlege</a>
+                        <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                        <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                        <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                        <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                        <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                        <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
                     </div>
                 </div>
+
+                <!-- Desktop Search dropdown -->
+                <div class="dropdown search-desktop desktop-only">
+                    <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="searchDesktopMenu">
+                        <i data-lucide="search"></i>
+                        Søk
+                    </button>
+
+                    <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
+                        <div class="search-container-desktop">
+                            <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..."
+                                aria-label="Søk i innholdet">
+                            <div class="search-results-desktop" id="searchResultsDesktop" role="status"
+                                aria-live="polite" aria-label="Søkeresultater"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -111,8 +123,10 @@
         <section class="page-intro">
             <h1>Igangsetting av palliativt forløp</h1>
             <p>
-                Når man har identifisert en palliativ pasient, og følger opp denne, trapper man gradvis opp palliative tiltak etter behov. <br>
-                Målet er best mulig livskvalitet for pasient og pårørende, og det er viktig å spør pasienten og pårørende: Hva er viktig for deg? <br>
+                Når man har identifisert en palliativ pasient, og følger opp denne, trapper man gradvis opp palliative
+                tiltak etter behov. <br>
+                Målet er best mulig livskvalitet for pasient og pårørende, og det er viktig å spør pasienten og
+                pårørende: Hva er viktig for deg? <br>
                 Ha respekt for at du er i pasientens hjem.
             </p>
         </section>
@@ -125,38 +139,50 @@
                     <p>Viktig ved første møte og ved endringer i pasientens sykdomsforløp:</p>
                 </div>
                 <details class="accordion-item">
-                <summary>Mottak av ny pasient</summary>
-                <div class="accordion-content">
-                    <p>
-                        Ved første kontakt med pasient og pårørende er det viktig å skape trygghet og tillit. <br>
-                        Fokuser på deres ønsker og behov, og forklar hva hjemmetjenesten kan bistå med. <br>
-                        Ved første kontakt er det viktig å sette av god tid til hjemmebesøket. <br>
-                        Lytt mer enn du snakker, og vurder både pasientens og pårørendes fysiske og psykiske tilstand. <br>
-                        Sjekk ut om opplysninger er hentet inn, og om de stemmer:
-                    </p>
-                    <ul>
-                        <li>Har vi dokumentert nærmeste pårørende? Kartlegg om det finnes andre pårørende i nærheten som kan, og ønsker, å bidra.</li>
-                        <li>
-                            Informer om retten til pleiepenger i livets sluttfase. <br>
-                            <a href="https://www.nav.no/pleiepenger-sluttfase" target="_blank">Pleiepenger i livets sluttfase - nav.no</a>
-                        </li>
-                        <li>Avklar hvilken besøkshyppighet som er nødvendig i første omgang.</li>
-                    </ul>
-                    <p>
-                        Det er pasienten og pårørende som bestemmer hvordan de ønsker å ha det i hjemmet, samtidig som ansatte i hjemmetjenesten skal ha et trygt og forsvarlig arbeidsmiljø. Formidle dette på en omsorgsfull måte, og etabler en felles forståelse. <br>
-                        Planlegg videre oppfølging sammen med pasient og pårørende, og gi ærlige tilbakemeldinger om hvilke begrensninger tjenesten har. <br>
-                        Før du går er det viktig å informere både muntlig og skriftlig om hvordan pasient og pårørende kan kontakte hjemmetjensten dag, kveld og natt. Opplys om at de må ringe ved behov - også utenom avtalt besøk.
-                    </p>
-                </div>
+                    <summary>Mottak av ny pasient</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Ved første kontakt med pasient og pårørende er det viktig å skape trygghet og tillit. <br>
+                            Fokuser på deres ønsker og behov, og forklar hva hjemmetjenesten kan bistå med. <br>
+                            Ved første kontakt er det viktig å sette av god tid til hjemmebesøket. <br>
+                            Lytt mer enn du snakker, og vurder både pasientens og pårørendes fysiske og psykiske
+                            tilstand. <br>
+                            Sjekk ut om opplysninger er hentet inn, og om de stemmer:
+                        </p>
+                        <ul>
+                            <li>Har vi dokumentert nærmeste pårørende? Kartlegg om det finnes andre pårørende i nærheten
+                                som kan, og ønsker, å bidra.</li>
+                            <li>
+                                Informer om retten til pleiepenger i livets sluttfase. <br>
+                                <a href="https://www.nav.no/pleiepenger-sluttfase" target="_blank">Pleiepenger i livets
+                                    sluttfase - nav.no</a>
+                            </li>
+                            <li>Avklar hvilken besøkshyppighet som er nødvendig i første omgang.</li>
+                        </ul>
+                        <p>
+                            Det er pasienten og pårørende som bestemmer hvordan de ønsker å ha det i hjemmet, samtidig
+                            som ansatte i hjemmetjenesten skal ha et trygt og forsvarlig arbeidsmiljø. Formidle dette på
+                            en omsorgsfull måte, og etabler en felles forståelse. <br>
+                            Planlegg videre oppfølging sammen med pasient og pårørende, og gi ærlige tilbakemeldinger om
+                            hvilke begrensninger tjenesten har. <br>
+                            Før du går er det viktig å informere både muntlig og skriftlig om hvordan pasient og
+                            pårørende kan kontakte hjemmetjensten dag, kveld og natt. Opplys om at de må ringe ved behov
+                            - også utenom avtalt besøk.
+                        </p>
+                    </div>
                 </details>
                 <details class="accordion-item">
-                <summary>Vendepunkt i sykdomsforløp</summary>
-                <div class="accordion-content">
-                    <p>
-                        Dersom du identifiserer en pasient i hjemmetjenesten som palliativ - Det kan være at pasienten får en palliativ diagnose, eller at den har et vendepunkt i et sykdomsforløp som har vært stabilt over lang tid. <br>
-                        Da er det viktig å planlegge for videre oppfølging, og gjøre avklaringer for veien videre. Snakk med pasient og pårørende om hva dere observerer, avklar om en må ha evaluering av lege, og inviter til en forhåndssamtale med pasient og pårørende. <br>
-                    </p>
-                </div>
+                    <summary>Vendepunkt i sykdomsforløp</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Dersom du identifiserer en pasient i hjemmetjenesten som palliativ - Det kan være at
+                            pasienten får en palliativ diagnose, eller at den har et vendepunkt i et sykdomsforløp som
+                            har vært stabilt over lang tid. <br>
+                            Da er det viktig å planlegge for videre oppfølging, og gjøre avklaringer for veien videre.
+                            Snakk med pasient og pårørende om hva dere observerer, avklar om en må ha evaluering av
+                            lege, og inviter til en forhåndssamtale med pasient og pårørende. <br>
+                        </p>
+                    </div>
                 </details>
             </section>
 
@@ -167,69 +193,75 @@
                     <p>Når du kommer tilbake til kontoret, må du planlegge videre forløp:</p>
                 </div>
                 <details class="accordion-item accordion-item-green">
-                <summary>Utstyr og medikamenter</summary>
-                <div class="accordion-content">
-                    <ul>
-                        <li>Bestill og klargjør nødvendig utstyr så tidlig som mulig, spesielt før helg og helligdager.</li>
-                        <li>Vurder om det er behov for å gjøre klart medikamentskrin, eller om dette kan vente.</li>
-                        <li>Avklar hvordan du får tak i medikamentskrin hvis det haster.</li>
-                    </ul>
-                </div>
+                    <summary>Utstyr og medikamenter</summary>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Bestill og klargjør nødvendig utstyr så tidlig som mulig, spesielt før helg og
+                                helligdager.</li>
+                            <li>Vurder om det er behov for å gjøre klart medikamentskrin, eller om dette kan vente.</li>
+                            <li>Avklar hvordan du får tak i medikamentskrin hvis det haster.</li>
+                        </ul>
+                    </div>
                 </details>
                 <details class="accordion-item accordion-item-green">
-                <summary>Videre samarbeid med fastlege og palliativt team</summary>
-                <div class="accordion-content">
-                    <ul>
-                        <li>Send melding til fastlegen om at pasienten er tatt imot av hjemmetjenesten.</li>
-                        <li>Avklar videre samarbeid. Dersom pasienten er svært dårlig, ring fastlegen for rask avklaring.</li>
-                        <li>Sjekk hvordan fastlegen best kan kontaktes, og om den er tilgjengelige utenom kontortid.</li>
-                        <li>Undersøk om pasienten allerede er tilknyttet palliativt team, eller om dette bør vurderes.</li>
-                        <li>Målet er å være i forkant og unngå unødvendig bruk av legevakt. Legevakt skal benyttes når det er nødvendig.</li>
-                    </ul>
-                </div>
+                    <summary>Videre samarbeid med fastlege og palliativt team</summary>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Send melding til fastlegen om at pasienten er tatt imot av hjemmetjenesten.</li>
+                            <li>Avklar videre samarbeid. Dersom pasienten er svært dårlig, ring fastlegen for rask
+                                avklaring.</li>
+                            <li>Sjekk hvordan fastlegen best kan kontaktes, og om den er tilgjengelige utenom kontortid.
+                            </li>
+                            <li>Undersøk om pasienten allerede er tilknyttet palliativt team, eller om dette bør
+                                vurderes.</li>
+                            <li>Målet er å være i forkant og unngå unødvendig bruk av legevakt. Legevakt skal benyttes
+                                når det er nødvendig.</li>
+                        </ul>
+                    </div>
                 </details>
                 <details class="accordion-item accordion-item-green">
-                <summary>Tilrettelegging av seng og hjelpemidler</summary>
-                <div class="accordion-content">
-                    <p>
-                        Noen pasienter ønsker ikke sykehusseng i hjemmet, 
-                        men dette blir som regel nødvendig når pasienten blir sengeliggende og trenger omfattende stell. <br>
-                        Planlegg tidlig: 
-                    </p>
-                    <ul>
-                        <li>Har kommunen seng tilgjengelig?</li>
-                        <li>Hvem leverer sengen, og kun på dagtid?</li>
-                        <li>Bør sengen bestilles allerede nå?</li>
-                    </ul>
-                </div>
+                    <summary>Tilrettelegging av seng og hjelpemidler</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Noen pasienter ønsker ikke sykehusseng i hjemmet,
+                            men dette blir som regel nødvendig når pasienten blir sengeliggende og trenger omfattende
+                            stell. <br>
+                            Planlegg tidlig:
+                        </p>
+                        <ul>
+                            <li>Har kommunen seng tilgjengelig?</li>
+                            <li>Hvem leverer sengen, og kun på dagtid?</li>
+                            <li>Bør sengen bestilles allerede nå?</li>
+                        </ul>
+                    </div>
                 </details>
                 <details class="accordion-item accordion-item-green">
-                <summary>Palliativ plan og bemanning</summary>
-                <div class="accordion-content">
-                    <p>
-                        Start arbeidet med en palliativ plan, og planlegg bemanningen rundt pasienten.<br>
-                        Behovet avhenger av: 
-                    </p>
-                    <ul>
-                        <li>hvor i sykdomsforløpet pasienten er</li>
-                        <li>hvilke ressurser pasient og pårørende har</li>
-                        <li>om det nærmer seg helg eller helligdager</li>
-                    </ul>
-                </div>
+                    <summary>Palliativ plan og bemanning</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Start arbeidet med en palliativ plan, og planlegg bemanningen rundt pasienten.<br>
+                            Behovet avhenger av:
+                        </p>
+                        <ul>
+                            <li>hvor i sykdomsforløpet pasienten er</li>
+                            <li>hvilke ressurser pasient og pårørende har</li>
+                            <li>om det nærmer seg helg eller helligdager</li>
+                        </ul>
+                    </div>
                 </details>
                 <details class="accordion-item accordion-item-green">
-                <summary>Innhold i palliativ plan</summary>
-                <div class="accordion-content">
-                    <p>
-                       Den palliative planen kan utformes i kommunens dokumentasjonssystem og bør inneholde: 
-                    </p>
-                    <ul>
-                        <li>Pasientens ønsker og preferanser knyttet til behandling og omsorg</li>
-                        <li>Hvor pasienten ønsker å tilbringe sin siste tid</li>
-                        <li>Pårørendes ønsker om deltakelse og deres rolle</li>
-                        <li>Klare retningslinjer for ansvar og oppfølging mellom involverte helsepersonell</li>
-                    </ul>
-                </div>
+                    <summary>Innhold i palliativ plan</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Den palliative planen kan utformes i kommunens dokumentasjonssystem og bør inneholde:
+                        </p>
+                        <ul>
+                            <li>Pasientens ønsker og preferanser knyttet til behandling og omsorg</li>
+                            <li>Hvor pasienten ønsker å tilbringe sin siste tid</li>
+                            <li>Pårørendes ønsker om deltakelse og deres rolle</li>
+                            <li>Klare retningslinjer for ansvar og oppfølging mellom involverte helsepersonell</li>
+                        </ul>
+                    </div>
                 </details>
             </section>
         </div>
@@ -266,4 +298,5 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>

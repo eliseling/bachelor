@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hjemmetid</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <a href="#main" class="skip-link">Hopp til innhold</a>
     <header class="site-header">
         <div class="header-inner">
 
             <a href="index.html" class="site-title-link">
-            <div class="site-title">
-                <span class="title-main">
-                    Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
-                </span>
-            </div>
+                <div class="site-title">
+                    <span class="title-main">
+                        Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
+                    </span>
+                </div>
             </a>
 
-           <!-- Page navigation bar (desktop only, hidden on mobile) -->
+            <!-- Page navigation bar (desktop only, hidden on mobile) -->
             <nav class="page-nav" role="navigation" aria-label="Steg navigasjon">
                 <a href="identifisering.html">Identifisering</a>
                 <a href="igangsetting.html">Igangsetting</a>
@@ -29,76 +31,86 @@
 
             <!-- Mobil hamburger -->
             <div class="dropdown mobile-only">
-            <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu" aria-label="Åpne meny">
-                <i data-lucide="menu"></i>
-            </button>
+                <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu"
+                    aria-label="Åpne meny">
+                    <i data-lucide="menu"></i>
+                </button>
 
-            <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
-                <!-- Søkefelt -->
-                <div class="search-container">
-                    <input type="text" id="searchInput" class="search-field" placeholder="Søk..." aria-label="Søk i innholdet">
-                    <div class="search-results" id="searchResults" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
-                </div>
-                <div class="dropdown-group" id="group-nav">
-                  <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-nav-content">
-                    <span class="group-label">Navigasjon</span>
-                  </button>
-                  <div class="group-content" id="group-nav-content" role="group">
-                    <a href="identifisering.html" role="menuitem">Identifisering</a>
-                    <a href="igangsetting.html" role="menuitem">Igangsetting</a>
-                    <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
-                    <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
-                  </div>
-                </div>
+                <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
+                    <!-- Søkefelt -->
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-field" placeholder="Søk..."
+                            aria-label="Søk i innholdet">
+                        <div class="search-results" id="searchResults" role="status" aria-live="polite"
+                            aria-label="Søkeresultater"></div>
+                    </div>
+                    <div class="dropdown-group" id="group-nav">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-nav-content">
+                            <span class="group-label">Navigasjon</span>
+                        </button>
+                        <div class="group-content" id="group-nav-content" role="group">
+                            <a href="identifisering.html" role="menuitem">Identifisering</a>
+                            <a href="igangsetting.html" role="menuitem">Igangsetting</a>
+                            <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
+                            <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
+                        </div>
+                    </div>
 
-                <div class="dropdown-group" id="group-followup">
-                  <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-followup-content"><span class="group-label">Samhandling / Ressurspersoner</span></button>
-                  <div class="group-content" id="group-followup-content" role="group">
-                    <a href="#" role="menuitem">Fastlege</a>
-                    <a href="#" role="menuitem">Palliativt team</a>
-                    <a href="#" role="menuitem">Ressurssykepleier</a>
-                    <a href="#" role="menuitem">Kreftkoordinator/<br>demenskoordinator/AKS</a>
-                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
-                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
-                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-                  </div>
+                    <div class="dropdown-group" id="group-followup">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-followup-content"><span class="group-label">Samhandling /
+                                Ressurspersoner</span></button>
+                        <div class="group-content" id="group-followup-content" role="group">
+                            <a href="fastlege.html" role="menuitem">Fastlege</a>
+                            <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                            <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                            <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                            <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                            <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                            <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
             </div>
 
             <!-- Desktop dropdowns container -->
             <div class="desktop-controls">
                 <!-- Desktop dropdown (Samhandling / Ressurspersoner) -->
                 <div class="dropdown followup-desktop">
-                <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false" aria-controls="followupMenu">
-                    Samhandling / Ressurspersoner
-                    <span class="chev">▾</span>
-                </button>
+                    <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="followupMenu">
+                        Samhandling / Ressurspersoner
+                        <span class="chev">▾</span>
+                    </button>
 
-                <div class="dropdown-content" id="followupMenu" role="menu">
-                    <a href="#" role="menuitem">Fastlege</a>
-                    <a href="#" role="menuitem">Palliativt team</a>
-                    <a href="#" role="menuitem">Ressurssykepleier</a>
-                    <a href="#" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
-                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
-                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
-                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-                </div>
-                </div>
-                
-                <!-- Desktop Search dropdown -->
-                <div class="dropdown search-desktop desktop-only">
-                <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false" aria-controls="searchDesktopMenu">
-                    <i data-lucide="search"></i>
-                    Søk
-                </button>
-
-                <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
-                    <div class="search-container-desktop">
-                        <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..." aria-label="Søk i innholdet">
-                        <div class="search-results-desktop" id="searchResultsDesktop" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
+                    <div class="dropdown-content" id="followupMenu" role="menu">
+                        <a href="fastlege.html" role="menuitem">Fastlege</a>
+                        <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                        <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                        <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                        <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                        <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                        <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
                     </div>
                 </div>
+
+                <!-- Desktop Search dropdown -->
+                <div class="dropdown search-desktop desktop-only">
+                    <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="searchDesktopMenu">
+                        <i data-lucide="search"></i>
+                        Søk
+                    </button>
+
+                    <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
+                        <div class="search-container-desktop">
+                            <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..."
+                                aria-label="Søk i innholdet">
+                            <div class="search-results-desktop" id="searchResultsDesktop" role="status"
+                                aria-live="polite" aria-label="Søkeresultater"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -111,9 +123,12 @@
         <section class="page-intro">
             <h1>Hjemmetid</h1>
             <p>
-                Mange med alvorlig og livstruende sykdom, samt eldre i livets siste fase ønsker å få være mest mulig hjemme.
-                Med god planlegging og tilrettelegging er det er et stort potensial for i større grad å legge til rette for at 
-                flere kan få oppfylt ønsket om å være hjemme i trygge omgivelser i livets sluttfase, og også å dø hjemme dersom de og pårørende ønsker det.
+                Mange med alvorlig og livstruende sykdom, samt eldre i livets siste fase ønsker å få være mest mulig
+                hjemme.
+                Med god planlegging og tilrettelegging er det er et stort potensial for i større grad å legge til rette
+                for at
+                flere kan få oppfylt ønsket om å være hjemme i trygge omgivelser i livets sluttfase, og også å dø hjemme
+                dersom de og pårørende ønsker det.
             </p>
         </section>
 
@@ -123,252 +138,332 @@
                 <h2>Helsepersonells oppgaver</h2>
 
                 <details class="accordion-item">
-                <summary>Forhåndssamtale</summary>
-                <div class="accordion-content">
-                    <p>
-                        Forhåndssamtaler er planlagte samtaler mellom bruker og helsepersonell om personens ønsker, 
-                        verdier og preferanser for framtidig helsehjelp, særlig med tanke på situasjoner der brukeren kan miste evnen til å uttrykke seg selv. <br>
-                        Hovedmålet med forhåndssamtalen er å:
-                    </p>
-                    <ul>
-                        <li>Sikre brukerens autonomi</li>
-                        <li>Tilpasse helsehjelpen til det brukeren selv ønsker</li>
-                        <li>Redusere usikkerhet og belastning for pårørende og helsepersonell</li>
-                        <li>Forebygge uønsket og unødvendig behandling</li>
-                    </ul>
-                    <br>
-                    <p>
-                        Forhåndssamtaler tilbys:
-                    </p>
-                    <ul>
-                        <li>Tidlig i forløpet</li>
-                        <li>Ved vendepunkt i sykdomsforløpet som for eksempel sykehusinnleggelser, og ved endringer i behandlingsintensitet</li>
-                        <li>Dersom bruker og pårørende ber om det</li>
-                    </ul>
-                    <br>
-                    <p>
-                        Forhåndssamtalen kan handle om:
-                    </p>
-                    <ul>
-                        <li>Brukerens verdier og livssyn</li>
-                        <li>Hva som er viktig for livskvalitet (Hva er viktig for deg?)</li>
-                        <li>Ønsker rundt livsforlengende behandling (f. eks. gjenoppliving, respirator)</li>
-                        <li>Ønsker om sted for behandling og død</li>
-                        <li>Hvem som skal involveres i beslutninger</li>
-                        <li>Ønsker for symptomlindring og omsorg i livets sluttfase</li>
-                    </ul>
-                    <br>
-                    <p>Viktig å huske:</p>
-                    <ul>
-                        <li>Forhåndssamtaler er frivillige og bør ses på som en prosess</li>
-                        <li>De bør gjennomføres flere ganger da personens behov endres over tid</li>
-                        <li>Aktuelt helsepersonell som kjenner pasienten godt deltar,
-                             fortrinnsvis også pårørende dersom pasienten ønsker </li>
-                        <li>De er ikke juridisk bindende, men skal vektlegges tungt</li>
-                        <li>Samtalene dokumenteres i pasientjournal</li>
-                        <li>Forhåndssamtaler støtter pasient- og brukerrettighetsloven §3-1 (rett til medvirkning), 
-                            og er i tråd med prinsippene om autonomi, verdighet og selvbestemmelse. </li>
-                        <li>Forhåndssamtaler er anbefalt i Nasjonale faglige retningslinjer for palliasjon</li>
-                    </ul>
-                    <p><b>Lenker:</b></p>
-                    <ul>
-                        <li><a href="https://www.helsedirektoratet.no/faglige-rad/Forhandssamtaler-og-planlegging-ved-begrenset-forventet-levetid/forhandssamtaler">Nasjonale faglige råd on forhåndssamtaler – Helsedirektoratet</a></li>
-                        <li><a href="https://www.helse-bergen.no/48e283/siteassets/seksjon/klb/documents/praktisk-info/forehandssamtalar/lommeveileder.pdf">Lommeveileder for forhåndssamtaler</a></li>
-                        <li><a href="https://kursbygger.ihelse.net/?startcourseid=2860&tracking=">E-læringskurs for forhåndssamtaler (FOU nettverk)</a></li>
-                    </ul>
-                        
-                </div>
-                </details>
-                <details class="accordion-item">
-                <summary>Vurder hjemmebesøk med fastlege/palliativt team</summary>
-                <div class="accordion-content">
-                    <p>
-                        En palliativ pasient trenger oppfølging av lege, og det er fastlegen som har ansvar for hjemmeboende pasienter på sin liste. 
-                        Dersom det planlegges ivaretagelse av en palliativ pasient i hjemmet, er det viktig å informere fastlegen tidlig i forløpet.
-                    </p>
-                    <p>
-                        Dersom det ikkje allereie er gjort, send en e-melding til fastlegen og informer om dine observasjoner, og hva som er avtalt videre. 
-                        Inviter fastlegen med på hjemmebesøk dersom det er nødvendig. Fastlegen skal ut fra en medisinsk vurdering prioritere når hjemmebesøk skal foretas. 
-                        Det kan være nyttig å gå på hjemmebesøk sammen for å få en felles forståelse av oppfølgingen videre, 
-                        og det kan være nødvendig med flere besøk avhengig av hvor pasienten er i forløpet og symptombyrden til pasienten.
-                    </p>
-                    <p>
-                        Sjekk om pasienten er henvist palliativt team, eller om det bør gjøres.
-                    </p>
-                    <p>
-                        Avklar med legen/palliativt team hvordan og når den/de kan kontaktes, og hvor ofte de ønsker oppdatering. 
-                        Det kan være nødvendig med telefonkontakt i denne fasen, da endringer ofte skjer raskt. Det er ønskelig å unngå å bruke legevakt i denne fasen, 
-                        og det kan man kanskje klare å unngå ved god planlegging. Legevakt må likevel kontaktes dersom det er nødvendig.
-                    </p>
-                    <p><b>Lenker:</b></p>
-                    <ul class="no-bullets">
-                        <li><a href="https://lovdata.no/dokument/SF/forskrift/2025-12-02-2405">Forskrift om fastlegeordning i kommunene (fastlegeforskriften) - Lovdata</a></li>
-                    </ul>
-                </div>
-                </details>
-                <details class="accordion-item">
-                <summary>Symptomkartlegging</summary>
-                <div class="accordion-content">
-                    <p>
-                        Tidlig identifisering, grundig vurdering og behandling av smerte og andre problemer av fysisk, 
-                        psykososial og åndelig/eksistensiell art er sentralt i palliasjon. 
-                        Pasientens oppfatning av situasjonen gir grunnlag for prioritering av tiltak og behandling.
-                    </p>
-                    <p>
-                        ESAS-r er et standardisert kartleggingsverktøy som brukes i palliasjon for å vurdere pasientens egenopplevde symptombelastning. 
-                        Det gir et raskt bilde av symptomnivå, endringer over tid og er et viktig verktøy i det tverrfaglige samarbeidet. 
-                    </p>
-                    <p>
-                        ESASr kartlegger følgende 9 symptomer på en numerisk skala fra 0–10 der 0 = ingen plager og 10 = verst tenkelig plage 
-                    </p>
-                    <ul>
-                        <li>Smerte</li>
-                        <li>Tretthet (fatigue)</li>
-                        <li>Kvalme</li>
-                        <li>Depresjon</li>
-                        <li>Angst</li>
-                        <li>Døsighet</li>
-                        <li>Appetitt</li>
-                        <li>Velvære (overall wellbeing)</li>
-                        <li>Tungpust (dyspné)</li>
-                        <li>Det er også plass til å føre opp <b>ett ekstra symptom</b> som er viktig for pasienten (f.eks. munntørrhet, kløe, obstipasjon).</li>
-                    </ul>
-                    <br>
-                    <p>
-                        En kan også benytte ESAS-R sekundærobservasjonsskjema ved redusert bevissthetsnivå, allmenntilstand etc. 
-                        Sekundærobservasjonsskjemaet kartlegger allmenntilstand basert på ECOG status, pustebesvær, matinntak, bevissthetsnivå/våkenhet, 
-                        orientering/kognitiv evne, motorisk ro/uro og ansiktsuttrykk.
-                    </p>
-                    <p>
-                        Ved kognitiv svikt kan man ta i bruk MOBID-2 skjema som kartlegger smerteadferd som smertelyder, ansiktsuttrykk og/eller avvergingsreaksjoner før, 
-                        under og etter mobilisering.
-                    </p>
-                    <p><b>Lenker:</b></p>
-                    <ul class="no-bullets">
-                        <li><a href="https://www.helse-bergen.no/4a6f72/siteassets/seksjon/klb/documents/esas/esas-r/esas_r_norwegian_version_final1_180112_helse-vest-logo.pdf">ESAS-r (ESAS-revidert) pasientskjema (pdf)</a></li>
-                        <li><a href="https://www.helse-bergen.no/4a6f6f/siteassets/seksjon/klb/documents/esas/esas-r/forlopsskjema_esasr_helse-vest-logo.pdf">Forløpsskjema ESAS-r (grafisk oversikt over registrerte symptom) (pdf)</a></li>
-                        <li><a href="#">Forløpsskjema ESAS-r til elektronisk utfylling (excel)</a></li>
-                        <li><a href="https://www.helse-bergen.no/492f2b/siteassets/seksjon/klb/documents/smertekart.pdf">Smertekart (pdf)</a></li>
-                        <li><a href="https://www.unn.no/49f2db/siteassets/documents/kompetansetjenester--sentre-og-fagrad/regionalt-kompetansesenter-for-lindrende-behandling/symtomkartlegging/mobid-2.pdf">MOBID-2</a></li>
-                    </ul>
-                </div>
-                </details>
-                <details class="accordion-item">
-                <summary>Sympotomlindring</summary>
-                <div class="accordion-content">
-                    <p>
-                        Pasienter med behov for palliasjon kan ha symptomer av fysisk, psykisk, sosial og eller åndelig/eksistensiell art. 
-                        Ofte påvirker ulike symptomer hverandre, også omtalt som total pain.
-                    </p>
-                    <p>
-                        Det er viktig å følge opp symptomkartleggingen med tiltak og evaluering. 
-                        Alle som er hos pasienten har plikt til å dokumentere observasjoner, tiltak og evalueringer. 
-                    </p>
-                    <p>
-                        Når det gjelder symptomlindring, vil det ofte være nødvendig å prøve ulike tiltak før en kommer frem til god symptomlindring. 
-                        Derfor er det viktig med god oppfølging og dokumentasjon til legen som følger opp.
-                    </p>
-                    <p>
-                        Hjemmetjenesten har ansvar for at pleiere som følger opp palliative pasienter har god kunnskap om symptomlindring. 
-                        Metodebok kan være til hjelp dersom man er usikker på hvordan man skal håndtere ulike symptomer. 
-                        Konferer med en kollega eller legen dersom du er usikker.
-                    </p>
-                    <p>
-                        Etter hvert som pasienten blir dårligere, vil det komme til et punkt hvor pasienten ikke klarer å svelge tabletter. 
-                        Det er viktig å ha en plan for hva man skal gjøre da, og være i forkant. 
-                        Symptomlindring skal i terminalfasen gis subcutant, og man er da oftest dekket med fire medikamenter:
-                        <a href="https://www.helse-bergen.no/kompetansesenter-i-lindrande-behandling/palliasjon-verktoy-for-helsepersonell/behandlingsalgoritmar-for-vanlege-symptom-hos-doyande-vaksne-dei-fire-viktigaste-medikamenta/">Behandlingsalgoritmar for vanlege symptom hos døyande vaksne. Dei fire viktigaste medikamenta - Helse Bergen HF.</a>
-                    </p>
-                    <p>
-                        Sjekk om arbeidsplassen din har ressurssykepleier. Denne har god kjennskap til de lindrende medikamentene.
-                        <br><a href="https://www.helse-bergen.no/kompetansesenter-i-lindrande-behandling/nettverk">Nettverk - Helse Bergen HF</a>
-                    </p>
-                    <p><b>Lenker:</b></p>
-                    <ul class="no-bullets">
-                        <li>Nasjonale faglige råd om <a href="https://www.helsedirektoratet.no/faglige-rad/lindrende-behandling-i-livets-sluttfase">Lindrende behandling i livets sluttfase - Helsedirektoratet</a></li>
-                        <li>Lindrende behandling/Lindring i Nord. Helse Nord sin <a href="https://metodebok.no/bok/lindrende/lindrende-behandling-(lindring-i-nord)">Metodebok</a></li>
-                        <li>Konverteringstabell smertebehandling <a href="https://www.helse-bergen.no/49b61e/siteassets/seksjon/klb/documents/medikamentskrin/smerter.pdf">Lindring av smerter ved livets slutt</a></li>
-                        <li><a href="https://www.helsedirektoratet.no/veiledere/behandlingsavklaringer-ved-begrenset-forventet-levetid-horingsutkast">Behandlingsavklaringer ved begrenset forventet levetid (HØRINGSUTKAST) - Helsedirektoratet</a></li>
-                        <li><a href="https://www.helse-bergen.no/kompetansesenter-i-lindrande-behandling/palliasjon-verktoy-for-helsepersonell/behandlingsalgoritmar-for-vanlege-symptom-hos-doyande-vaksne-dei-fire-viktigaste-medikamenta/">Behandlingsalgoritmar for vanlege symptom hos døyande vaksne. Dei fire viktigaste medikamenta - Helse Bergen HF</a></li>
-                    </ul>
-                </div>
-                </details>
-                <details class="accordion-item">
-                <summary>Boligkartlegging/tilrettelegging med hjelpemidler</summary>
-                <div class="accordion-content">
-                    <p>
-                       Når en pasient vil tilbringe den siste tiden av livet i hjemmet, og dersom han/hun ønsker å dø hjemme, 
-                       vil det være nødvendig å tilrettelegge i hjemmet med hjelpemidler. Dette er både for å ivareta pasient og pårørende, 
-                       og for å ivareta helsepersonell. Eldre boliger er gjerne mindre tilrettelagt enn nyere boliger, men det er mye man kan tilrettelegge i hjemmet med enkle grep.
-                    </p>
-                    <p>
-                        Snakk sammen med pasient og pårørende, og skisser ulike løsninger. 
-                        Ofte vil pasienten og pårørende være skeptiske til endringer, men med samtaler og felles forståelse kan man komme frem til akseptable løsninger. 
-                        Ofte må tanken modnes litt før endringen skjer.
-                    </p>
-                    <p>
-                        Fysioterapitjenesten i kommune har oversikt over løsninger og hjelpemidler, og vil være nyttig å samarbeide med. 
-                        De fleste kommuner har et korttidslager hvor en enkelt kan låne ting for en kort periode dersom man er palliativ/terminal, har ALS eller FCF.
-                    </p>
-                    <p>
-                        Hjelpemidler kan være sykeseng, madrass, trykkavlastende overmadrass, personløfter, toalettstol, 
-                        toalettforhøyer med armlene, dusjkrakk, dusjstol, manuell rullestol, preikestol, underarmsrullator, rullator, trykkavlastende pute, arbeidsstol og terskeleliminator.
-                    </p>
-                    <p>
-                        Eksisterende seng kan tilrettelegges med hjertebrett (dette krever todelt overmadrass og at den er minst 10 cm høy) søsterhjelp og støttestang. 
-                        Lageret har noen ganger forhøyningsklosser som kan lånes kortvarig.
-                    </p>
-                    <p>
-                        Fysio-/ergoterapitjenesten i kommunen kan dra på hjemmebesøk for å kartlegge og hjelpe til med å tilrettelegge boligen. 
-                        Fysioterapitjenesten har også kunnskap om andre hjelpemidler, og kan søke på disse. 
-                    </p>
-                    <p>
-                        Oversikt over aktuelle: <a href="#">Hjelpemidler som en lan låne fra lokalt lager.docx </a>
-                    </p>
-                </div>
-                </details>
-                <details class="accordion-item">
-                <summary>Pårørendestøtte</summary>
-                <div class="accordion-content">
-                    <p>
-                       Pårørende som følger opp en palliativ pasient har rett til veiledning, opplæring og avlasting. 
-                       Det er krevende å ivareta en pallliativ pasient i hjemmet, og det er derfor nødvendig med nært samarbeid med pårørende for å kartlegge behov og tilby støtte. 
-                       Pårørende har ikke plikt til å ivareta helsehjelp, men det har kommunen. 
-                       Alle har rett til nødvendig helsehjelp i den kommunen han/hun bor eller oppholder seg 
-                       <a href="https://www.helsedirektoratet.no/rundskriv/pasient-og-brukerrettighetsloven-med-kommentarer">Pasient- og brukerrettighetsloven med kommentarer - Helsedirektoratet.</a>
-                    </p>
-                    <p>
-                        Kommunen har plikt til å tilby opplæring, veiledning og støtte til pårørende. 
-                        Dette gjelder særlig til pårørende med særlig tyngende omsorgsoppgaver. Informasjon må ofte gjentas.
-                        <a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder">Pårørendeveileder - Helsedirektoratet.</a>
-                    </p>
-                    <p>
-                        Sørg for at pårørende har fått informasjon om pleiepenger ved livet sluttfase:
-                        <a href="https://www.nav.no/pleiepenger-sluttfase">Pleiepenger i livets sluttfase - nav.no.</a>
-                        Kontakt gjerne sosionom ved sykehuset dersom en trenger hjelp til å søke om pleiepenger.
-                    </p>
-                    <p>
-                        Hjelpemidler kan være sykeseng, madrass, trykkavlastende overmadrass, personløfter, toalettstol, 
-                        toalettforhøyer med armlene, dusjkrakk, dusjstol, manuell rullestol, preikestol, underarmsrullator, rullator, trykkavlastende pute, arbeidsstol og terskeleliminator.
-                    </p>
-                    <p>
-                        Eksisterende seng kan tilrettelegges med hjertebrett (dette krever todelt overmadrass og at den er minst 10 cm høy) søsterhjelp og støttestang. 
-                        Lageret har noen ganger forhøyningsklosser som kan lånes kortvarig.
-                    </p>
-                    <p>
-                        Fysio-/ergoterapitjenesten i kommunen kan dra på hjemmebesøk for å kartlegge og hjelpe til med å tilrettelegge boligen. 
-                        Fysioterapitjenesten har også kunnskap om andre hjelpemidler, og kan søke på disse. 
-                    </p>
-                    <p>
-                        Oversikt over aktuelle: <a href="#">Hjelpemidler som en lan låne fra lokalt lager.docx </a>
-                    </p>
+                    <summary>Forhåndssamtale</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Forhåndssamtaler er planlagte samtaler mellom bruker og helsepersonell om personens ønsker,
+                            verdier og preferanser for framtidig helsehjelp, særlig med tanke på situasjoner der
+                            brukeren kan miste evnen til å uttrykke seg selv. <br>
+                            Hovedmålet med forhåndssamtalen er å:
+                        </p>
+                        <ul>
+                            <li>Sikre brukerens autonomi</li>
+                            <li>Tilpasse helsehjelpen til det brukeren selv ønsker</li>
+                            <li>Redusere usikkerhet og belastning for pårørende og helsepersonell</li>
+                            <li>Forebygge uønsket og unødvendig behandling</li>
+                        </ul>
+                        <br>
+                        <p>
+                            Forhåndssamtaler tilbys:
+                        </p>
+                        <ul>
+                            <li>Tidlig i forløpet</li>
+                            <li>Ved vendepunkt i sykdomsforløpet som for eksempel sykehusinnleggelser, og ved endringer
+                                i behandlingsintensitet</li>
+                            <li>Dersom bruker og pårørende ber om det</li>
+                        </ul>
+                        <br>
+                        <p>
+                            Forhåndssamtalen kan handle om:
+                        </p>
+                        <ul>
+                            <li>Brukerens verdier og livssyn</li>
+                            <li>Hva som er viktig for livskvalitet (Hva er viktig for deg?)</li>
+                            <li>Ønsker rundt livsforlengende behandling (f. eks. gjenoppliving, respirator)</li>
+                            <li>Ønsker om sted for behandling og død</li>
+                            <li>Hvem som skal involveres i beslutninger</li>
+                            <li>Ønsker for symptomlindring og omsorg i livets sluttfase</li>
+                        </ul>
+                        <br>
+                        <p>Viktig å huske:</p>
+                        <ul>
+                            <li>Forhåndssamtaler er frivillige og bør ses på som en prosess</li>
+                            <li>De bør gjennomføres flere ganger da personens behov endres over tid</li>
+                            <li>Aktuelt helsepersonell som kjenner pasienten godt deltar,
+                                fortrinnsvis også pårørende dersom pasienten ønsker </li>
+                            <li>De er ikke juridisk bindende, men skal vektlegges tungt</li>
+                            <li>Samtalene dokumenteres i pasientjournal</li>
+                            <li>Forhåndssamtaler støtter pasient- og brukerrettighetsloven §3-1 (rett til medvirkning),
+                                og er i tråd med prinsippene om autonomi, verdighet og selvbestemmelse. </li>
+                            <li>Forhåndssamtaler er anbefalt i Nasjonale faglige retningslinjer for palliasjon</li>
+                        </ul>
+                        <p><b>Lenker:</b></p>
+                        <ul>
+                            <li><a
+                                    href="https://www.helsedirektoratet.no/faglige-rad/Forhandssamtaler-og-planlegging-ved-begrenset-forventet-levetid/forhandssamtaler">Nasjonale
+                                    faglige råd on forhåndssamtaler – Helsedirektoratet</a></li>
+                            <li><a
+                                    href="https://www.helse-bergen.no/48e283/siteassets/seksjon/klb/documents/praktisk-info/forehandssamtalar/lommeveileder.pdf">Lommeveileder
+                                    for forhåndssamtaler</a></li>
+                            <li><a href="https://kursbygger.ihelse.net/?startcourseid=2860&tracking=">E-læringskurs for
+                                    forhåndssamtaler (FOU nettverk)</a></li>
+                        </ul>
 
-                    <p><b>Lenker:</b></p>
-                    <ul class="no-bullets">
-                        <li><a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder/stotte-familie-og-andre-parorende/stotte-til-parorende-med-store-omsorgsoppgaver-ogeller-belastninger/kartlegg-og-fang-opp-parorendes-behov-for-stotte">Kartlegg pårørendes behov for støtte - Helsedirektoratet</a></li>
-                        <li><a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder">Pårørendeveileder - Helsedirektoratet</a></li>
-                    </ul>
-                </div>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Vurder hjemmebesøk med fastlege/palliativt team</summary>
+                    <div class="accordion-content">
+                        <p>
+                            En palliativ pasient trenger oppfølging av lege, og det er fastlegen som har ansvar for
+                            hjemmeboende pasienter på sin liste.
+                            Dersom det planlegges ivaretagelse av en palliativ pasient i hjemmet, er det viktig å
+                            informere fastlegen tidlig i forløpet.
+                        </p>
+                        <p>
+                            Dersom det ikkje allereie er gjort, send en e-melding til fastlegen og informer om dine
+                            observasjoner, og hva som er avtalt videre.
+                            Inviter fastlegen med på hjemmebesøk dersom det er nødvendig. Fastlegen skal ut fra en
+                            medisinsk vurdering prioritere når hjemmebesøk skal foretas.
+                            Det kan være nyttig å gå på hjemmebesøk sammen for å få en felles forståelse av oppfølgingen
+                            videre,
+                            og det kan være nødvendig med flere besøk avhengig av hvor pasienten er i forløpet og
+                            symptombyrden til pasienten.
+                        </p>
+                        <p>
+                            Sjekk om pasienten er henvist palliativt team, eller om det bør gjøres.
+                        </p>
+                        <p>
+                            Avklar med legen/palliativt team hvordan og når den/de kan kontaktes, og hvor ofte de ønsker
+                            oppdatering.
+                            Det kan være nødvendig med telefonkontakt i denne fasen, da endringer ofte skjer raskt. Det
+                            er ønskelig å unngå å bruke legevakt i denne fasen,
+                            og det kan man kanskje klare å unngå ved god planlegging. Legevakt må likevel kontaktes
+                            dersom det er nødvendig.
+                        </p>
+                        <p><b>Lenker:</b></p>
+                        <ul class="no-bullets">
+                            <li><a href="https://lovdata.no/dokument/SF/forskrift/2025-12-02-2405">Forskrift om
+                                    fastlegeordning i kommunene (fastlegeforskriften) - Lovdata</a></li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Symptomkartlegging</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Tidlig identifisering, grundig vurdering og behandling av smerte og andre problemer av
+                            fysisk,
+                            psykososial og åndelig/eksistensiell art er sentralt i palliasjon.
+                            Pasientens oppfatning av situasjonen gir grunnlag for prioritering av tiltak og behandling.
+                        </p>
+                        <p>
+                            ESAS-r er et standardisert kartleggingsverktøy som brukes i palliasjon for å vurdere
+                            pasientens egenopplevde symptombelastning.
+                            Det gir et raskt bilde av symptomnivå, endringer over tid og er et viktig verktøy i det
+                            tverrfaglige samarbeidet.
+                        </p>
+                        <p>
+                            ESASr kartlegger følgende 9 symptomer på en numerisk skala fra 0–10 der 0 = ingen plager og
+                            10 = verst tenkelig plage
+                        </p>
+                        <ul>
+                            <li>Smerte</li>
+                            <li>Tretthet (fatigue)</li>
+                            <li>Kvalme</li>
+                            <li>Depresjon</li>
+                            <li>Angst</li>
+                            <li>Døsighet</li>
+                            <li>Appetitt</li>
+                            <li>Velvære (overall wellbeing)</li>
+                            <li>Tungpust (dyspné)</li>
+                            <li>Det er også plass til å føre opp <b>ett ekstra symptom</b> som er viktig for pasienten
+                                (f.eks. munntørrhet, kløe, obstipasjon).</li>
+                        </ul>
+                        <br>
+                        <p>
+                            En kan også benytte ESAS-R sekundærobservasjonsskjema ved redusert bevissthetsnivå,
+                            allmenntilstand etc.
+                            Sekundærobservasjonsskjemaet kartlegger allmenntilstand basert på ECOG status, pustebesvær,
+                            matinntak, bevissthetsnivå/våkenhet,
+                            orientering/kognitiv evne, motorisk ro/uro og ansiktsuttrykk.
+                        </p>
+                        <p>
+                            Ved kognitiv svikt kan man ta i bruk MOBID-2 skjema som kartlegger smerteadferd som
+                            smertelyder, ansiktsuttrykk og/eller avvergingsreaksjoner før,
+                            under og etter mobilisering.
+                        </p>
+                        <p><b>Lenker:</b></p>
+                        <ul class="no-bullets">
+                            <li><a
+                                    href="https://www.helse-bergen.no/4a6f72/siteassets/seksjon/klb/documents/esas/esas-r/esas_r_norwegian_version_final1_180112_helse-vest-logo.pdf">ESAS-r
+                                    (ESAS-revidert) pasientskjema (pdf)</a></li>
+                            <li><a
+                                    href="https://www.helse-bergen.no/4a6f6f/siteassets/seksjon/klb/documents/esas/esas-r/forlopsskjema_esasr_helse-vest-logo.pdf">Forløpsskjema
+                                    ESAS-r (grafisk oversikt over registrerte symptom) (pdf)</a></li>
+                            <li><a href="#">Forløpsskjema ESAS-r til elektronisk utfylling (excel)</a></li>
+                            <li><a
+                                    href="https://www.helse-bergen.no/492f2b/siteassets/seksjon/klb/documents/smertekart.pdf">Smertekart
+                                    (pdf)</a></li>
+                            <li><a
+                                    href="https://www.unn.no/49f2db/siteassets/documents/kompetansetjenester--sentre-og-fagrad/regionalt-kompetansesenter-for-lindrende-behandling/symtomkartlegging/mobid-2.pdf">MOBID-2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Sympotomlindring</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Pasienter med behov for palliasjon kan ha symptomer av fysisk, psykisk, sosial og eller
+                            åndelig/eksistensiell art.
+                            Ofte påvirker ulike symptomer hverandre, også omtalt som total pain.
+                        </p>
+                        <p>
+                            Det er viktig å følge opp symptomkartleggingen med tiltak og evaluering.
+                            Alle som er hos pasienten har plikt til å dokumentere observasjoner, tiltak og evalueringer.
+                        </p>
+                        <p>
+                            Når det gjelder symptomlindring, vil det ofte være nødvendig å prøve ulike tiltak før en
+                            kommer frem til god symptomlindring.
+                            Derfor er det viktig med god oppfølging og dokumentasjon til legen som følger opp.
+                        </p>
+                        <p>
+                            Hjemmetjenesten har ansvar for at pleiere som følger opp palliative pasienter har god
+                            kunnskap om symptomlindring.
+                            Metodebok kan være til hjelp dersom man er usikker på hvordan man skal håndtere ulike
+                            symptomer.
+                            Konferer med en kollega eller legen dersom du er usikker.
+                        </p>
+                        <p>
+                            Etter hvert som pasienten blir dårligere, vil det komme til et punkt hvor pasienten ikke
+                            klarer å svelge tabletter.
+                            Det er viktig å ha en plan for hva man skal gjøre da, og være i forkant.
+                            Symptomlindring skal i terminalfasen gis subcutant, og man er da oftest dekket med fire
+                            medikamenter:
+                            <a
+                                href="https://www.helse-bergen.no/kompetansesenter-i-lindrande-behandling/palliasjon-verktoy-for-helsepersonell/behandlingsalgoritmar-for-vanlege-symptom-hos-doyande-vaksne-dei-fire-viktigaste-medikamenta/">Behandlingsalgoritmar
+                                for vanlege symptom hos døyande vaksne. Dei fire viktigaste medikamenta - Helse Bergen
+                                HF.</a>
+                        </p>
+                        <p>
+                            Sjekk om arbeidsplassen din har ressurssykepleier. Denne har god kjennskap til de lindrende
+                            medikamentene.
+                            <br><a
+                                href="https://www.helse-bergen.no/kompetansesenter-i-lindrande-behandling/nettverk">Nettverk
+                                - Helse Bergen HF</a>
+                        </p>
+                        <p><b>Lenker:</b></p>
+                        <ul class="no-bullets">
+                            <li>Nasjonale faglige råd om <a
+                                    href="https://www.helsedirektoratet.no/faglige-rad/lindrende-behandling-i-livets-sluttfase">Lindrende
+                                    behandling i livets sluttfase - Helsedirektoratet</a></li>
+                            <li>Lindrende behandling/Lindring i Nord. Helse Nord sin <a
+                                    href="https://metodebok.no/bok/lindrende/lindrende-behandling-(lindring-i-nord)">Metodebok</a>
+                            </li>
+                            <li>Konverteringstabell smertebehandling <a
+                                    href="https://www.helse-bergen.no/49b61e/siteassets/seksjon/klb/documents/medikamentskrin/smerter.pdf">Lindring
+                                    av smerter ved livets slutt</a></li>
+                            <li><a
+                                    href="https://www.helsedirektoratet.no/veiledere/behandlingsavklaringer-ved-begrenset-forventet-levetid-horingsutkast">Behandlingsavklaringer
+                                    ved begrenset forventet levetid (HØRINGSUTKAST) - Helsedirektoratet</a></li>
+                            <li><a
+                                    href="https://www.helse-bergen.no/kompetansesenter-i-lindrande-behandling/palliasjon-verktoy-for-helsepersonell/behandlingsalgoritmar-for-vanlege-symptom-hos-doyande-vaksne-dei-fire-viktigaste-medikamenta/">Behandlingsalgoritmar
+                                    for vanlege symptom hos døyande vaksne. Dei fire viktigaste medikamenta - Helse
+                                    Bergen HF</a></li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Boligkartlegging/tilrettelegging med hjelpemidler</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Når en pasient vil tilbringe den siste tiden av livet i hjemmet, og dersom han/hun ønsker å
+                            dø hjemme,
+                            vil det være nødvendig å tilrettelegge i hjemmet med hjelpemidler. Dette er både for å
+                            ivareta pasient og pårørende,
+                            og for å ivareta helsepersonell. Eldre boliger er gjerne mindre tilrettelagt enn nyere
+                            boliger, men det er mye man kan tilrettelegge i hjemmet med enkle grep.
+                        </p>
+                        <p>
+                            Snakk sammen med pasient og pårørende, og skisser ulike løsninger.
+                            Ofte vil pasienten og pårørende være skeptiske til endringer, men med samtaler og felles
+                            forståelse kan man komme frem til akseptable løsninger.
+                            Ofte må tanken modnes litt før endringen skjer.
+                        </p>
+                        <p>
+                            Fysioterapitjenesten i kommune har oversikt over løsninger og hjelpemidler, og vil være
+                            nyttig å samarbeide med.
+                            De fleste kommuner har et korttidslager hvor en enkelt kan låne ting for en kort periode
+                            dersom man er palliativ/terminal, har ALS eller FCF.
+                        </p>
+                        <p>
+                            Hjelpemidler kan være sykeseng, madrass, trykkavlastende overmadrass, personløfter,
+                            toalettstol, 
+                            toalettforhøyer med armlene, dusjkrakk, dusjstol, manuell rullestol, preikestol,
+                            underarmsrullator, rullator, trykkavlastende pute, arbeidsstol og terskeleliminator.
+                        </p>
+                        <p>
+                            Eksisterende seng kan tilrettelegges med hjertebrett (dette krever todelt overmadrass og at
+                            den er minst 10 cm høy) søsterhjelp og støttestang.
+                            Lageret har noen ganger forhøyningsklosser som kan lånes kortvarig.
+                        </p>
+                        <p>
+                            Fysio-/ergoterapitjenesten i kommunen kan dra på hjemmebesøk for å kartlegge og hjelpe til
+                            med å tilrettelegge boligen.
+                            Fysioterapitjenesten har også kunnskap om andre hjelpemidler, og kan søke på disse.
+                        </p>
+                        <p>
+                            Oversikt over aktuelle: <a href="#">Hjelpemidler som en lan låne fra lokalt lager.docx </a>
+                        </p>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Pårørendestøtte</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Pårørende som følger opp en palliativ pasient har rett til veiledning, opplæring og
+                            avlasting.
+                            Det er krevende å ivareta en pallliativ pasient i hjemmet, og det er derfor nødvendig med
+                            nært samarbeid med pårørende for å kartlegge behov og tilby støtte.
+                            Pårørende har ikke plikt til å ivareta helsehjelp, men det har kommunen.
+                            Alle har rett til nødvendig helsehjelp i den kommunen han/hun bor eller oppholder seg
+                            <a
+                                href="https://www.helsedirektoratet.no/rundskriv/pasient-og-brukerrettighetsloven-med-kommentarer">Pasient-
+                                og brukerrettighetsloven med kommentarer - Helsedirektoratet.</a>
+                        </p>
+                        <p>
+                            Kommunen har plikt til å tilby opplæring, veiledning og støtte til pårørende.
+                            Dette gjelder særlig til pårørende med særlig tyngende omsorgsoppgaver. Informasjon må ofte
+                            gjentas.
+                            <a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder">Pårørendeveileder -
+                                Helsedirektoratet.</a>
+                        </p>
+                        <p>
+                            Sørg for at pårørende har fått informasjon om pleiepenger ved livet sluttfase:
+                            <a href="https://www.nav.no/pleiepenger-sluttfase">Pleiepenger i livets sluttfase -
+                                nav.no.</a>
+                            Kontakt gjerne sosionom ved sykehuset dersom en trenger hjelp til å søke om pleiepenger.
+                        </p>
+                        <p>
+                            Hjelpemidler kan være sykeseng, madrass, trykkavlastende overmadrass, personløfter,
+                            toalettstol, 
+                            toalettforhøyer med armlene, dusjkrakk, dusjstol, manuell rullestol, preikestol,
+                            underarmsrullator, rullator, trykkavlastende pute, arbeidsstol og terskeleliminator.
+                        </p>
+                        <p>
+                            Eksisterende seng kan tilrettelegges med hjertebrett (dette krever todelt overmadrass og at
+                            den er minst 10 cm høy) søsterhjelp og støttestang.
+                            Lageret har noen ganger forhøyningsklosser som kan lånes kortvarig.
+                        </p>
+                        <p>
+                            Fysio-/ergoterapitjenesten i kommunen kan dra på hjemmebesøk for å kartlegge og hjelpe til
+                            med å tilrettelegge boligen.
+                            Fysioterapitjenesten har også kunnskap om andre hjelpemidler, og kan søke på disse.
+                        </p>
+                        <p>
+                            Oversikt over aktuelle: <a href="#">Hjelpemidler som en lan låne fra lokalt lager.docx </a>
+                        </p>
+
+                        <p><b>Lenker:</b></p>
+                        <ul class="no-bullets">
+                            <li><a
+                                    href="https://www.helsedirektoratet.no/veiledere/parorendeveileder/stotte-familie-og-andre-parorende/stotte-til-parorende-med-store-omsorgsoppgaver-ogeller-belastninger/kartlegg-og-fang-opp-parorendes-behov-for-stotte">Kartlegg
+                                    pårørendes behov for støtte - Helsedirektoratet</a></li>
+                            <li><a href="https://www.helsedirektoratet.no/veiledere/parorendeveileder">Pårørendeveileder
+                                    - Helsedirektoratet</a></li>
+                        </ul>
+                    </div>
                 </details>
             </section>
             <!-- Høyre kolonne -->
@@ -379,33 +474,56 @@
                     <summary>Brukermedvirkning</summary>
                     <div class="accordion-content">
                         <p>
-                            «Hva er viktig for deg?» er et godt spørsmål å stille for å sikre reell brukermedvirkning. 
-                            Spørsmålet kan bidra til at pasienten betraktes som en likeverdig partner i diskusjoner og beslutninger som angår personens ønsker og behov.
+                            «Hva er viktig for deg?» er et godt spørsmål å stille for å sikre reell brukermedvirkning.
+                            Spørsmålet kan bidra til at pasienten betraktes som en likeverdig partner i diskusjoner og
+                            beslutninger som angår personens ønsker og behov.
                         </p>
                         <p>
-                            Samvalg betyr at pasienten og helsepersonellet sammen snakker gjennom ulike alternativer og bestemmer hvilken undersøkelses- eller behandlingsmetode som skal brukes. 
-                            For at pasienten skal kunne delta aktivt, må han eller hun få tydelig og relevant informasjon om egen helse, hvilke behandlingsmuligheter som finnes, og hvilke fordeler og risikoer som følger med. 
-                            Helsepersonellet må tilpasse kommunikasjonen til pasientens helsekompetanse, slik at pasienten faktisk forstår og kan være med på å vurdere hva som er det mest hensiktsmessige valget. 
-                            Samvalg betyr ikke at pasienten alltid skal få etterkommet sitt ønske. Samvalgsprosessen skal imidlertid gi helsepersonell kunnskap om hva som er viktig for pasienten, og bidra til behandling som tar hensyn til pasientens livssituasjon 
-                            <a href="https://www.regjeringen.no/no/dokumenter/meld.-st.-7-20192020/id2678667/?ch=1"> (Meld. St. 7 (2019–2020) - regjeringen.no).</a>
+                            Samvalg betyr at pasienten og helsepersonellet sammen snakker gjennom ulike alternativer og
+                            bestemmer hvilken undersøkelses- eller behandlingsmetode som skal brukes.
+                            For at pasienten skal kunne delta aktivt, må han eller hun få tydelig og relevant
+                            informasjon om egen helse, hvilke behandlingsmuligheter som finnes, og hvilke fordeler og
+                            risikoer som følger med.
+                            Helsepersonellet må tilpasse kommunikasjonen til pasientens helsekompetanse, slik at
+                            pasienten faktisk forstår og kan være med på å vurdere hva som er det mest hensiktsmessige
+                            valget.
+                            Samvalg betyr ikke at pasienten alltid skal få etterkommet sitt ønske. Samvalgsprosessen
+                            skal imidlertid gi helsepersonell kunnskap om hva som er viktig for pasienten, og bidra til
+                            behandling som tar hensyn til pasientens livssituasjon
+                            <a href="https://www.regjeringen.no/no/dokumenter/meld.-st.-7-20192020/id2678667/?ch=1">
+                                (Meld. St. 7 (2019–2020) - regjeringen.no).</a>
                         </p>
                         <p><b>Lovverk som regulerer brukermedvirkning</b></p>
                         <ul>
                             <li>
-                                Pasient- og brukerrettighetsloven § 3-1 sikrer pasienters og brukeres rett til å medvirke i valg av undersøkelsesmetoder, behandling og tjenester. 
+                                Pasient- og brukerrettighetsloven § 3-1 sikrer pasienters og brukeres rett til å
+                                medvirke i valg av undersøkelsesmetoder, behandling og tjenester.
                                 Fremhever også retten til tilpasset informasjon, som er nødvendig for reell medvirkning
-                                <a href="https://lovdata.no/dokument/NL/lov/1999-07-02-63?q=Pasient-%20og%20brukerrettighetsloven">Lov om pasient- og brukerrettigheter (pasient- og brukerrettighetsloven) - Lovdata</a>
+                                <a
+                                    href="https://lovdata.no/dokument/NL/lov/1999-07-02-63?q=Pasient-%20og%20brukerrettighetsloven">Lov
+                                    om pasient- og brukerrettigheter (pasient- og brukerrettighetsloven) - Lovdata</a>
                             </li>
                             <li>
-                                Helse- og omsorgstjenesteloven (§ 3–10) slår fast at brukermedvirkning skal ivaretas på både individ - og systemnivå i kommunenes tjenestetilbud
-                                <a href="https://lovdata.no/dokument/NL/lov/2011-06-24-30">Lov om kommunale helse- og omsorgstjenester m.m. (helse- og omsorgstjenesteloven) - Lovdata</a>
+                                Helse- og omsorgstjenesteloven (§ 3–10) slår fast at brukermedvirkning skal ivaretas på
+                                både individ - og systemnivå i kommunenes tjenestetilbud
+                                <a href="https://lovdata.no/dokument/NL/lov/2011-06-24-30">Lov om kommunale helse- og
+                                    omsorgstjenester m.m. (helse- og omsorgstjenesteloven) - Lovdata</a>
                             </li>
                         </ul>
                         <p><b>Lenker:</b></p>
                         <ul>
-                            <li><a href="https://www.kompetansebroen.no/aktuelt/hva-er-viktig-for-deg-2?o=ahus">Hva er viktig for deg? - Kompetansebroen</a></li>
-                            <li><p>Helsedirektoratets ressursside om</p><a href="https://www.helsedirektoratet.no/lov-og-forskrift/brukermedvirkning"> Brukermedvirkning - Helsedirektoratet</a></li>
-                            <li><p>Pasientinformasjon om brukermedvirkning: </p><a href="https://www.helsenorge.no/rettigheter/brukermedvirkning"> Brukermedvirkning – din rett og mulighet til å medvirke - Helsenorge </a></li>
+                            <li><a href="https://www.kompetansebroen.no/aktuelt/hva-er-viktig-for-deg-2?o=ahus">Hva er
+                                    viktig for deg? - Kompetansebroen</a></li>
+                            <li>
+                                <p>Helsedirektoratets ressursside om</p><a
+                                    href="https://www.helsedirektoratet.no/lov-og-forskrift/brukermedvirkning">
+                                    Brukermedvirkning - Helsedirektoratet</a>
+                            </li>
+                            <li>
+                                <p>Pasientinformasjon om brukermedvirkning: </p><a
+                                    href="https://www.helsenorge.no/rettigheter/brukermedvirkning"> Brukermedvirkning –
+                                    din rett og mulighet til å medvirke - Helsenorge </a>
+                            </li>
                         </ul>
                     </div>
                 </details>
@@ -414,30 +532,40 @@
                     <summary>Dokumentasjon</summary>
                     <div class="accordion-content">
                         <p>
-                            I pleien skal det utføres en helhetlig kartlegging hver dag, ved hvert besøk. Dette dokumenteres i pasientens journal.
+                            I pleien skal det utføres en helhetlig kartlegging hver dag, ved hvert besøk. Dette
+                            dokumenteres i pasientens journal.
                         </p>
                         <p>
-                            Dokumentering innen palliasjon skal gi et helhetlig og presist bilde av pasientens situasjon, behov og mål for behandlingen. 
-                            Den må være systematisk, oppdatert og tverrfaglig forankret, og ta utgangspunkt i både fysiske, psykiske, sosiale og eksistensielle behov.
+                            Dokumentering innen palliasjon skal gi et helhetlig og presist bilde av pasientens
+                            situasjon, behov og mål for behandlingen.
+                            Den må være systematisk, oppdatert og tverrfaglig forankret, og ta utgangspunkt i både
+                            fysiske, psykiske, sosiale og eksistensielle behov.
                         </p>
                         <p>Kartlegging:</p>
                         <p>
-                            Kartlegging, vurdering og tester danner grunnlaget for videre oppfølging. Symptomer dokumenteres med strukturerte verktøy. 
+                            Kartlegging, vurdering og tester danner grunnlaget for videre oppfølging. Symptomer
+                            dokumenteres med strukturerte verktøy.
                             Vurderingene skal vise endringer i tilstand og effekt av tiltak.
                         </p>
                         <p>Samarbeid og kommunikasjon:</p>
                         <p>
-                            Under samarbeid og kommunikasjon beskrives dialog med pasient og pårørende, informasjon som er gitt om sykdom, prognose og behandlingsmål, samt beslutninger knyttet til behandlingsnivå og eventuelle forhåndssamtaler. 
+                            Under samarbeid og kommunikasjon beskrives dialog med pasient og pårørende, informasjon som
+                            er gitt om sykdom, prognose og behandlingsmål, samt beslutninger knyttet til behandlingsnivå
+                            og eventuelle forhåndssamtaler.
                             Tverrfaglig samarbeid og avklaringer dokumenteres fortløpende.
                         </p>
                         <p>Grunnleggende behov:</p>
                         <p>
-                            Innen grunnleggende behov dokumenteres status og tiltak knyttet til respirasjon og sirkulasjon, ernæring og væskeinntak, eliminasjon, hud og sår, hygiene, søvn og hvile. 
-                            I palliasjon er også psykisk helse og lindring av angst, uro og eksistensiell smerte sentralt. Det skal komme frem hvilke tiltak som er iverksatt, og hvordan pasienten responderer på disse.
+                            Innen grunnleggende behov dokumenteres status og tiltak knyttet til respirasjon og
+                            sirkulasjon, ernæring og væskeinntak, eliminasjon, hud og sår, hygiene, søvn og hvile.
+                            I palliasjon er også psykisk helse og lindring av angst, uro og eksistensiell smerte
+                            sentralt. Det skal komme frem hvilke tiltak som er iverksatt, og hvordan pasienten
+                            responderer på disse.
                         </p>
                         <p>Legemiddelhåndtering</p>
                         <p>
-                            Når man håndterer medisiner, er det viktig å skrive tydelig hvorfor de gis, hvilken dose, hvordan de tas og hvilken effekt de har. 
+                            Når man håndterer medisiner, er det viktig å skrive tydelig hvorfor de gis, hvilken dose,
+                            hvordan de tas og hvilken effekt de har.
                             Eventuelle bivirkninger og endringer må også komme klart frem.
                         </p>
                     </div>
@@ -447,26 +575,43 @@
                     <summary>HMS for helsepersonell</summary>
                     <div class="accordion-content">
                         <p>
-                            Pleiere strekker seg ofte langt for å ivareta palliative pasienter og pårørende i hjemmet. Helsepersonell ønsker gjerne å tilrettelegge etter pasient og pårørendes behov for å sikre en verdig avslutning på livet, 
-                            og for at pårørende skal sitte igjen med en følelse av at vi gjorde en god innsats for pasienten og de pårørende.
+                            Pleiere strekker seg ofte langt for å ivareta palliative pasienter og pårørende i hjemmet.
+                            Helsepersonell ønsker gjerne å tilrettelegge etter pasient og pårørendes behov for å sikre
+                            en verdig avslutning på livet,
+                            og for at pårørende skal sitte igjen med en følelse av at vi gjorde en god innsats for
+                            pasienten og de pårørende.
                         </p>
                         <p>
-                            Det er likevel viktig å tenke på HMS for pleiepersonell, da pleiere ofte står i krevende oppgaver og har et belastende arbeid. Dette gjelder både fysisk og psykisk.
+                            Det er likevel viktig å tenke på HMS for pleiepersonell, da pleiere ofte står i krevende
+                            oppgaver og har et belastende arbeid. Dette gjelder både fysisk og psykisk.
                         </p>
                         <p>
-                            Fysisk er det nødvendig å tilrettelegge med hjelpemidler for at ikke pleiepersonell skal skade seg eller få store belastninger. 
-                            Pasienter som nærmer seg livets sluttfase, trenger på et tidspunkt stell i seng, og det vil derfor være nødvendig med sykehusseng. Ofte ønsker pasienten å sove i sin egen seng så lenge som mulig, 
-                            men snakk med pasient og pårørende på en empatisk måte om nødvendigheten av seng. Pasienten må gjerne sove i sin egen seng så lenge det er forsvarlig, men sørg for å ha sykehusseng tilgjengelig og ha en plan på hvordan den kan monteres i hjemmet på kort varsel.
+                            Fysisk er det nødvendig å tilrettelegge med hjelpemidler for at ikke pleiepersonell skal
+                            skade seg eller få store belastninger.
+                            Pasienter som nærmer seg livets sluttfase, trenger på et tidspunkt stell i seng, og det vil
+                            derfor være nødvendig med sykehusseng. Ofte ønsker pasienten å sove i sin egen seng så lenge
+                            som mulig,
+                            men snakk med pasient og pårørende på en empatisk måte om nødvendigheten av seng. Pasienten
+                            må gjerne sove i sin egen seng så lenge det er forsvarlig, men sørg for å ha sykehusseng
+                            tilgjengelig og ha en plan på hvordan den kan monteres i hjemmet på kort varsel.
                         </p>
                         <p>
-                            For å ivareta den psykiske helsen til pleiepersonell, er det nødvendig for arbeidsplassen å legge til rette for det. 
-                            For pleiere kan det være krevende å stå i slike situasjoner, og man blir gjerne berørt selv. Legg til rette for leder- og kollegaveiledning, samt etisk refleksjon. 
+                            For å ivareta den psykiske helsen til pleiepersonell, er det nødvendig for arbeidsplassen å
+                            legge til rette for det.
+                            For pleiere kan det være krevende å stå i slike situasjoner, og man blir gjerne berørt selv.
+                            Legg til rette for leder- og kollegaveiledning, samt etisk refleksjon.
                             Snakk sammen og støtt hverandre. Ta særlig vare på nye/uerfarne pleiere.
                         </p>
-                        <p><a href="https://lovdata.no/dokument/NL/lov/2005-06-17-62">Lov om arbeidsmiljø, arbeidstid og stillingsvern mv. (arbeidsmiljøloven) - Lovdata</a></p>
-                        <p><a href="https://www.med.uio.no/helsam/tjenester/kunnskap/etikk-helsetjenesten/sme-modellen/">SME-modellen (6-trinnsmodellen) - Institutt for helse og samfunn</a></p>
-                        <p><a href="https://www.kompetansebroen.no/courses/etikkrefleksjon">Etikkrefleksjon - et e-læringskurs på Kompetansebroen</a></p>
-                        <p><a href="https://www.med.uio.no/helsam/forskning/aktuelt/aktuelle-saker/2024/setter-pasienten-foran-systemet.html">Setter pasienten foran systemet - Institutt for helse og samfunn</a></p>
+                        <p><a href="https://lovdata.no/dokument/NL/lov/2005-06-17-62">Lov om arbeidsmiljø, arbeidstid og
+                                stillingsvern mv. (arbeidsmiljøloven) - Lovdata</a></p>
+                        <p><a
+                                href="https://www.med.uio.no/helsam/tjenester/kunnskap/etikk-helsetjenesten/sme-modellen/">SME-modellen
+                                (6-trinnsmodellen) - Institutt for helse og samfunn</a></p>
+                        <p><a href="https://www.kompetansebroen.no/courses/etikkrefleksjon">Etikkrefleksjon - et
+                                e-læringskurs på Kompetansebroen</a></p>
+                        <p><a
+                                href="https://www.med.uio.no/helsam/forskning/aktuelt/aktuelle-saker/2024/setter-pasienten-foran-systemet.html">Setter
+                                pasienten foran systemet - Institutt for helse og samfunn</a></p>
                     </div>
                 </details>
 
@@ -474,18 +619,24 @@
                     <summary>Sykehus/sykehjem</summary>
                     <div class="accordion-content">
                         <p>
-                            Det er ønskelig å skåne pasienten og pårørende for unødvendige innleggelser og flytting. Noen ganger kan det likevel være nødvendig.
+                            Det er ønskelig å skåne pasienten og pårørende for unødvendige innleggelser og flytting.
+                            Noen ganger kan det likevel være nødvendig.
                         </p>
                         <p>
-                            Det må ikke ses på som et nederlag om pasienten blir innlagt i sykehus eller institusjon selv om man planlegger godt og gjør så godt man kan. 
-                            Noen ganger er det også pårørende som ombestemmer seg og ikke klarer å stå i belastningene. 
-                            Snakk sammen med pasient, pårørende og lege om situasjonen, og konferer med andre kollegaer. Gjør tiltak som oppfattes som best for pasient og pårørende.
+                            Det må ikke ses på som et nederlag om pasienten blir innlagt i sykehus eller institusjon
+                            selv om man planlegger godt og gjør så godt man kan.
+                            Noen ganger er det også pårørende som ombestemmer seg og ikke klarer å stå i belastningene.
+                            Snakk sammen med pasient, pårørende og lege om situasjonen, og konferer med andre kollegaer.
+                            Gjør tiltak som oppfattes som best for pasient og pårørende.
                         </p>
                         <p>
                             Det er uetisk å flytte en pasient som er døende.
                         </p>
-                        <p><a href="https://www.nsf.no/etikk-0/yrkesetiske-retningslinjer-sykepleiere">Yrkesetiske retningslinjer for sykepleiere</a></p>
-                        <p><a href="https://www.med.uio.no/helsam/tjenester/kunnskap/etikk-helsetjenesten/sentrale-tema/kasuistikker/flytting-av-doende-pasient.html">Flytting av døende pasient – en uverdig handling? - Institutt for helse og samfunn</a></p>
+                        <p><a href="https://www.nsf.no/etikk-0/yrkesetiske-retningslinjer-sykepleiere">Yrkesetiske
+                                retningslinjer for sykepleiere</a></p>
+                        <p><a
+                                href="https://www.med.uio.no/helsam/tjenester/kunnskap/etikk-helsetjenesten/sentrale-tema/kasuistikker/flytting-av-doende-pasient.html">Flytting
+                                av døende pasient – en uverdig handling? - Institutt for helse og samfunn</a></p>
                     </div>
                 </details>
             </section>
@@ -523,4 +674,5 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
