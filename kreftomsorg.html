@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kreftomsorg Rogaland</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body class="page-contact-info">
     <a href="#main" class="skip-link">Hopp til innhold</a>
     <header class="site-header">
         <div class="header-inner">
 
             <a href="index.html" class="site-title-link">
-            <div class="site-title">
-                <span class="title-main">
-                    Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
-                </span>
-            </div>
+                <div class="site-title">
+                    <span class="title-main">
+                        Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
+                    </span>
+                </div>
             </a>
 
             <!-- Page navigation bar (desktop only, hidden on mobile) -->
@@ -29,77 +31,87 @@
 
             <!-- Mobil hamburger -->
             <div class="dropdown mobile-only">
-            <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu" aria-label="Åpne meny">
-                <i data-lucide="menu"></i>
-            </button>
+                <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu"
+                    aria-label="Åpne meny">
+                    <i data-lucide="menu"></i>
+                </button>
 
-            <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
-                <!-- Søkefelt -->
-                <div class="search-container">
-                    <input type="text" id="searchInput" class="search-field" placeholder="Søk..." aria-label="Søk i innholdet">
-                    <div class="search-results" id="searchResults" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
-                </div>
+                <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
+                    <!-- Søkefelt -->
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-field" placeholder="Søk..."
+                            aria-label="Søk i innholdet">
+                        <div class="search-results" id="searchResults" role="status" aria-live="polite"
+                            aria-label="Søkeresultater"></div>
+                    </div>
 
-                <div class="dropdown-group" id="group-nav">
-                  <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-nav-content">
-                    <span class="group-label">Navigasjon</span>
-                  </button>
-                  <div class="group-content" id="group-nav-content" role="group">
-                    <a href="identifisering.html" role="menuitem">Identifisering</a>
-                    <a href="igangsetting.html" role="menuitem">Igangsetting</a>
-                    <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
-                    <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
-                  </div>
-                </div>
+                    <div class="dropdown-group" id="group-nav">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-nav-content">
+                            <span class="group-label">Navigasjon</span>
+                        </button>
+                        <div class="group-content" id="group-nav-content" role="group">
+                            <a href="identifisering.html" role="menuitem">Identifisering</a>
+                            <a href="igangsetting.html" role="menuitem">Igangsetting</a>
+                            <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
+                            <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
+                        </div>
+                    </div>
 
-                <div class="dropdown-group" id="group-followup">
-                  <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-followup-content"><span class="group-label">Samhandling / Ressurspersoner</span></button>
-                  <div class="group-content" id="group-followup-content" role="group">
-                    <a href="#" role="menuitem">Fastlege</a>
-                    <a href="#" role="menuitem">Palliativt team</a>
-                    <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
-                    <a href="#" role="menuitem">Kreftkoordinator/<br>demenskoordinator/AKS</a>
-                    <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
-                    <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
-                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-                  </div>
+                    <div class="dropdown-group" id="group-followup">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-followup-content"><span class="group-label">Samhandling /
+                                Ressurspersoner</span></button>
+                        <div class="group-content" id="group-followup-content" role="group">
+                            <a href="fastlege.html" role="menuitem">Fastlege</a>
+                            <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                            <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                            <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                            <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                            <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                            <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
             </div>
 
             <!-- Desktop dropdowns container -->
             <div class="desktop-controls">
                 <!-- Desktop dropdown (Samhandling / Ressurspersoner) -->
                 <div class="dropdown followup-desktop">
-                <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false" aria-controls="followupMenu">
-                    Samhandling / Ressurspersoner
-                    <span class="chev">▾</span>
-                </button>
+                    <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="followupMenu">
+                        Samhandling / Ressurspersoner
+                        <span class="chev">▾</span>
+                    </button>
 
-                <div class="dropdown-content" id="followupMenu" role="menu">
-                    <a href="#" role="menuitem">Fastlege</a>
-                    <a href="#" role="menuitem">Palliativt team</a>
-                    <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
-                    <a href="#" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
-                    <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
-                    <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
-                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-                </div>
-                </div>
-                
-                <!-- Desktop Search dropdown -->
-                <div class="dropdown search-desktop desktop-only">
-                <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false" aria-controls="searchDesktopMenu">
-                    <i data-lucide="search"></i>
-                    Søk
-                </button>
-
-                <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
-                    <div class="search-container-desktop">
-                        <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..." aria-label="Søk i innholdet">
-                        <div class="search-results-desktop" id="searchResultsDesktop" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
+                    <div class="dropdown-content" id="followupMenu" role="menu">
+                        <a href="fastlege.html" role="menuitem">Fastlege</a>
+                        <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                        <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                        <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                        <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                        <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                        <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
                     </div>
                 </div>
+
+                <!-- Desktop Search dropdown -->
+                <div class="dropdown search-desktop desktop-only">
+                    <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="searchDesktopMenu">
+                        <i data-lucide="search"></i>
+                        Søk
+                    </button>
+
+                    <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
+                        <div class="search-container-desktop">
+                            <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..."
+                                aria-label="Søk i innholdet">
+                            <div class="search-results-desktop" id="searchResultsDesktop" role="status"
+                                aria-live="polite" aria-label="Søkeresultater"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -112,8 +124,10 @@
         <section class="page-intro">
             <h1>Kreftomsorg Rogaland</h1>
             <p>
-                Kreftomsorg Rogaland er et regionalt kompetansesenter som tilbyr spesialisert psykososial helsehjelp til pasienter og pårørende som er berørt av kreft. 
-                Senteret arbeider tett med helsetjenesten og er et lavterskeltilbud der brukerne kan ta kontakt uten henvisning. Målet er å bidra til trygghet, 
+                Kreftomsorg Rogaland er et regionalt kompetansesenter som tilbyr spesialisert psykososial helsehjelp til
+                pasienter og pårørende som er berørt av kreft.
+                Senteret arbeider tett med helsetjenesten og er et lavterskeltilbud der brukerne kan ta kontakt uten
+                henvisning. Målet er å bidra til trygghet,
                 støtte og økt mestring i en livssituasjon preget av sykdom, behandling eller tap.
             </p>
         </section>
@@ -124,28 +138,34 @@
                 <h2>Tjenester og tilbud</h2>
 
                 <details class="accordion-item">
-                <summary>Informasjon om tjenester, ansatte og tilbud</summary>
-                <div class="accordion-content">
-                    <p>
-                        Kreftomsorg Rogaland har kontor på Haugalandet, i Stavanger og Bryne. Organisasjonen består av et tverrfaglig team med bred og spesialisert erfaring innen kreftomsorg og palliativ oppfølging. 
-                    </p>
-                    <p>
-                        De ansatte inkluderer:
-                    </p>
-                    <ul>
-                        <li>Kreftsykepleiere</li>
-                        <li>Familieterapeuter</li>
-                        <li>Palliativ sykepleier</li>
-                        <li>Sosionom</li>
-                        <li>Sexolog</li>
-                        <li>Sorgspesialist</li>
-                        <li>Stråleterapeut</li>
-                    </ul>
-                    <p>
-                        Kreftomsorg Rogaland tilbyr individuelle samtaler, parsamtaler og familiearbeid, samt ulike gruppetilbud som pasient-, pårørende- og sorggrupper. De tilbyr også veiledning om rettigheter, sosionomtjenester, sexologisk rådgivning og undervisning for både helsepersonell og berørte familier. 
-                        Ungdom får eget tilbud gjennom Ung i Vest, og senteret legger i tillegg til rette for tilpasset trening for dem som trenger støtte under eller etter behandling.
-                    </p>
-                </div>
+                    <summary>Informasjon om tjenester, ansatte og tilbud</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Kreftomsorg Rogaland har kontor på Haugalandet, i Stavanger og Bryne. Organisasjonen består
+                            av et tverrfaglig team med bred og spesialisert erfaring innen kreftomsorg og palliativ
+                            oppfølging.
+                        </p>
+                        <p>
+                            De ansatte inkluderer:
+                        </p>
+                        <ul>
+                            <li>Kreftsykepleiere</li>
+                            <li>Familieterapeuter</li>
+                            <li>Palliativ sykepleier</li>
+                            <li>Sosionom</li>
+                            <li>Sexolog</li>
+                            <li>Sorgspesialist</li>
+                            <li>Stråleterapeut</li>
+                        </ul>
+                        <p>
+                            Kreftomsorg Rogaland tilbyr individuelle samtaler, parsamtaler og familiearbeid, samt ulike
+                            gruppetilbud som pasient-, pårørende- og sorggrupper. De tilbyr også veiledning om
+                            rettigheter, sosionomtjenester, sexologisk rådgivning og undervisning for både
+                            helsepersonell og berørte familier.
+                            Ungdom får eget tilbud gjennom Ung i Vest, og senteret legger i tillegg til rette for
+                            tilpasset trening for dem som trenger støtte under eller etter behandling.
+                        </p>
+                    </div>
                 </details>
             </section>
             <!-- Høyre kolonne - Infopunkter -->
@@ -206,4 +226,5 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>

@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ressurssykepleier</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <a href="#main" class="skip-link">Hopp til innhold</a>
     <header class="site-header">
         <div class="header-inner">
 
             <a href="index.html" class="site-title-link">
-            <div class="site-title">
-                <span class="title-main">
-                    Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
-                </span>
-            </div>
+                <div class="site-title">
+                    <span class="title-main">
+                        Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
+                    </span>
+                </div>
             </a>
 
             <!-- Page navigation bar (desktop only, hidden on mobile) -->
@@ -29,77 +31,87 @@
 
             <!-- Mobil hamburger -->
             <div class="dropdown mobile-only">
-            <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu" aria-label="Åpne meny">
-                <i data-lucide="menu"></i>
-            </button>
+                <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu"
+                    aria-label="Åpne meny">
+                    <i data-lucide="menu"></i>
+                </button>
 
-            <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
-                <!-- Søkefelt -->
-                <div class="search-container">
-                    <input type="text" id="searchInput" class="search-field" placeholder="Søk..." aria-label="Søk i innholdet">
-                    <div class="search-results" id="searchResults" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
-                </div>
+                <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
+                    <!-- Søkefelt -->
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-field" placeholder="Søk..."
+                            aria-label="Søk i innholdet">
+                        <div class="search-results" id="searchResults" role="status" aria-live="polite"
+                            aria-label="Søkeresultater"></div>
+                    </div>
 
-                <div class="dropdown-group" id="group-nav">
-                  <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-nav-content">
-                    <span class="group-label">Navigasjon</span>
-                  </button>
-                  <div class="group-content" id="group-nav-content" role="group">
-                    <a href="identifisering.html" role="menuitem">Identifisering</a>
-                    <a href="igangsetting.html" role="menuitem">Igangsetting</a>
-                    <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
-                    <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
-                  </div>
-                </div>
+                    <div class="dropdown-group" id="group-nav">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-nav-content">
+                            <span class="group-label">Navigasjon</span>
+                        </button>
+                        <div class="group-content" id="group-nav-content" role="group">
+                            <a href="identifisering.html" role="menuitem">Identifisering</a>
+                            <a href="igangsetting.html" role="menuitem">Igangsetting</a>
+                            <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
+                            <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
+                        </div>
+                    </div>
 
-                <div class="dropdown-group" id="group-followup">
-                  <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-followup-content"><span class="group-label">Samhandling / Ressurspersoner</span></button>
-                  <div class="group-content" id="group-followup-content" role="group">
-                    <a href="#" role="menuitem">Fastlege</a>
-                    <a href="#" role="menuitem">Palliativt team</a>
-                    <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
-                    <a href="#" role="menuitem">Kreftkoordinator/<br>demenskoordinator/AKS</a>
-                    <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
-                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
-                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-                  </div>
+                    <div class="dropdown-group" id="group-followup">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-followup-content"><span class="group-label">Samhandling /
+                                Ressurspersoner</span></button>
+                        <div class="group-content" id="group-followup-content" role="group">
+                            <a href="fastlege.html" role="menuitem">Fastlege</a>
+                            <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                            <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                            <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                            <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                            <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                            <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
             </div>
 
             <!-- Desktop dropdowns container -->
             <div class="desktop-controls">
                 <!-- Desktop dropdown (Samhandling / Ressurspersoner) -->
                 <div class="dropdown followup-desktop">
-                <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false" aria-controls="followupMenu">
-                    Samhandling / Ressurspersoner
-                    <span class="chev">▾</span>
-                </button>
+                    <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="followupMenu">
+                        Samhandling / Ressurspersoner
+                        <span class="chev">▾</span>
+                    </button>
 
-                <div class="dropdown-content" id="followupMenu" role="menu">
-                    <a href="#" role="menuitem">Fastlege</a>
-                    <a href="#" role="menuitem">Palliativt team</a>
-                    <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
-                    <a href="#" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
-                    <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
-                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
-                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-                </div>
-                </div>
-                
-                <!-- Desktop Search dropdown -->
-                <div class="dropdown search-desktop desktop-only">
-                <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false" aria-controls="searchDesktopMenu">
-                    <i data-lucide="search"></i>
-                    Søk
-                </button>
-
-                <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
-                    <div class="search-container-desktop">
-                        <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..." aria-label="Søk i innholdet">
-                        <div class="search-results-desktop" id="searchResultsDesktop" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
+                    <div class="dropdown-content" id="followupMenu" role="menu">
+                        <a href="fastlege.html" role="menuitem">Fastlege</a>
+                        <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                        <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                        <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                        <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                        <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                        <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
                     </div>
                 </div>
+
+                <!-- Desktop Search dropdown -->
+                <div class="dropdown search-desktop desktop-only">
+                    <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="searchDesktopMenu">
+                        <i data-lucide="search"></i>
+                        Søk
+                    </button>
+
+                    <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
+                        <div class="search-container-desktop">
+                            <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..."
+                                aria-label="Søk i innholdet">
+                            <div class="search-results-desktop" id="searchResultsDesktop" role="status"
+                                aria-live="polite" aria-label="Søkeresultater"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -112,7 +124,8 @@
         <section class="page-intro">
             <h1>Ressurssykepleier / primærkontakt</h1>
             <p>
-                Kompetansesenteret i lindrende behandling i Helse Vest har fagnettverk i kreftomsorg og lindrende behandling.
+                Kompetansesenteret i lindrende behandling i Helse Vest har fagnettverk i kreftomsorg og lindrende
+                behandling.
             </p>
         </section>
 
@@ -122,15 +135,19 @@
                 <h2>Nettverk i lindrende behandling</h2>
 
                 <details class="accordion-item">
-                <summary>Informasjon om nettverk, mål og ressurspersoner</summary>
-                <div class="accordion-content">
-                    <p>
-                        Målet med nettverkene er kompetanseheving og samhandling slik at kreftpasienter og andre pasienter med behov for lindrende behandling, samt deres pårørende, opplever god kvalitet og trygghet på alle nivå i helse- og omsorgstjenestene
-                    </p>
-                    <p>
-                        Ressurspersonene i nettverket er sykepleiere, vernepleiere, fysioterapeuter og ergoterapeuter. De arbeider på sykehus, i sykehjem eller bo- og hjemmetjenester, og kan kontaktes for faglige råd.
-                    </p>
-                </div>
+                    <summary>Informasjon om nettverk, mål og ressurspersoner</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Målet med nettverkene er kompetanseheving og samhandling slik at kreftpasienter og andre
+                            pasienter med behov for lindrende behandling, samt deres pårørende, opplever god kvalitet og
+                            trygghet på alle nivå i helse- og omsorgstjenestene
+                        </p>
+                        <p>
+                            Ressurspersonene i nettverket er sykepleiere, vernepleiere, fysioterapeuter og
+                            ergoterapeuter. De arbeider på sykehus, i sykehjem eller bo- og hjemmetjenester, og kan
+                            kontaktes for faglige råd.
+                        </p>
+                    </div>
                 </details>
             </section>
             <!-- Høyre kolonne - Infopunkter -->
@@ -141,15 +158,21 @@
                     <ul>
                         <li>
                             Oversikt over nettverket sine oppgaver og ressurspersoner: <br>
-                            <a href="https://www.helse-bergen.no/kompetansesenter-i-lindrande-behandling/nettverk/nettverk-helse-fonna/">Nettverk Helse Fonna - Helse Bergen HF</a>
+                            <a
+                                href="https://www.helse-bergen.no/kompetansesenter-i-lindrande-behandling/nettverk/nettverk-helse-fonna/">Nettverk
+                                Helse Fonna - Helse Bergen HF</a>
                         </li>
                         <li>
-                            Register over ressurspersoner i Nettverk i kreftomsorg og lindrende behandling i Helseregion Vest 
+                            Register over ressurspersoner i Nettverk i kreftomsorg og lindrende behandling i Helseregion
+                            Vest
                             <a href="https://www.pallnet.no/#!/">Pallnet</a>
                         </li>
                         <li>
-                            Her kan du lese mer om erfaringer og oppfatninger knyttet til ressurssykepleieren i palliasjon og kreftomsorg, i tre ulike kontekster sykehjem, hjemmetjeneste og sykehus: <br>
-                            <a href="https://www.scup.com/doi/10.18261/tfo.8.3.9?fbclid=IwAR3kXKELEYVLpqvd_RYnQDceAkOY3AqzQKl0rpjUm_qE59UD85tsR3CnZWk">Ressurssykepleieren i palliasjon og kreftomsorg | Tidsskrift for omsorgsforskning</a>
+                            Her kan du lese mer om erfaringer og oppfatninger knyttet til ressurssykepleieren i
+                            palliasjon og kreftomsorg, i tre ulike kontekster sykehjem, hjemmetjeneste og sykehus: <br>
+                            <a
+                                href="https://www.scup.com/doi/10.18261/tfo.8.3.9?fbclid=IwAR3kXKELEYVLpqvd_RYnQDceAkOY3AqzQKl0rpjUm_qE59UD85tsR3CnZWk">Ressurssykepleieren
+                                i palliasjon og kreftomsorg | Tidsskrift for omsorgsforskning</a>
                         </li>
                     </ul>
                 </div>
@@ -188,4 +211,5 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>

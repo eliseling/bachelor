@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Våketjenesten</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <a href="#main" class="skip-link">Hopp til innhold</a>
     <header class="site-header">
         <div class="header-inner">
 
             <a href="index.html" class="site-title-link">
-            <div class="site-title">
-                <span class="title-main">
-                    Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
-                </span>
-            </div>
+                <div class="site-title">
+                    <span class="title-main">
+                        Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
+                    </span>
+                </div>
             </a>
 
             <!-- Page navigation bar (desktop only, hidden on mobile) -->
@@ -29,76 +31,86 @@
 
             <!-- Mobil hamburger -->
             <div class="dropdown mobile-only">
-            <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu" aria-label="Åpne meny">
-                <i data-lucide="menu"></i>
-            </button>
+                <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu"
+                    aria-label="Åpne meny">
+                    <i data-lucide="menu"></i>
+                </button>
 
-            <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
-                <!-- Søkefelt -->
-                <div class="search-container">
-                    <input type="text" id="searchInput" class="search-field" placeholder="Søk..." aria-label="Søk i innholdet">
-                    <div class="search-results" id="searchResults" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
-                </div>
-                <div class="dropdown-group" id="group-nav">
-                  <button class="group-toggle-menu group-toggle" aria-expanded="false" aria-controls="group-nav-content">
-                    <span class="group-label">Navigasjon</span>
-                  </button>
-                  <div class="group-content" id="group-nav-content" role="group">
-                    <a href="identifisering.html" role="menuitem">Identifisering</a>
-                    <a href="igangsetting.html" role="menuitem">Igangsetting</a>
-                    <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
-                    <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
-                  </div>
-                </div>
+                <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
+                    <!-- Søkefelt -->
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-field" placeholder="Søk..."
+                            aria-label="Søk i innholdet">
+                        <div class="search-results" id="searchResults" role="status" aria-live="polite"
+                            aria-label="Søkeresultater"></div>
+                    </div>
+                    <div class="dropdown-group" id="group-nav">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-nav-content">
+                            <span class="group-label">Navigasjon</span>
+                        </button>
+                        <div class="group-content" id="group-nav-content" role="group">
+                            <a href="identifisering.html" role="menuitem">Identifisering</a>
+                            <a href="igangsetting.html" role="menuitem">Igangsetting</a>
+                            <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
+                            <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
+                        </div>
+                    </div>
 
-                <div class="dropdown-group" id="group-followup">
-                  <button class="group-toggle group-toggle-menu" aria-expanded="false" aria-controls="group-followup-content"><span class="group-label">Samhandling / Ressurspersoner</span></button>
-                  <div class="group-content" id="group-followup-content" role="group">
-                    <a href="#" role="menuitem">Fastlege</a>
-                    <a href="#" role="menuitem">Palliativt team</a>
-                    <a href="#" role="menuitem">Ressurssykepleier</a>
-                    <a href="#" role="menuitem">Kreftkoordinator/<br>demenskoordinator/AKS</a>
-                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
-                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
-                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-                  </div>
+                    <div class="dropdown-group" id="group-followup">
+                        <button class="group-toggle group-toggle-menu" aria-expanded="false"
+                            aria-controls="group-followup-content"><span class="group-label">Samhandling /
+                                Ressurspersoner</span></button>
+                        <div class="group-content" id="group-followup-content" role="group">
+                            <a href="fastlege.html" role="menuitem">Fastlege</a>
+                            <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                            <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                            <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                            <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                            <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                            <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
             </div>
 
             <!-- Desktop dropdowns container -->
             <div class="desktop-controls">
                 <!-- Desktop dropdown (Samhandling / Ressurspersoner) -->
                 <div class="dropdown followup-desktop">
-                <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false" aria-controls="followupMenu">
-                    Samhandling / Ressurspersoner
-                    <span class="chev">▾</span>
-                </button>
+                    <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="followupMenu">
+                        Samhandling / Ressurspersoner
+                        <span class="chev">▾</span>
+                    </button>
 
-                <div class="dropdown-content" id="followupMenu" role="menu">
-                    <a href="#" role="menuitem">Fastlege</a>
-                    <a href="#" role="menuitem">Palliativt team</a>
-                    <a href="#" role="menuitem">Ressurssykepleier</a>
-                    <a href="#" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
-                    <a href="#" role="menuitem">Kompetansesenter i lindrende behandling</a>
-                    <a href="#" role="menuitem">Kreftomsorg Rogaland</a>
-                    <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
-                </div>
-                </div>
-                
-                <!-- Desktop Search dropdown -->
-                <div class="dropdown search-desktop desktop-only">
-                <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false" aria-controls="searchDesktopMenu">
-                    <i data-lucide="search"></i>
-                    Søk
-                </button>
-
-                <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
-                    <div class="search-container-desktop">
-                        <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..." aria-label="Søk i innholdet">
-                        <div class="search-results-desktop" id="searchResultsDesktop" role="status" aria-live="polite" aria-label="Søkeresultater"></div>
+                    <div class="dropdown-content" id="followupMenu" role="menu">
+                        <a href="fastlege.html" role="menuitem">Fastlege</a>
+                        <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                        <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                        <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                        <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                        <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                        <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
                     </div>
                 </div>
+
+                <!-- Desktop Search dropdown -->
+                <div class="dropdown search-desktop desktop-only">
+                    <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="searchDesktopMenu">
+                        <i data-lucide="search"></i>
+                        Søk
+                    </button>
+
+                    <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
+                        <div class="search-container-desktop">
+                            <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..."
+                                aria-label="Søk i innholdet">
+                            <div class="search-results-desktop" id="searchResultsDesktop" role="status"
+                                aria-live="polite" aria-label="Søkeresultater"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -112,27 +124,32 @@
             <h1>Våketjenesten</h1>
             <p>
                 Ingen skal måtte dø alene.
-                Mange Røde Kors avdelinger i landet har tilbud om Våketjeneste - medmenneskelig nærvær til døende og deres pårørende.   
+                Mange Røde Kors avdelinger i landet har tilbud om Våketjeneste - medmenneskelig nærvær til døende og
+                deres pårørende.
             </p>
             <p>
                 Våketjenesten tilbyr tilstedeværelse og støtte hos pasienter i livets aller siste fase. <br>
-                Tjenesten består av frivillige som sitter hos pasienten, slik at pårørende kan hvile, og pasienten ikke er alene. 
-                Informer pårørende om muligheten og avklar om de ønsker tilbudet. Forklar hvordan tjenesten fungerer, når den kan benyttes, 
-                og hvem som organiserer den i kommunen. 
+                Tjenesten består av frivillige som sitter hos pasienten, slik at pårørende kan hvile, og pasienten ikke
+                er alene.
+                Informer pårørende om muligheten og avklar om de ønsker tilbudet. Forklar hvordan tjenesten fungerer,
+                når den kan benyttes,
+                og hvem som organiserer den i kommunen.
             </p>
             <p>
                 Dersom våkingen krever mye oppfølging fra helsepersonell, må kommunen vurdere å leie inn fastvakt selv.
                 Våkere er frivillige, og en kan ikke forvente at Røde Kors alltid kan stille.
             </p>
             <p>
-                Sjekk med ditt lokale Røde Kors om de har tilbud om Våketjeneste, eller om det finnes andre tilbud om frivillighet. 
+                Sjekk med ditt lokale Røde Kors om de har tilbud om Våketjeneste, eller om det finnes andre tilbud om
+                frivillighet.
             </p>
             <details class="accordion-item">
                 <summary>Et tilbud om ro, trygghet og nærvær</summary>
                 <div class="accordion-content">
                     <p>
-                        Våketjenesten er et tilbud som skal sikre ro, trygghet og menneskelig nærvær i pasientens aller siste fase. 
-                        For mange pårørende kan døgnkontinuerlig tilstedeværelse være krevende. 
+                        Våketjenesten er et tilbud som skal sikre ro, trygghet og menneskelig nærvær i pasientens aller
+                        siste fase.
+                        For mange pårørende kan døgnkontinuerlig tilstedeværelse være krevende.
                         Våketjenesten gir avlastning og støtte, samtidig som pasienten får selskap og omsorg.
                     </p>
                 </div>
@@ -144,80 +161,86 @@
             <section class="accordion-section">
                 <h2>Slik bruker du våketjenesten i praksis</h2>
                 <details class="accordion-item">
-                <summary>Hva er Våketjenesten?</summary>
-                <div class="accordion-content">
-                    <p>
-                        Våketjenesten består vanligvis av opplærte frivillige som sitter hos pasienten i tidsavgrensede vakter. 
-                        De er der for å gi ro, holde hånden, være til stede og bidra til en verdig avslutning. 
-                        De gjør ikke medisinske oppgaver, men samarbeider med hjemmetjenesten.
-                    </p>
-                    <p>
-                        Tjenesten kan benyttes både dag, kveld og natt, avhengig av kapasitet og lokale ordninger.
-                    </p>
-                </div>
+                    <summary>Hva er Våketjenesten?</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Våketjenesten består vanligvis av opplærte frivillige som sitter hos pasienten i
+                            tidsavgrensede vakter.
+                            De er der for å gi ro, holde hånden, være til stede og bidra til en verdig avslutning.
+                            De gjør ikke medisinske oppgaver, men samarbeider med hjemmetjenesten.
+                        </p>
+                        <p>
+                            Tjenesten kan benyttes både dag, kveld og natt, avhengig av kapasitet og lokale ordninger.
+                        </p>
+                    </div>
                 </details>
                 <details class="accordion-item">
-                <summary>Hva sier vi til pårørende?</summary>
-                <div class="accordion-content">
-                    <p>Som pleier bør du:</p>
-                    <ul>
-                        <li>Forklare at tilbudet finnes, og at det er gratis.</li>
-                        <li>Beskrive at frivillige kommer for å være til stede – ikke for stell eller medisinske oppgaver.</li>
-                        <li>Understreke at dette er et supplement, ikke en erstatning for hjemmetjenesten.</li>
-                        <li>Spørre om pårørende ønsker dette, og om det er tidspunkt som passer spesielt godt.</li>
-                        <li>Avklare eventuelle ønsker, for eksempel om ro, musikk eller om pasienten liker å holde hånden.</li>
-                    </ul>
-                    <p>For mange pårørende er det godt å vite at de kan hvile noen timer uten at pasienten er alene.</p>
-                </div>
+                    <summary>Hva sier vi til pårørende?</summary>
+                    <div class="accordion-content">
+                        <p>Som pleier bør du:</p>
+                        <ul>
+                            <li>Forklare at tilbudet finnes, og at det er gratis.</li>
+                            <li>Beskrive at frivillige kommer for å være til stede – ikke for stell eller medisinske
+                                oppgaver.</li>
+                            <li>Understreke at dette er et supplement, ikke en erstatning for hjemmetjenesten.</li>
+                            <li>Spørre om pårørende ønsker dette, og om det er tidspunkt som passer spesielt godt.</li>
+                            <li>Avklare eventuelle ønsker, for eksempel om ro, musikk eller om pasienten liker å holde
+                                hånden.</li>
+                        </ul>
+                        <p>For mange pårørende er det godt å vite at de kan hvile noen timer uten at pasienten er alene.
+                        </p>
+                    </div>
                 </details>
                 <details class="accordion-item">
-                <summary>Hvordan organiseres det?</summary>
-                <div class="accordion-content">
-                    <p>
-                        Som pleier bør du ha oversikt over hvem som koordinerer tjenesten lokalt og
-                        vite hvordan du bestiller vakevakt (telefon, skjema, e-post).
-                    </p>
-                    <p>
-                        Gi nødvendig og viktig informasjon til koordinator: adresse, pasientens tilstand, behov for ro og pårørendes behov.
-                    </p>
-                </div>
+                    <summary>Hvordan organiseres det?</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Som pleier bør du ha oversikt over hvem som koordinerer tjenesten lokalt og
+                            vite hvordan du bestiller vakevakt (telefon, skjema, e-post).
+                        </p>
+                        <p>
+                            Gi nødvendig og viktig informasjon til koordinator: adresse, pasientens tilstand, behov for
+                            ro og pårørendes behov.
+                        </p>
+                    </div>
                 </details>
                 <details class="accordion-item">
-                <summary>Hva gjør den frivillige?</summary>
-                <div class="accordion-content">
-                    <p>
-                        Den frivillige sitter hos pasienten og skaper ro og nærvær.
-                        De observerer og melder til tjenesten dersom det er behov, og tilbyr støtte til pårørende dersom de ønsker det.
-                    </p>
-                    <p>
-                        Våkere følger pasientens og familiens ønsker for atmosfære og samvær.
-                    </p>
-                </div>
+                    <summary>Hva gjør den frivillige?</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Den frivillige sitter hos pasienten og skaper ro og nærvær.
+                            De observerer og melder til tjenesten dersom det er behov, og tilbyr støtte til pårørende
+                            dersom de ønsker det.
+                        </p>
+                        <p>
+                            Våkere følger pasientens og familiens ønsker for atmosfære og samvær.
+                        </p>
+                    </div>
                 </details>
                 <details class="accordion-item">
-                <summary>Praktiske avklaringer</summary>
-                <div class="accordion-content">
-                    <ul>
-                        <li>Pårørende kan være til stede under vaket om de ønsker.</li>
-                        <li>Frivillige skal ha telefonnummer til hjemmetjenesten.</li>
-                        <li>Hjemmetjenesten har ansvar for medisinsk tilsyn og stell.</li>
-                        <li>Ved dødsfall kontaktes hjemmetjenesten, ikke frivilligkoordinator.</li>
-                    </ul>
-                </div>
+                    <summary>Praktiske avklaringer</summary>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Pårørende kan være til stede under vaket om de ønsker.</li>
+                            <li>Frivillige skal ha telefonnummer til hjemmetjenesten.</li>
+                            <li>Hjemmetjenesten har ansvar for medisinsk tilsyn og stell.</li>
+                            <li>Ved dødsfall kontaktes hjemmetjenesten, ikke frivilligkoordinator.</li>
+                        </ul>
+                    </div>
                 </details>
                 <details class="accordion-item">
-                <summary>Informasjon ved innvilgelse.</summary>
-                <div class="accordion-content">
-                    <p>
-                       Gi pårørende:
-                    </p>
-                    <ul>
-                        <li>Navn på organisasjonen som kommer.</li>
-                        <li>Tidspunkt for starten og forventet varighet.</li>
-                        <li>Informasjon om at frivillige ikke utfører stell eller medisinsk pleie.</li>
-                        <li>Trygghet på at hjemmetjenesten fortsatt følger pasienten tett.</li>
-                    </ul>
-                </div>
+                    <summary>Informasjon ved innvilgelse.</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Gi pårørende:
+                        </p>
+                        <ul>
+                            <li>Navn på organisasjonen som kommer.</li>
+                            <li>Tidspunkt for starten og forventet varighet.</li>
+                            <li>Informasjon om at frivillige ikke utfører stell eller medisinsk pleie.</li>
+                            <li>Trygghet på at hjemmetjenesten fortsatt følger pasienten tett.</li>
+                        </ul>
+                    </div>
                 </details>
             </section>
 
@@ -227,9 +250,12 @@
                 <div class="info-card">
                     <h3>Lenker</h3>
                     <ul>
-                        <li><a href="https://www.regjeringen.no/no/dokumenter/nou-1999-2/id141460/?ch=6" target="_blank">FN's rettigheter for døende</a></li>
-                        <li><a href="https://www.rodekors.no/globalassets/_distrikt-og-lokalforeninger/dk-hedmark/lokf/eidskog/rode-kors-vaketjeneste-faktaark.pdf" target="_blank">Røde Kors - Våketjeneste Faktaark</a></li>
-                        <li><a href="https://sykepleien.no/meninger/2020/04/ingen-skal-matte-do-alene" target="_blank">Sykepleien - Ingen skal måtte dø alene</a></li>
+                        <li><a href="https://www.regjeringen.no/no/dokumenter/nou-1999-2/id141460/?ch=6"
+                                target="_blank">FN's rettigheter for døende</a></li>
+                        <li><a href="https://www.rodekors.no/globalassets/_distrikt-og-lokalforeninger/dk-hedmark/lokf/eidskog/rode-kors-vaketjeneste-faktaark.pdf"
+                                target="_blank">Røde Kors - Våketjeneste Faktaark</a></li>
+                        <li><a href="https://sykepleien.no/meninger/2020/04/ingen-skal-matte-do-alene"
+                                target="_blank">Sykepleien - Ingen skal måtte dø alene</a></li>
                     </ul>
                 </div>
             </section>
@@ -267,4 +293,5 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
