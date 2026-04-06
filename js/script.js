@@ -416,7 +416,10 @@ const pageMap = {
   'kontakt.html': { title: 'Kontakt', position: 6, previousPage: 'index.html' },
   'kompetanseSenter.html': { title: 'Kompetansesenteret', position: 6, previousPage: 'index.html' },
   'ressursSykepleier.html': { title: 'Ressurssykepleier', position: 6, previousPage: 'index.html' },
-  'kreftomsorg.html': { title: 'Kreftomsorg Rogaland', position: 6, previousPage: 'index.html' }
+  'kreftomsorg.html': { title: 'Kreftomsorg Rogaland', position: 6, previousPage: 'index.html' },
+  'kreftkoordinator.html': { title: 'Kreftkoordinator/demenskoordinator/AKS', position: 6, previousPage: 'index.html' },
+  'palliativtTeam.html': { title: 'Palliativt team', position: 6, previousPage: 'index.html' },
+  'fastlege.html': { title: 'Fastlege', position: 6, previousPage: 'index.html' }
 };
 
 function generateBreadcrumbs() {
