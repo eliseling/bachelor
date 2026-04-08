@@ -182,7 +182,371 @@
                         Pårørende trenger tid, støtte og en trygg fagperson som leder prosessen videre.
                     </p>
                 </div>
+            </details><!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hjemmedød</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Hopp til innhold</a>
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a href="index.html" class="site-title-link">
+                <div class="site-title">
+                    <span class="title-main">
+                        Beslutningsstøtteverktøy <br> i et palliativt pasientforløp
+                    </span>
+                </div>
+            </a>
+
+            <!-- Page navigation bar (desktop only, hidden on mobile) -->
+            <nav class="page-nav" role="navigation" aria-label="Steg navigasjon">
+                <a href="identifisering.html">Identifisering</a>
+                <a href="igangsetting.html">Igangsetting</a>
+                <a href="hjemmetid.html">Hjemmetid</a>
+                <a href="hjemmedod.html">Hjemmedød</a>
+            </nav>
+
+            <!-- Mobil hamburger -->
+            <div class="dropdown mobile-only">
+                <button id="stepsBtn" class="dropbtn" aria-expanded="false" aria-controls="stepsMenu"
+                    aria-label="Åpne meny">
+                    <i data-lucide="menu"></i>
+                </button>
+
+                <div class="dropdownSteps" id="stepsMenu" role="menu" aria-label="Hovedmeny">
+                    <!-- Søkefelt -->
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-field" placeholder="Søk..."
+                            aria-label="Søk i innholdet">
+                        <div class="search-results" id="searchResults" role="status" aria-live="polite"
+                            aria-label="Søkeresultater"></div>
+                    </div>
+
+                    <div class="dropdown-group" id="group-nav">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-nav-content">
+                            <span class="group-label">Navigasjon</span>
+                        </button>
+                        <div class="group-content" id="group-nav-content" role="group">
+                            <a href="identifisering.html" role="menuitem">Identifisering</a>
+                            <a href="igangsetting.html" role="menuitem">Igangsetting</a>
+                            <a href="hjemmetid.html" role="menuitem">Hjemmetid</a>
+                            <a href="hjemmedod.html" role="menuitem">Hjemmedød</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-group" id="group-followup">
+                        <button class="group-toggle-menu group-toggle" aria-expanded="false"
+                            aria-controls="group-followup-content"><span class="group-label">Samhandling /
+                                Ressurspersoner</span></button>
+                        <div class="group-content" id="group-followup-content" role="group">
+                            <a href="fastlege.html" role="menuitem">Fastlege</a>
+                            <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                            <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                            <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                            <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                            <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                            <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop dropdowns container -->
+            <div class="desktop-controls">
+                <!-- Desktop dropdown (Samhandling / Ressurspersoner) -->
+                <div class="dropdown followup-desktop">
+                    <button class="dropbtn" id="followupBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="followupMenu">
+                        Samhandling / Ressurspersoner
+                        <span class="chev">▾</span>
+                    </button>
+
+                    <div class="dropdown-content" id="followupMenu" role="menu">
+                        <a href="fastlege.html" role="menuitem">Fastlege</a>
+                        <a href="palliativtTeam.html" role="menuitem">Palliativt team</a>
+                        <a href="ressursSykepleier.html" role="menuitem">Ressurssykepleier</a>
+                        <a href="kreftkoordinator.html" role="menuitem">Kreftkoordinator/demenskoordinator/AKS</a>
+                        <a href="kompetanseSenter.html" role="menuitem">Kompetansesenter i lindrende behandling</a>
+                        <a href="kreftomsorg.html" role="menuitem">Kreftomsorg Rogaland</a>
+                        <a href="vaketjeneste.html" role="menuitem">Våketjenesten</a>
+                    </div>
+                </div>
+
+                <!-- Desktop Search dropdown -->
+                <div class="dropdown search-desktop desktop-only">
+                    <button class="dropbtn search-btn" id="searchDesktopBtn" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="searchDesktopMenu">
+                        <i data-lucide="search"></i>
+                        Søk
+                    </button>
+
+                    <div class="dropdown-content search-dropdown" id="searchDesktopMenu" role="menu">
+                        <div class="search-container-desktop">
+                            <input type="text" id="searchInputDesktop" class="search-field-desktop" placeholder="Søk..."
+                                aria-label="Søk i innholdet">
+                            <div class="search-results-desktop" id="searchResultsDesktop" role="status"
+                                aria-live="polite" aria-label="Søkeresultater"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main id="main" class="container">
+        <div class="nav-row">
+            <nav class="breadcrumb-nav" aria-label="Brødsmuler"></nav>
+        </div>
+        <section class="page-intro">
+            <h1>Hjemmedød</h1>
+            <p>
+                Når en person dør, er det ingenting som haster.
+                La pårørende få tid ved sengen til å sørge, og bidra til ro og verdighet i rommet.
+            </p>
+            <p>
+                Rydd rolig rundt pasienten og fjern medisinsk utstyr.
+                Noter tidspunkt og relevante observasjoner.
+            </p>
+            <details class="accordion-item">
+                <summary>Når en pasient dør hjemme</summary>
+                <div class="accordion-content">
+                    <p>
+                        Når pårørende har fått den tiden de trenger, tilby at de kan trekke seg litt tilbake mens du
+                        setter på hakebøyle og steller den døde. <br>
+                        Foreta et lett stell ved behov:
+                    </p>
+                    <ul>
+                        <li>Legg pasienten i flatt leie</li>
+                        <li>Lukk øyne og munn</li>
+                        <li>Vask ansikt og hender</li>
+                        <li>Ta på bleie ved behov</li>
+                        <li>Skift til rent tøy etter pårørendes ønske</li>
+                        <li>Tenn gjerne et lys <i>(husk å vurdere tidligere bruk av oksygen)</i></li>
+                    </ul>
+                    <p>
+                        Avklar med pårørende om det er andre familiemedlemmer som skal komme og ta farvel, og tilby å
+                        kontakte dem.
+                        Informer rolig om hva som skjer videre.
+                    </p>
+                    <p>
+                        Ring lege for syning.
+                    </p>
+                    <p>
+                        Avklar om du skal kontakte begravelsesbyrå, eller om pårørende ønsker å gjøre det selv.
+                        Opplys om at legen må fylle ut dødsattest før transport kan skje.
+                    </p>
+                    <p>
+                        Bli i hjemmet så lenge det er nødvendig.
+                        Avtal når du går, og eventuelt når du kommer tilbake for å hente utstyr.
+                        Ta med medisiner. Hvis du ikke skal tilbake, informer om at hjemmetjenesten kan kontaktes ved
+                        spørsmål,
+                        og at du uansett vil ta kontakt om tre uker for å tilby en etterlattesamtale.
+                    </p>
+                    <p>
+                        <b>Når du kommer tilbake til kontoret:</b>
+                    </p>
+                    <ul>
+                        <li>Dokumenter i journal.</li>
+                        <li>Legg inn etterlattesamtale i arbeidsplan.</li>
+                        <li>Meld dødsfallet til hjelpemiddellager for henting av utstyr.</li>
+                    </ul>
+                    <p>
+                        Når en pasient dør hjemme, er en av hjemmesykepleierens viktigste oppgaver å skape ro,
+                        ivareta pårørende og sørge for en verdig håndtering av den døde.
+                        Selv om situasjonen kan oppleves emosjonelt krevende, er det viktig å huske at svært lite haster
+                        i de første minuttene.
+                        Pårørende trenger tid, støtte og en trygg fagperson som leder prosessen videre.
+                    </p>
+                </div>
             </details>
+        </section>
+
+        <div class="content-grid">
+            <!-- Venstre kolonne - Prosess -->
+            <section class="accordion-section">
+                <h2>Pleierens oppgaver</h2>
+
+                <details class="accordion-item">
+                    <summary>Ivaretakelse av pårørende</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Pårørende kan reagere ulikt – med sorg, stillhet, uro eller handlingslammelse. <br>
+                            Som pleier bør du:
+                        </p>
+                        <ul>
+                            <li>anerkjenne situasjonen og møte pårørende med ro og varme</li>
+                            <li>la dem sitte ved sengen så lenge de ønsker</li>
+                            <li>invitere til samtale, men ikke presse</li>
+                            <li>tilby praktisk hjelp (vann, stol, kontakt av andre familiemedlemmer)</li>
+                        </ul>
+                        <p>
+                            Det er også viktig å være oppmerksom på barn som pårørende, og sikre at de blir møtt og
+                            forklart på en god måte dersom de er tilstede.
+                        </p>
+                        <p>
+                            <a href="https://www.helsenorge.no/parorende/barn-som-parorende">Når barn lever med sykdom
+                                eller rus i familien</a>
+                        </p>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Stell av den døde</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Når pårørende gir uttrykk for at de er klare, utfører du et verdig dødsstell.
+                            Hensikten er å bevare pasientens verdighet og gjøre den døde klar for at pårørende og
+                            eventuelt begravelsesbyrå skal kunne se dem i ro og orden. <br>
+                            Dette innebærer:
+                        </p>
+                        <ul>
+                            <li>Å sette på hakebøyle tidlig, før stivhet tilkommer</li>
+                            <li>
+                                Legg pasienten i flatt leie.
+                                Ha en pute under hodet til pasienten for lettere å holde hakebøylen i riktig posisjon.
+                            </li>
+                            <li>Lukke øyne og munn</li>
+                            <li>Vaske ansikt og hender</li>
+                            <li>Skifte til rent tøy dersom ønsket</li>
+                            <li>Tenke gjennom eventuell smittevern-praksis, ved behov</li>
+                            <li>Tenne et lys eller gjøre rommet i stand <i>(dersom trygt)</i></li>
+                        </ul>
+                        <p>
+                            Det er viktig at du forklarer hva du gjør, og inviterer pårørende til å delta dersom de
+                            ønsker det.
+                        </p>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Praktiske avklaringer</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Som fagperson må du veilede rolig gjennom hva som skal skje videre. <br>
+                            Dette inkluderer:
+                        </p>
+                        <ul>
+                            <li>Spørre om andre pårørende skal kontaktes</li>
+                            <li>Informere om syning og hvem som gjør det</li>
+                            <li>Forklare at transport av avdøde ikke kan skje før lege har skrevet ut dødsattest</li>
+                            <li>Avklare hvem som ringer begravelsesbyrå</li>
+                        </ul>
+                        <p>
+                            Noen pårørende kan være usikre eller i sjokk – vær forberedt på å gjenta informasjon senere.
+                        </p>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Kontakt med lege</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Legen skal kontaktes for syning av den døde. I enkelte kommuner kan det være lang
+                            responstid, og pårørende kan bli slitne av å vente. <br>
+                            Derfor er det viktig å:
+                        </p>
+                        <ul>
+                            <li>Informere om mulig ventetid</li>
+                            <li>Trygge pårørende og tilby din tilstedeværelse så lenge det trengs</li>
+                            <li>Være tilgjengelig for spørsmål</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Håndtering av utstyr og medikamenter</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Etter at du har vært til stede så lenge som nødvendig:
+                        </p>
+                        <ul>
+                            <li>Ta med medikamenter tilbake (eventuelt destruere etter lokale rutiner)</li>
+                            <li>Avklare om du kommer tilbake senere for å hente utstyr</li>
+                            <li>Gi telefonnummer og forsikre pårørende om at de kan ringe ved behov</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Etterarbeid og etterlatteoppfølging</summary>
+                    <div class="accordion-content">
+                        <p>
+                            Når du kommer tilbake til kontoret skal du:
+                        </p>
+                        <ul>
+                            <li>Dokumentere hendelsen og observasjonene dine</li>
+                            <li>Registrere at det skal tilbys en etterlattesamtale (typisk etter ca. tre uker)</li>
+                            <li>Melde fra til hjelpemiddellager for henting av utstyr</li>
+                        </ul>
+                        <p>
+                            Vær oppmerksom på at pårørende som mister noen hjemme, særlig uten støtte, kan være ekstra
+                            sårbare.
+                            En etterlattsamtale kan bidra til å avklare behov for videre støtte.
+                        </p>
+                        <p>
+                            <a href="oppfolging.html">Les mer...</a>
+                        </p>
+                    </div>
+                </details>
+            </section>
+            <!-- Høyre kolonne - Infopunkter -->
+            <section class="info-section extra-section">
+                <h2>Ressurser</h2>
+                <div class="info-card">
+                    <h3>Lenker</h3>
+                    <ul>
+                        <li><a href="https://www.helsenorge.no/doden/" target="_blank">Døden - Helsenorge</a></li>
+                        <li><a href="https://kreftforeningen.no/rad-og-rettigheter/doden/hjemmedod/"
+                                target="_blank">Hjemmedød - Kreftforeningen</a></li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>E-læring</h3>
+                    <ul>
+                        <li><a href="https://www.kslaring.no/local/course_page/home_page.php?id=28932"
+                                target="_blank">Åpenhet om døden</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Om verktøyet</h4>
+                <p>Utviklet for å støtte palliativ behandling og pasientforløp i helsesektoren.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Steg</h4>
+                <ul>
+                    <li><a href="identifisering.html">Identifisering</a></li>
+                    <li><a href="igangsetting.html">Igangsetting</a></li>
+                    <li><a href="hjemmetid.html">Hjemmetid</a></li>
+                    <li><a href="hjemmedod.html">Hjemmedød</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Ressurser</h4>
+                <ul>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="lenker.html">Lenker</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Beslutningsstøtteverktøy – Palliativ behandling</p>
+        </div>
+    </footer>
+
+    <button class="top-btn" id="topBtn" aria-label="Til toppen">↑</button>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
         </section>
 
         <div class="content-grid">
