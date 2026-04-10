@@ -448,6 +448,7 @@ body.page-contact .info-card ul li a {
   transition: color 0.2s ease;
   display: inline-flex;
   align-items: center;
+  font-size: 16px;
 }
 
 body.page-contact .info-card ul li a:hover {
@@ -460,6 +461,7 @@ body.page-links .info-card ul li a {
   transition: color 0.2s ease;
   display: inline-flex;
   align-items: center;
+  font-size: 16px;
 }
 
 body.page-links .info-card ul li a:hover {
@@ -472,6 +474,7 @@ body.page-contact-info .info-card ul li a {
   transition: color 0.2s ease;
   display: inline-flex;
   align-items: center;
+  font-size: 16px;
 }
 
 body.page-contact-info .info-card ul li a:hover {
