@@ -411,12 +411,6 @@ body.page-links .info-card {
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-body.page-contact .info-card:hover,
-body.page-links .info-card:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
-}
-
 body.page-contact .info-card h2,
 body.page-links .info-card h2 {
   margin: 0 0 16px;
