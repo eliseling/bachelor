@@ -43,6 +43,24 @@ if (stepsBtn && stepsMenu) {
 const followupBtn = document.getElementById("followupBtn");
 const followupMenu = document.getElementById("followupMenu");
 
+function closeDesktopFollowupDropdown() {
+  const btn = document.getElementById("followupBtn");
+  const menu = document.getElementById("followupMenu");
+  if (btn && menu && menu.classList.contains("show")) {
+    menu.classList.remove("show");
+    btn.setAttribute("aria-expanded", "false");
+  }
+}
+
+function closeDesktopSearchDropdown() {
+  const btn = document.getElementById("searchDesktopBtn");
+  const menu = document.getElementById("searchDesktopMenu");
+  if (btn && menu && menu.classList.contains("show")) {
+    menu.classList.remove("show");
+    btn.setAttribute("aria-expanded", "false");
+  }
+}
+
 // Helper function to find and highlight search result
 function highlightSearchResult(targetText) {
   const elementsToSearch = document.querySelectorAll("h1, h2, h3, h4, p, li, summary, .info-card h3, .info-card-blue h3");
@@ -174,6 +192,9 @@ if (followupBtn && followupMenu) {
 
     const expanded = followupMenu.classList.contains("show");
     followupBtn.setAttribute("aria-expanded", expanded ? "true" : "false");
+    if (expanded) {
+      closeDesktopSearchDropdown();
+    }
   });
 
   document.addEventListener("click", () => {
@@ -194,7 +215,10 @@ if (searchDesktopBtnElm && searchDesktopMenu) {
 
     const expanded = searchDesktopMenu.classList.contains("show");
     searchDesktopBtnElm.setAttribute("aria-expanded", expanded ? "true" : "false");
-    
+    if (expanded) {
+      closeDesktopFollowupDropdown();
+    }
+
     // Auto-focus search input when dropdown opens
     if (expanded) {
       const searchInput = document.getElementById("searchInputDesktop");
