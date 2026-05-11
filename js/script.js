@@ -63,7 +63,7 @@ function closeDesktopSearchDropdown() {
 
 // Helper function to find and highlight search result
 function highlightSearchResult(targetText) {
-  const elementsToSearch = document.querySelectorAll("h1, h2, h3, h4, p, li, summary, .info-card h3, .info-card-blue h3");
+  const elementsToSearch = document.querySelectorAll("h1, h2, h3, h4, p, li, summary");
   let foundElement = null;
   
   elementsToSearch.forEach((element) => {
@@ -277,6 +277,7 @@ const allPages = [
   { url: 'igangsetting.html', title: 'Igangsetting' },
   { url: 'hjemmetid.html', title: 'Hjemmetid' },
   { url: 'hjemmedod.html', title: 'Hjemmedød' },
+  { url: 'oppfolging.html', title: 'Oppfølging' },
   { url: 'vaketjeneste.html', title: 'Våketjenesten' },
   { url: 'dokumentasjon.html', title: 'Dokumentasjon' },
   { url: 'lenker.html', title: 'Lenker' },
@@ -303,7 +304,7 @@ async function buildSearchIndex() {
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
       
-      const elementsToSearch = doc.querySelectorAll("h1, h2, h3, h4, p, li, summary, .info-card h3, .info-card-blue h3");
+      const elementsToSearch = doc.querySelectorAll("h1, h2, h3, h4, p, li, summary");
       
       elementsToSearch.forEach((element) => {
         const text = element.textContent.trim();

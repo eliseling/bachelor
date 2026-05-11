@@ -26,7 +26,7 @@ Hovedmålet er å lage et brukervennlig, tilgjengelig og faglig relevant verktø
 
 Løsningen er et statisk nettsted basert på HTML, CSS og JavaScript. Den viktigste strukturen er:
 - `index.html` — hovedsiden med oversikt over pasientforløpet
-- `identifisering.html` — identifisering av palliativ pasient
+- `identifisering.html` — identifisering av pasient med behov for palliasjon
 - `igangsetting.html` — oppstart av palliativt forløp
 - `hjemmetid.html` — behandling, planlegging og oppfølging i hjemmet
 - `hjemmedod.html` — rutiner ved hjemmedød

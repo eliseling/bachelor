@@ -1331,43 +1331,6 @@ main.container{
   margin-bottom: 4px;
 }
 
-.info-card-blue{
-  background: linear-gradient(135deg, rgba(33, 150, 243, 0.12) 0%, rgba(33, 150, 243, 0.06) 100%);
-  border: 2px solid rgba(33, 150, 243, 0.6);
-  border-radius: 12px;
-  padding: 16px;
-}
-
-.info-card-blue h3{
-  margin: 0 0 8px;
-  font-size: 15px;
-  color: var(--brand);
-  font-weight: 700;
-}
-
-.info-card-blue p{
-  margin: 8px 0 0 0;
-  font-size: 14px;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.info-card-blue p:first-child{
-  margin-top: 0;
-}
-
-.info-card-blue ul{
-  margin: 8px 0 0 0;
-  padding-left: 20px;
-}
-
-.info-card-blue li{
-  font-size: 14px;
-  color: var(--muted);
-  line-height: 1.5;
-  margin-bottom: 4px;
-}
-
 .info-details{
   margin-top: 12px;
 }
